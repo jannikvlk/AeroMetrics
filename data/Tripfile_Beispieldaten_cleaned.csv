@@ -1,0 +1,615 @@
+id;creation_time;airline_code;flight_number;flight_suffix;flight_date;departure_airport;user_name;action_name;header_line;entry_details
+19882676;2024-05-07 07:57:00.532;XY;999;;7;HAM;service-acco;CalculateWeightAndTrimAction;2024-05-07 07:57:00,532 INFO  [b49035535fd133fd] [XY0999 /07 HAM | service-acco | CalculateWeightAndTrimAction        |                                | Thread-5273 (ActiveMQ-client-global-threads)]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19882677;2024-05-07 07:57:00.533;XY;999;;7;HAM;service-acco;CalculateWeightAndTrimAction;2024-05-07 07:57:00,533 INFO  [b49035535fd133fd] [XY0999 /07 HAM | service-acco | CalculateWeightAndTrimAction        |                                | Thread-5273 (ActiveMQ-client-global-threads)]  Saved:;STATUS AIRCRAFT_CONFIG 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 REGISTRATION 1 REGISTRATION_CHANGE 1
+19882678;2024-05-07 07:57:08.627;XY;999;;7;HAM;human;EstimateStorePaxDataAction;2024-05-07 07:57:08,627 INFO  [dcaa1a3196ec2913] [XY0999 /07 HAM | human       | EstimateStorePaxDataAction          |                                | default task-19]  Received:;"com.lhsystems.lc2.paxactuals.dto.PaxDataDTO [ id = 2206454 ]
+ Baggage weight type: STANDARD       
+MUC            
+                Y              Jump           Standby        Male           Female         Child          Infant         Bags           BWgt           Average        
+Booked          100            NULL           NULL           NULL           NULL           NULL           NULL           0              0.00  KG       NULL           
+
+ Distribution   : STANDARD_DISTRIBUTION 
+ Section        : 0A             0B             0C             0D             0E             0F             
+ Capacity       : Y18            Y36            Y36            Y36            Y30            Y30            
+ Distribution   : Y0             Y0             Y0             Y0             Y0             Y0"
+19882679;2024-05-07 07:57:08.627;XY;999;;7;HAM;human;StorePaxDataAction;2024-05-07 07:57:08,627 INFO  [dcaa1a3196ec2913] [XY0999 /07 HAM | human       | StorePaxDataAction                  |                                | default task-19]  Received:;"com.lhsystems.lc2.paxactuals.dto.PaxDataDTO [ id = 2206452 ]
+ Baggage weight type: STANDARD       
+MUC            
+                Y              Jump           Standby        Male           Female         Child          Infant         Bags           BWgt           Average        
+Loadsheet       100            NULL           0              100            0              0              0              0              0.00  KG       NULL           
+
+ Distribution   : STANDARD_DISTRIBUTION 
+ Section        : 0A             0B             0C             0D             0E             0F             
+ Capacity       : Y18            Y36            Y36            Y36            Y30            Y30            
+ Distribution   : Y0             Y0             Y0             Y0             Y0             Y0"
+19883315;2024-05-07 07:58:07.204;XY;999;;7;HAM;human;AutoLoadBulkAction;2024-05-07 07:58:07,204 INFO  [a21c3d9d8c65c0ff] [XY0999 /07 HAM | human       | AutoLoadBulkAction                  |                                | default task-19]  Received:;"NULL
+Loaded pre-autoload state:
+POSITIONS
+nilled : 3 4 2 1 
+blocked: NULL 
+LOADED ITEMS"
+19883316;2024-05-07 07:58:07.205;XY;999;;7;HAM;human;AssignLoadplanAction;2024-05-07 07:58:07,205 INFO  [a21c3d9d8c65c0ff] [XY0999 /07 HAM | human       | AssignLoadplanAction                |                                | default task-19]  Received:;"com.lhsystems.lc2.loadplan.dto.PositionAssignmentInputDTO [ id = NULL ]
+Action type    : ACTION_NIL_ALL"
+19883317;2024-05-07 07:58:07.205;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:07,205 INFO  [a21c3d9d8c65c0ff] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883401;2024-05-07 07:56:33.061;XY;999;;7;HAM;human;UpdateFlightAction;2024-05-07 07:56:33,061 INFO  [3c7026f87b8732f2] [XY0999 /07 HAM | human       | UpdateFlightAction                  |                                | default task-19]  Received:;"Airline: XY        Flightnumber: 0999      Suffix:           Date: 2024-05-07T00:00:00 
+Legs:
+DEP    STD in UTC             ETD in UTC             DEST    TRANSIT     CANCELLED    DELETED
+HAM    2024-05-07T12:00:00    2024-05-07T12:00:00    MUC     false       false        false"
+19883402;2024-05-07 07:56:33.061;XY;999;;7;HAM;human;AssignLCCAction;2024-05-07 07:56:33,061 INFO  [3c7026f87b8732f2] [XY0999 /07 HAM | human       | AssignLCCAction                     |                                | default task-19]  Received:;NULL
+19883403;2024-05-07 07:56:33.062;XY;999;;7;HAM;human;AssignLCCAction;2024-05-07 07:56:33,062 INFO  [3c7026f87b8732f2] [XY0999 /07 HAM | human       | AssignLCCAction                     |                                | default task-19]  Saved:;"A/L Flt No Suff Date          DEP    ARR    STD in UTC                    ETD in UTC                    AC Type Reg       Assigned user  Planned user   Location 
+XY  0999   NULL 2024-05-07    HAM    MUC    2024-05-07 12:00:00           2024-05-07 12:00:00           NULL    NULL      NULL           NULL           HAM"
+19883404;2024-05-07 07:56:33.062;XY;999;;7;HAM;human;UpdateFlightAction;2024-05-07 07:56:33,062 INFO  [3c7026f87b8732f2] [XY0999 /07 HAM | human       | UpdateFlightAction                  |                                | default task-19]  Saved:;"Airline: XY        Flightnumber: 0999      Suffix: NULL      Date: 2024-05-07T00:00:00 
+Legs:
+DEP    STD in UTC             ETD in UTC             DEST    TRANSIT     CANCELLED    
+HAM    2024-05-07T12:00:00    2024-05-07T12:00:00    MUC     false       false"
+19883417;2024-05-07 07:56:57.898;XY;999;;7;HAM;human;GetCabinConfigurationsAction;2024-05-07 07:56:57,898 INFO  [9f0ef59b76330160] [XY0999 /07 HAM | human       | GetCabinConfigurationsAction        |                                | default task-19]  Received:;"com.lhsystems.lc2.common.dto.SingleAttributeDTO@412ea4e8[
+  id=<null>
+  deleted=false
+  attribute=UUXCZ
+]"
+19883418;2024-05-07 07:56:58.857;XY;999;;7;HAM;human;StoreRegistrationAndConfigurationAc;2024-05-07 07:56:58,857 INFO  [d0b46a9eebdd83ec] [XY0999 /07 HAM | human       | StoreRegistrationAndConfigurationAc |                                | default task-19]  Received:;"com.lhsystems.lc2.legaircraftconfiguration.dto.RegistratonAndCabinConfigurationDTO [ id = NULL ]
+Registration : UUXCZ                    Cabin configuration : Y186"
+19883419;2024-05-07 07:56:58.857;XY;999;;7;HAM;human;UpdateCrewDataAction;2024-05-07 07:56:58,857 INFO  [d0b46a9eebdd83ec] [XY0999 /07 HAM | human       | UpdateCrewDataAction                |                                | default task-19]  Received:;"com.lhsystems.lc2.legaircraftconfiguration.dto.AircraftCrewDTO [ id = NULL ]
+Cockpit crew nr.          : NULL                     Cockpit crew bag nr.      : NULL                     
+Cabin crew nr.            : NULL                     Cabin crew bag nr.        : NULL                     
+As crew nr.               : NULL                     As pax nr.                : NULL                     
+Deadhead cabin crew nr.   : NULL                     Deadhead cockpit crew nr. : NULL                     
+Captain`s name            : NULL"
+19883420;2024-05-07 07:56:58.857;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:56:58,857 INFO  [d0b46a9eebdd83ec] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883421;2024-05-07 07:56:58.858;XY;999;;7;HAM;human;TransferCargoAction;2024-05-07 07:56:58,858 INFO  [d0b46a9eebdd83ec] [XY0999 /07 HAM | human       | TransferCargoAction                 |                                | default task-19]  Received:;"com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750867  flightId = NULL legId = NULL  deleted = false  fragmentId = LoadFragment ]
+Cargo items:"
+19883422;2024-05-07 07:56:58.858;XY;999;;7;HAM;human;AssignLCCAction;2024-05-07 07:56:58,858 INFO  [d0b46a9eebdd83ec] [XY0999 /07 HAM | human       | AssignLCCAction                     |                                | default task-19]  Received:;NULL
+19883423;2024-05-07 07:56:58.858;XY;999;;7;HAM;human;AssignLCCAction;2024-05-07 07:56:58,858 INFO  [d0b46a9eebdd83ec] [XY0999 /07 HAM | human       | AssignLCCAction                     |                                | default task-19]  Saved:;"A/L Flt No Suff Date          DEP    ARR    STD in UTC                    ETD in UTC                    AC Type Reg       Assigned user  Planned user   Location 
+XY  0999   NULL 2024-05-07    HAM    MUC    2024-05-07 12:00:00           2024-05-07 12:00:00           73M     UUXCZ     NULL           NULL           HAM"
+19883424;2024-05-07 07:56:58.858;XY;999;;7;HAM;human;TransferCargoAction;2024-05-07 07:56:58,858 INFO  [d0b46a9eebdd83ec] [XY0999 /07 HAM | human       | TransferCargoAction                 |                                | default task-19]  Saved:;"com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750717  flightId = 496775 legId = 521041  deleted = false  fragmentId = LoadFragment ]
+
+Total baggage      : 0.00     KG               
+Total cargo        : 0.00     KG               
+Total EIC          : 0.00     KG               
+Total mail         : 0.00     KG"
+19883425;2024-05-07 07:56:58.858;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:56:58,858 INFO  [d0b46a9eebdd83ec] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 0.00      KG               PAX_WI index                  : 0.00                               
+ TOTAL_DEADLOAD_WI weight      : 45516.00  KG               TOTAL_DEADLOAD_WI index       : 37.42                               
+ TOTAL_LOAD_WI                 : 0.00      KG               TOTAL_TRAFFIC_LOAD            : 0.00      KG              
+ FUEL_INDEX                    : 0.00                      
+ AZFW                          : 45516.00  KG               ATOW                          : 45516.00  KG                         
+ ALAW                          : 45516.00  KG               ATXW                          : 45516.00  KG                                  
+ AFT_LIMIT_ZFW                 : 43.21                      FWD_LIMIT_ZFW     ..."
+19883426;2024-05-07 07:56:58.859;XY;999;;7;HAM;human;StoreRegistrationAndConfigurationAc;2024-05-07 07:56:58,859 INFO  [d0b46a9eebdd83ec] [XY0999 /07 HAM | human       | StoreRegistrationAndConfigurationAc |                                | default task-19]  Saved:;"Configuration
+Start Weight : 45102.0 KG Start Index: 37.23
+Crew         : 2/4
+Water(%)     : NULL
+Category    | Weight          | Index   
+Galley:
+A           | 204.00   KG     | 3.24    
+A           | 0.00     KG     | -0.00   
+A           | 210.00   KG     | -3.05   
+Total Weight: 45516.00 KG     Index: 37.42   
+STATUS AIRCRAFT_CONFIG 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 REGISTRATION 1 REGISTRATION_CHANGE 1"
+19883409;2024-05-07 07:56:51.432;XY;999;;7;HAM;human;AssignUnassignViewAction;2024-05-07 07:56:51,432 INFO  [8a7924a476f917dd] [XY0999 /07 HAM | human       | AssignUnassignViewAction            | Assign Flight Leg              | default task-19]  Received:;"View to assign / unassign : FLIGHT_LEG
+Assign requested          : true
+Forced assign             : false
+User                      : human
+Rights                    : AccessLoadingInstructionView ViewSystemConfiguration AccessTDMTableView AccessNOTOCView AccessLoadsheetView CreateZFWMessage CopyLoadData AcceptTransitData AccessULDData CreateModifyDeleteFlightLeg SelectContextParametersForFunctionalConfigurationEntities AccessLegAircraftConfigurationView SendFuelOrder ViewFunctionalConfiguration ReopenCargoFinal AccessBagULDOrder AccessBuildFlightLegView AssignFlightLegsToMyFlights AccessSystemConfiguration ReopenLeg TransferCargoItems SetCargoFinal ViewAircraftData AccessPaxView AccessLoadView EmergencyLock CreateModifyDeleteRolesAndRights AccessMessagesView AccessSupplementaryInfosView MFAMandatory ForceUnlockLoadTable AccessAircraftData SelectContextParametersForSystemConfigurationEntities AccessMonitorView ViewTripFileData AccessFlightLegSurvey AccessAirportData SetRampFinal DisplayFlightLegData CloseL..."
+19883430;2024-05-07 07:56:51.433;XY;999;;7;HAM;human;AssignUnassignViewAction;2024-05-07 07:56:51,433 INFO  [8a7924a476f917dd] [XY0999 /07 HAM | human       | AssignUnassignViewAction            | Assign Flight Leg              | default task-19]  Saved:;"Flight leg assigned to  : human                    Role    : LoadController           
+Flight leg planned to   : NULL                      Role    : NULL                     
+Load table assigned to  : NULL                      Role    : NULL                     
+Cargo table assigned to : NULL                      Role    : NULL"
+19883431;2024-05-07 07:57:00.675;XY;999;;7;HAM;service-acco;AutomaticNotificationAction;2024-05-07 07:57:00,675 INFO  [ebff2816c8b4d0a9] [XY0999 /07 HAM | service-acco | AutomaticNotificationAction         |                                | Thread-5273 (ActiveMQ-client-global-threads)]  Received:;NULL
+19883432;2024-05-07 07:57:00.675;XY;999;;7;HAM;service-acco;AutomaticNotificationAction;2024-05-07 07:57:00,675 INFO  [ebff2816c8b4d0a9] [XY0999 /07 HAM | service-acco | AutomaticNotificationAction         |                                | Thread-5273 (ActiveMQ-client-global-threads)]  Saved:;STATUS AIRCRAFT_CONFIG 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 REGISTRATION 1 REGISTRATION_CHANGE 1
+19883433;2024-05-07 07:57:00.921;XY;999;;7;HAM;service-acco;AutoLoadBulkAction;2024-05-07 07:57:00,921 INFO  [55233de05decd2a5] [XY0999 /07 HAM | service-acco | AutoLoadBulkAction                  |                                | Thread-5273 (ActiveMQ-client-global-threads)]  Received:;NULL
+19883434;2024-05-07 07:57:00.921;XY;999;;7;HAM;service-acco;AssignLoadplanAction;2024-05-07 07:57:00,921 INFO  [55233de05decd2a5] [XY0999 /07 HAM | service-acco | AssignLoadplanAction                |                                | Thread-5273 (ActiveMQ-client-global-threads)]  Received:;"com.lhsystems.lc2.loadplan.dto.PositionAssignmentInputDTO [ id = NULL ]
+Action type    : ACTION_NIL_ALL"
+19883435;2024-05-07 07:57:00.922;XY;999;;7;HAM;service-acco;CalculateWeightAndTrimAction;2024-05-07 07:57:00,922 INFO  [55233de05decd2a5] [XY0999 /07 HAM | service-acco | CalculateWeightAndTrimAction        |                                | Thread-5273 (ActiveMQ-client-global-threads)]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883436;2024-05-07 07:57:00.922;XY;999;;7;HAM;service-acco;CalculateWeightAndTrimAction;2024-05-07 07:57:00,922 INFO  [55233de05decd2a5] [XY0999 /07 HAM | service-acco | CalculateWeightAndTrimAction        |                                | Thread-5273 (ActiveMQ-client-global-threads)]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883437;2024-05-07 07:57:00.922;XY;999;;7;HAM;service-acco;CalculateWeightAndTrimAction;2024-05-07 07:57:00,922 INFO  [55233de05decd2a5] [XY0999 /07 HAM | service-acco | CalculateWeightAndTrimAction        |                                | Thread-5273 (ActiveMQ-client-global-threads)]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 0.00      KG               PAX_WI index                  : 0.00                               
+ TOTAL_DEADLOAD_WI weight      : 45516.00  KG               TOTAL_DEADLOAD_WI index       : 37.42                               
+ TOTAL_LOAD_WI                 : 0.00      KG               TOTAL_TRAFFIC_LOAD            : 0.00      KG              
+ FUEL_INDEX                    : 0.00                      
+ AZFW                          : 45516.00  KG               ATOW                          : 45516.00  KG                         
+ ALAW                          : 45516.00  KG               ATXW                          : 45516.00  KG                                  
+ AFT_LIMIT_ZFW                 : 43.21                      FWD_LIMIT_ZFW     ..."
+19883438;2024-05-07 07:57:00.922;XY;999;;7;HAM;service-acco;CalculateWeightAndTrimAction;2024-05-07 07:57:00,922 INFO  [55233de05decd2a5] [XY0999 /07 HAM | service-acco | CalculateWeightAndTrimAction        |                                | Thread-5273 (ActiveMQ-client-global-threads)]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 0.00      KG               PAX_WI index                  : 0.00                               
+ TOTAL_DEADLOAD_WI weight      : 45516.00  KG               TOTAL_DEADLOAD_WI index       : 37.42                               
+ TOTAL_LOAD_WI                 : 0.00      KG               TOTAL_TRAFFIC_LOAD            : 0.00      KG              
+ FUEL_INDEX                    : 0.00                      
+ AZFW                          : 45516.00  KG               ATOW                          : 45516.00  KG                         
+ ALAW                          : 45516.00  KG               ATXW                          : 45516.00  KG                                  
+ AFT_LIMIT_ZFW                 : 43.21                      FWD_LIMIT_ZFW     ..."
+19883439;2024-05-07 07:57:00.923;XY;999;;7;HAM;service-acco;AutoLoadBulkAction;2024-05-07 07:57:00,923 INFO  [55233de05decd2a5] [XY0999 /07 HAM | service-acco | AutoLoadBulkAction                  |                                | Thread-5273 (ActiveMQ-client-global-threads)]  Saved:;"com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750717  flightId = 496775 legId = 521041  deleted = false  fragmentId = LoadFragment ]
+STATUS AIRCRAFT_CONFIG 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 REGISTRATION 1 REGISTRATION_CHANGE 1"
+19883440;2024-05-07 07:57:01.246;XY;999;;7;HAM;service-acco;CreateZFWMessageAction;2024-05-07 07:57:01,246 INFO  [99179739cf416e96] [XY0999 /07 HAM | service-acco | CreateZFWMessageAction              |                                | Thread-5273 (ActiveMQ-client-global-threads)]  Received:;EmptyDTO - no input expected
+19883441;2024-05-07 07:57:01.246;XY;999;;7;HAM;service-acco;CreateZFWMessageAction;2024-05-07 07:57:01,246 INFO  [99179739cf416e96] [XY0999 /07 HAM | service-acco | CreateZFWMessageAction              |                                | Thread-5273 (ActiveMQ-client-global-threads)]  Sent:;"Receiver queue      : netlineload/master/queue/LOADC.SEND.LOADINFO
+Document            :
+<?xml version=""1.0"" encoding=""UTF-8"" standalone=""yes""?>
+<ns19:ZFWFigures xmlns:ns2=""http://www.lsb.de/iocc/BaggageUnitMessage"" xmlns:ns4=""http://www.lsb.de/iocc/Email"" xmlns:ns3=""http://www.lhsystems.com/iocc/nll/CateringLsAcknowledge"" xmlns:ns6=""http://www.lsb.de/iocc/LoadSheetInXml"" xmlns:ns20=""http://www.lsb.de/iocc/PilotNameINT"" xmlns:ns5=""http://www.lsb.de/iocc/LoadInstructionXML"" xmlns:ns8=""http://www.lsb.de/iocc/CkiStatusInformation"" xmlns:ns7=""http://www.lsb.de/iocc/PassengerCheckIn"" xmlns:ns13=""http://www.lsb.de/iocc/CargoForecastMessage"" xmlns:ns9=""http://www.iata.org/IATA/2007/00"" xmlns:ns12=""http://www.lsb.de/iocc/AircraftPositionFigures"" xmlns:ns11=""http://www.lhsystems.com/iocc/nll/AcarsLsAcknowledge"" xmlns:ns10=""http://www.lsb.de/iocc/AcarsInXml"" xmlns:ns21=""http://www.lsb.de/iocc/IncomingNTMMessage"" xmlns:ns17=""http://www.lsb.de/iocc/RampFuelFigures"" xmlns:ns16=""http://www.lsb.de/iocc/passengerBookingFi..."
+19883442;2024-05-07 07:57:01.247;XY;999;;7;HAM;service-acco;CalculateWeightAndTrimAction;2024-05-07 07:57:01,247 INFO  [99179739cf416e96] [XY0999 /07 HAM | service-acco | CalculateWeightAndTrimAction        |                                | Thread-5273 (ActiveMQ-client-global-threads)]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883443;2024-05-07 07:57:01.247;XY;999;;7;HAM;service-acco;CalculateWeightAndTrimAction;2024-05-07 07:57:01,247 INFO  [99179739cf416e96] [XY0999 /07 HAM | service-acco | CalculateWeightAndTrimAction        |                                | Thread-5273 (ActiveMQ-client-global-threads)]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883444;2024-05-07 07:57:01.247;XY;999;;7;HAM;service-acco;CalculateWeightAndTrimAction;2024-05-07 07:57:01,247 INFO  [99179739cf416e96] [XY0999 /07 HAM | service-acco | CalculateWeightAndTrimAction        |                                | Thread-5273 (ActiveMQ-client-global-threads)]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 0.00      KG               PAX_WI index                  : 0.00                               
+ TOTAL_DEADLOAD_WI weight      : 45516.00  KG               TOTAL_DEADLOAD_WI index       : 37.42                               
+ TOTAL_LOAD_WI                 : 0.00      KG               TOTAL_TRAFFIC_LOAD            : 0.00      KG              
+ FUEL_INDEX                    : 0.00                      
+ AZFW                          : 45516.00  KG               ATOW                          : 45516.00  KG                         
+ ALAW                          : 45516.00  KG               ATXW                          : 45516.00  KG                                  
+ AFT_LIMIT_ZFW                 : 43.21                      FWD_LIMIT_ZFW     ..."
+19883445;2024-05-07 07:57:01.247;XY;999;;7;HAM;service-acco;CalculateWeightAndTrimAction;2024-05-07 07:57:01,247 INFO  [99179739cf416e96] [XY0999 /07 HAM | service-acco | CalculateWeightAndTrimAction        |                                | Thread-5273 (ActiveMQ-client-global-threads)]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 0.00      KG               PAX_WI index                  : 0.00                               
+ TOTAL_DEADLOAD_WI weight      : 45516.00  KG               TOTAL_DEADLOAD_WI index       : 37.42                               
+ TOTAL_LOAD_WI                 : 0.00      KG               TOTAL_TRAFFIC_LOAD            : 0.00      KG              
+ FUEL_INDEX                    : 0.00                      
+ AZFW                          : 45516.00  KG               ATOW                          : 45516.00  KG                         
+ ALAW                          : 45516.00  KG               ATXW                          : 45516.00  KG                                  
+ AFT_LIMIT_ZFW                 : 43.21                      FWD_LIMIT_ZFW     ..."
+19883446;2024-05-07 07:57:01.248;XY;999;;7;HAM;service-acco;CreateZFWMessageAction;2024-05-07 07:57:01,248 INFO  [99179739cf416e96] [XY0999 /07 HAM | service-acco | CreateZFWMessageAction              |                                | Thread-5273 (ActiveMQ-client-global-threads)]  Saved:;"ZFW 45516 KG
+STATUS AIRCRAFT_CONFIG 1 EZFW 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1"
+19883447;2024-05-07 07:57:14.813;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:57:14,813 INFO  [5e948d08994b3050] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19882680;2024-05-07 07:57:08.627;XY;999;;7;HAM;human;CreateBaggageLoadItemsAction;2024-05-07 07:57:08,627 INFO  [dcaa1a3196ec2913] [XY0999 /07 HAM | human       | CreateBaggageLoadItemsAction        |                                | default task-19]  Received:;"com.lhsystems.lc2.common.dto.SingleAttributeDTO [ id = NULL ]
+Already existing load items:"
+19882681;2024-05-07 07:57:08.627;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:57:08,627 INFO  [dcaa1a3196ec2913] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19882682;2024-05-07 07:57:08.628;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:57:08,628 INFO  [dcaa1a3196ec2913] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19882683;2024-05-07 07:57:08.628;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:57:08,628 INFO  [dcaa1a3196ec2913] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 45516.00  KG               TOTAL_DEADLOAD_WI index       : 37.42                               
+ TOTAL_LOAD_WI                 : 0.00      KG               TOTAL_TRAFFIC_LOAD            : 7500.00   KG              
+ FUEL_INDEX                    : 0.00                      
+ AZFW                          : 53016.00  KG               ATOW                          : 53016.00  KG                         
+ ALAW                          : 53016.00  KG               ATXW                          : 53016.00  KG                                  
+ AFT_LIMIT_ZFW                 : 53.14                      FWD_LIMIT_ZFW     ..."
+19882684;2024-05-07 07:57:08.628;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:57:08,628 INFO  [dcaa1a3196ec2913] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 45516.00  KG               TOTAL_DEADLOAD_WI index       : 37.42                               
+ TOTAL_LOAD_WI                 : 0.00      KG               TOTAL_TRAFFIC_LOAD            : 7500.00   KG              
+ FUEL_INDEX                    : 0.00                      
+ AZFW                          : 53016.00  KG               ATOW                          : 53016.00  KG                         
+ ALAW                          : 53016.00  KG               ATXW                          : 53016.00  KG                                  
+ AFT_LIMIT_ZFW                 : 53.14                      FWD_LIMIT_ZFW     ..."
+19882685;2024-05-07 07:57:08.628;XY;999;;7;HAM;human;CreateBaggageLoadItemsAction;2024-05-07 07:57:08,628 INFO  [dcaa1a3196ec2913] [XY0999 /07 HAM | human       | CreateBaggageLoadItemsAction        |                                | default task-19]  Saved:;"com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750717  flightId = 496775 legId = 521041  deleted = false  fragmentId = LoadFragment ]
+BULK
+ Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
+ 4984156   NULL         ESTIMATE  1500.00   KG   100       0.00      HAM       HAM       MUC       B         NULL      false      
+ 4984157   NULL         ESTIMATE  0.00      KG   0         0.00      HAM       HAM       MUC       TB        NULL      false      
+STATUS AIRCRAFT_CONFIG 1 EZFW 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1"
+19882686;2024-05-07 07:57:08.628;XY;999;;7;HAM;human;StorePaxDataAction;2024-05-07 07:57:08,628 INFO  [dcaa1a3196ec2913] [XY0999 /07 HAM | human       | StorePaxDataAction                  |                                | default task-19]  Saved:;"TOTAL Pax: 100    Y: 100  Jump: 0    StandBy: NULL  Male: 100  Female: 0  Child: 0  Infant: 0  Total bag: 0  Total bag weight: 0.0 KG  Baggage weight type: STANDARD
+ Distribution        : STANDARD_DISTRIBUTION    
+ Section             : 0A                       0B                       0C                       0D                       0E                       0F                       
+ Capacity            : Y18                      Y36                      Y36                      Y36                      Y30                      Y30                      
+ Distribution        : Y10                      Y19                      Y19                      Y20                      Y16                      Y16                      
+ Undistributed pax   : 0                        
+STATUS AIRCRAFT_CONFIG 1 EZFW 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1"
+19882687;2024-05-07 07:57:08.629;XY;999;;7;HAM;human;EstimateStorePaxDataAction;2024-05-07 07:57:08,629 INFO  [dcaa1a3196ec2913] [XY0999 /07 HAM | human       | EstimateStorePaxDataAction          |                                | default task-19]  Saved:;"Total booked pax : MUC - 100  
+STATUS AIRCRAFT_CONFIG 1 EZFW 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1"
+19882688;2024-05-07 07:59:06.944;XY;999;;7;HAM;human;UpdateLoadTableAction;2024-05-07 07:59:06,944 INFO  [1b699a6148b15dd0] [XY0999 /07 HAM | human       | UpdateLoadTableAction               |                                | default task-19]  Received:;"com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750717  flightId = 496775 legId = NULL  deleted = false  fragmentId = LoadFragment ]
+BULK
+ Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
+ 4984180   NULL         ESTIMATE  200.00    KG   0         0.00      HAM       HAM       MUC       C         2         false     ICE/4.RMK/TEST UM DAAS DISPLAY ZU SEHEN.RFL/2.RFL/3.RFL/4.RFL/5.RFL/6.RFL/7.RFL/8 
+ 4984179   NULL         ESTIMATE  1500.00   KG   100       0.00      HAM       HAM       MUC       B         3         false     NULL"
+19882689;2024-05-07 07:59:06.945;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:59:06,945 INFO  [1b699a6148b15dd0] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883448;2024-05-07 07:57:14.813;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:57:14,813 INFO  [5e948d08994b3050] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 45516.00  KG               TOTAL_DEADLOAD_WI index       : 37.42                               
+ TOTAL_LOAD_WI                 : 0.00      KG               TOTAL_TRAFFIC_LOAD            : 7500.00   KG              
+ FUEL_INDEX                    : 7.40                      
+ AZFW                          : 53016.00  KG               ATOW                          : 61816.00  KG                         
+ ALAW                          : 56316.00  KG               ATXW                          : 62016.00  KG                                  
+ AFT_LIMIT_ZFW                 : 57.21                      FWD_LIMIT_ZFW     ..."
+19883449;2024-05-07 07:57:14.861;XY;999;;7;HAM;human;UpdateFuelDataAction;2024-05-07 07:57:14,861 INFO  [5e948d08994b3050] [XY0999 /07 HAM | human       | UpdateFuelDataAction                |                                | default task-19]  Received:;"com.lhsystems.lc2.fuelhandling.dto.FuelDTO [ id = 0  flightId = 496775 legId = 521041  deleted = false  fragmentId = FuelDataFragment ]
+ StandardFuel        : Yes                       Non standard fuel   : No                       
+ EditionNumber       : 2                         Fueling Indicator   : false                     TruckOnSbyIndicator : false                    
+                                           Manual Non Standard Index : NULL                     
+ Actual OFP No       : NULL                      Density             : 0.802 KGPERCUBICMETER     Trip Fuel           : 5500.0 KG                
+ FZFW                : NULL                      Max Fuel Cap        : 21961.0 KG               
+ EZFW sent           : NULL                      Minimum TOF         : NULL                     
+ Triggerd by         : MANUAL_INPUT                                                              Take Off Fuel       : 8800.0 KG                
+                                                 Taxi Fuel   ..."
+19883450;2024-05-07 07:57:14.861;XY;999;;7;HAM;human;UpdateFuelDataAction;2024-05-07 07:57:14,861 INFO  [5e948d08994b3050] [XY0999 /07 HAM | human       | UpdateFuelDataAction                |                                | default task-19]  Saved:;"FUEL  trip=5500.0 KG taxi=200.0 KG takeoff=8800.0 KG ballast=null edno=3
+STATUS FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1"
+19883451;2024-05-07 07:58:03.305;XY;999;;7;HAM;human;UpdateLoadTableAction;2024-05-07 07:58:03,305 INFO  [fda2f9da300745fb] [XY0999 /07 HAM | human       | UpdateLoadTableAction               |                                | default task-19]  Received:;"com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750717  flightId = 496775 legId = NULL  deleted = false  fragmentId = LoadFragment ]
+BULK
+ Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
+ 4984156   NULL         ESTIMATE  1500.00   KG   100       0.00      HAM       HAM       MUC       B         NULL      false     NULL 
+ 4984157   NULL         ESTIMATE  0.00      KG   0         0.00      HAM       HAM       MUC       TB        NULL      false     NULL 
+ NULL      NULL         ESTIMATE  200.00    KG   0         0.00      HAM       HAM       MUC       C         NULL      false     ICE/4.RMK/TEST UM DAAS DISPLAY ZU SEHEN.RFL/2.RFL/3.RFL/4.RFL/5.RFL/6.RFL/7.RFL/8"
+19883452;2024-05-07 07:58:03.306;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:03,306 INFO  [fda2f9da300745fb] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883453;2024-05-07 07:58:03.306;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:03,306 INFO  [fda2f9da300745fb] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 45516.00  KG               TOTAL_DEADLOAD_WI index       : 37.42                               
+ TOTAL_LOAD_WI                 : 0.00      KG               TOTAL_TRAFFIC_LOAD            : 7500.00   KG              
+ FUEL_INDEX                    : 7.40                      
+ AZFW                          : 53016.00  KG               ATOW                          : 61816.00  KG                         
+ ALAW                          : 56316.00  KG               ATXW                          : 62016.00  KG                                  
+ AFT_LIMIT_ZFW                 : 57.21                      FWD_LIMIT_ZFW     ..."
+19883454;2024-05-07 07:58:03.306;XY;999;;7;HAM;human;UpdateLoadTableAction;2024-05-07 07:58:03,306 INFO  [fda2f9da300745fb] [XY0999 /07 HAM | human       | UpdateLoadTableAction               |                                | default task-19]  Saved:;"com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750717  flightId = 496775 legId = 521041  deleted = false  fragmentId = LoadFragment ]
+BULK
+ Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
+ 4984178   NULL         ESTIMATE  200.00    KG   0         0.00      HAM       HAM       MUC       C         NULL      false     ICE/4.RMK/TEST UM DAAS DISPLAY ZU SEHEN.RFL/2.RFL/3.RFL/4.RFL/5.RFL/6.RFL/7.RFL/8 
+ 4984177   NULL         ESTIMATE  0.00      KG   0         0.00      HAM       HAM       MUC       TB        NULL      false     NULL 
+ 4984176   NULL         ESTIMATE  1500.00   KG   100       0.00      HAM       HAM       MUC       B         NULL      false     NULL 
+
+Total baggage      : 1500.00  KG               
+Total cargo        : 200.00   KG               
+Total EIC          : 0.00     KG               
+Total mail         : 0.00     KG               
+STATUS FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_TRANSFER 1 C..."
+19883318;2024-05-07 07:58:07.205;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:07,205 INFO  [a21c3d9d8c65c0ff] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883319;2024-05-07 07:58:07.205;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:07,205 INFO  [a21c3d9d8c65c0ff] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 45516.00  KG               TOTAL_DEADLOAD_WI index       : 37.42                               
+ TOTAL_LOAD_WI                 : 0.00      KG               TOTAL_TRAFFIC_LOAD            : 7500.00   KG              
+ FUEL_INDEX                    : 7.40                      
+ AZFW                          : 53016.00  KG               ATOW                          : 61816.00  KG                         
+ ALAW                          : 56316.00  KG               ATXW                          : 62016.00  KG                                  
+ AFT_LIMIT_ZFW                 : 57.21                      FWD_LIMIT_ZFW     ..."
+19883320;2024-05-07 07:58:07.206;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:07,206 INFO  [a21c3d9d8c65c0ff] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 45516.00  KG               TOTAL_DEADLOAD_WI index       : 37.42                               
+ TOTAL_LOAD_WI                 : 0.00      KG               TOTAL_TRAFFIC_LOAD            : 7500.00   KG              
+ FUEL_INDEX                    : 7.40                      
+ AZFW                          : 53016.00  KG               ATOW                          : 61816.00  KG                         
+ ALAW                          : 56316.00  KG               ATXW                          : 62016.00  KG                                  
+ AFT_LIMIT_ZFW                 : 57.21                      FWD_LIMIT_ZFW     ..."
+19883321;2024-05-07 07:58:07.206;XY;999;;7;HAM;human;AutoLoadBulkAction;2024-05-07 07:58:07,206 INFO  [a21c3d9d8c65c0ff] [XY0999 /07 HAM | human       | AutoLoadBulkAction                  |                                | default task-19]  Saved:;"com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750717  flightId = 496775 legId = 521041  deleted = false  fragmentId = LoadFragment ]
+BULK
+ Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
+ 4984196   NULL         ESTIMATE  1500.00   KG   100       0.00      HAM       HAM       MUC       B         SBY       false     NULL 
+ 4984178   NULL         ESTIMATE  200.00    KG   0         0.00      HAM       HAM       MUC       C         SBY       false     ICE/4.RMK/TEST UM DAAS DISPLAY ZU SEHEN.RFL/2.RFL/3.RFL/4.RFL/5.RFL/6.RFL/7.RFL/8 
+ 4984197   NULL         ESTIMATE  0.00      KG   0         0.00      HAM       HAM       MUC       TB        SBY       false     NULL 
+STATUS FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1 DGR_ITEMS 0"
+19883322;2024-05-07 07:58:40.247;XY;999;;7;HAM;human;AssignLoadplanAction;2024-05-07 07:58:40,247 INFO  [fb497f10bbe93034] [XY0999 /07 HAM | human       | AssignLoadplanAction                |                                | default task-19]  Received:;"com.lhsystems.lc2.loadplan.dto.PositionAssignmentInputDTO [ id = NULL ]
+Action type    : ACTION_UNDO_NIL_ALL"
+19883323;2024-05-07 07:58:40.248;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:40,248 INFO  [fb497f10bbe93034] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883324;2024-05-07 07:58:40.248;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:40,248 INFO  [fb497f10bbe93034] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 45516.00  KG               TOTAL_DEADLOAD_WI index       : 37.42                               
+ TOTAL_LOAD_WI                 : 0.00      KG               TOTAL_TRAFFIC_LOAD            : 7500.00   KG              
+ FUEL_INDEX                    : 7.40                      
+ AZFW                          : 53016.00  KG               ATOW                          : 61816.00  KG                         
+ ALAW                          : 56316.00  KG               ATXW                          : 62016.00  KG                                  
+ AFT_LIMIT_ZFW                 : 57.21                      FWD_LIMIT_ZFW     ..."
+19883325;2024-05-07 07:58:40.248;XY;999;;7;HAM;human;AssignLoadplanAction;2024-05-07 07:58:40,248 INFO  [fb497f10bbe93034] [XY0999 /07 HAM | human       | AssignLoadplanAction                |                                | default task-19]  Saved:;"com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750717  flightId = 496775 legId = 521041  deleted = false  fragmentId = LoadFragment ]
+BULK
+ Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
+ 4984180   NULL         ESTIMATE  200.00    KG   0         0.00      HAM       HAM       MUC       C         NULL      false     ICE/4.RMK/TEST UM DAAS DISPLAY ZU SEHEN.RFL/2.RFL/3.RFL/4.RFL/5.RFL/6.RFL/7.RFL/8 
+ 4984179   NULL         ESTIMATE  1500.00   KG   100       0.00      HAM       HAM       MUC       B         NULL      false     NULL 
+ 4984181   NULL         ESTIMATE  0.00      KG   0         0.00      HAM       HAM       MUC       TB        NULL      false     NULL 
+
+STATUS FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1 DGR_ITEMS 0"
+19883326;2024-05-07 07:58:56.957;XY;999;;7;HAM;human;CreateLoadingInstructionAction;2024-05-07 07:58:56,957 INFO  [5a2be57515419b1b] [XY0999 /07 HAM | human       | CreateLoadingInstructionAction      |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  preliminary = false ]
+19883455;2024-05-07 07:58:24.836;XY;999;;7;HAM;human;UpdateLoadTableAction;2024-05-07 07:58:24,836 INFO  [9cfb83edd8272b5c] [XY0999 /07 HAM | human       | UpdateLoadTableAction               |                                | default task-19]  Received:;"com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750717  flightId = 496775 legId = NULL  deleted = false  fragmentId = LoadFragment ]
+BULK
+ Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
+ 4984178   NULL         ESTIMATE  200.00    KG   0         0.00      HAM       HAM       MUC       C         NULL      false     ICE/4.RMK/TEST UM DAAS DISPLAY ZU SEHEN.RFL/2.RFL/3.RFL/4.RFL/5.RFL/6.RFL/7.RFL/8 
+ 4984196   NULL         ESTIMATE  1500.00   KG   100       0.00      HAM       HAM       MUC       B         NULL      false     NULL 
+ 4984197   NULL         ESTIMATE  0.00      KG   0         0.00      HAM       HAM       MUC       TB        NULL      false     NULL"
+19883456;2024-05-07 07:58:24.837;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:24,837 INFO  [9cfb83edd8272b5c] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883457;2024-05-07 07:58:24.837;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:24,837 INFO  [9cfb83edd8272b5c] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 45516.00  KG               TOTAL_DEADLOAD_WI index       : 37.42                               
+ TOTAL_LOAD_WI                 : 0.00      KG               TOTAL_TRAFFIC_LOAD            : 7500.00   KG              
+ FUEL_INDEX                    : 7.40                      
+ AZFW                          : 53016.00  KG               ATOW                          : 61816.00  KG                         
+ ALAW                          : 56316.00  KG               ATXW                          : 62016.00  KG                                  
+ AFT_LIMIT_ZFW                 : 57.21                      FWD_LIMIT_ZFW     ..."
+19883458;2024-05-07 07:58:24.837;XY;999;;7;HAM;human;UpdateLoadTableAction;2024-05-07 07:58:24,837 INFO  [9cfb83edd8272b5c] [XY0999 /07 HAM | human       | UpdateLoadTableAction               |                                | default task-19]  Saved:;"com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750717  flightId = 496775 legId = 521041  deleted = false  fragmentId = LoadFragment ]
+BULK
+ Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
+ 4984180   NULL         ESTIMATE  200.00    KG   0         0.00      HAM       HAM       MUC       C         NULL      false     ICE/4.RMK/TEST UM DAAS DISPLAY ZU SEHEN.RFL/2.RFL/3.RFL/4.RFL/5.RFL/6.RFL/7.RFL/8 
+ 4984179   NULL         ESTIMATE  1500.00   KG   100       0.00      HAM       HAM       MUC       B         NULL      false     NULL 
+ 4984181   NULL         ESTIMATE  0.00      KG   0         0.00      HAM       HAM       MUC       TB        NULL      false     NULL 
+
+Total baggage      : 1500.00  KG               
+Total cargo        : 200.00   KG               
+Total EIC          : 0.00     KG               
+Total mail         : 0.00     KG               
+STATUS FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_TRANSFER 1 C..."
+19883459;2024-05-07 07:58:45.781;XY;999;;7;HAM;human;AssignLoadplanAction;2024-05-07 07:58:45,781 INFO  [71cdbfc3bd724266] [XY0999 /07 HAM | human       | AssignLoadplanAction                |                                | default task-19]  Received:;"com.lhsystems.lc2.loadplan.dto.PositionAssignmentInputDTO [ id = NULL ]
+Action type    : ACTION_DRAG
+Items          : BULK
+ Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
+ 4984179   NULL         ESTIMATE  1500.00   KG   100       0.00      HAM       HAM       MUC       B         NULL      false     NULL 
+To positions   : 3"
+19883460;2024-05-07 07:58:45.782;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:45,782 INFO  [71cdbfc3bd724266] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883461;2024-05-07 07:58:45.782;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:45,782 INFO  [71cdbfc3bd724266] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 47016.00  KG               TOTAL_DEADLOAD_WI index       : 46.42                               
+ TOTAL_LOAD_WI                 : 1500.00   KG               TOTAL_TRAFFIC_LOAD            : 9000.00   KG              
+ FUEL_INDEX                    : 7.40                      
+ AZFW                          : 54516.00  KG               ATOW                          : 63316.00  KG                         
+ ALAW                          : 57816.00  KG               ATXW                          : 63516.00  KG                                  
+ AFT_LIMIT_ZFW                 : 59.28                      FWD_LIMIT_ZFW     ..."
+19883462;2024-05-07 07:58:45.783;XY;999;;7;HAM;human;AssignLoadplanAction;2024-05-07 07:58:45,783 INFO  [71cdbfc3bd724266] [XY0999 /07 HAM | human       | AssignLoadplanAction                |                                | default task-19]  Saved:;"com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750717  flightId = 496775 legId = 521041  deleted = false  fragmentId = LoadFragment ]
+BULK
+ Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
+ 4984180   NULL         ESTIMATE  200.00    KG   0         0.00      HAM       HAM       MUC       C         NULL      false     ICE/4.RMK/TEST UM DAAS DISPLAY ZU SEHEN.RFL/2.RFL/3.RFL/4.RFL/5.RFL/6.RFL/7.RFL/8 
+ 4984179   NULL         ESTIMATE  1500.00   KG   100       0.00      HAM       HAM       MUC       B         3         false     NULL 
+ 4984181   NULL         ESTIMATE  0.00      KG   0         0.00      HAM       HAM       MUC       TB        NULL      false     NULL 
+
+STATUS FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1 DGR_ITEMS 0"
+19883463;2024-05-07 07:58:50.503;XY;999;;7;HAM;human;AssignLoadplanAction;2024-05-07 07:58:50,503 INFO  [6dadcb703de40fe5] [XY0999 /07 HAM | human       | AssignLoadplanAction                |                                | default task-19]  Received:;"com.lhsystems.lc2.loadplan.dto.PositionAssignmentInputDTO [ id = NULL ]
+Action type    : ACTION_DRAG
+Items          : BULK
+ Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
+ 4984180   NULL         ESTIMATE  200.00    KG   0         0.00      HAM       HAM       MUC       C         NULL      false     ICE/4.RMK/TEST UM DAAS DISPLAY ZU SEHEN.RFL/2.RFL/3.RFL/4.RFL/5.RFL/6.RFL/7.RFL/8 
+To positions   : 2"
+19883464;2024-05-07 07:58:50.503;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:50,503 INFO  [6dadcb703de40fe5] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883465;2024-05-07 07:58:50.503;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:50,503 INFO  [6dadcb703de40fe5] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 47216.00  KG               TOTAL_DEADLOAD_WI index       : 44.94                               
+ TOTAL_LOAD_WI                 : 1700.00   KG               TOTAL_TRAFFIC_LOAD            : 9200.00   KG              
+ FUEL_INDEX                    : 7.40                      
+ AZFW                          : 54716.00  KG               ATOW                          : 63516.00  KG                         
+ ALAW                          : 58016.00  KG               ATXW                          : 63716.00  KG                                  
+ AFT_LIMIT_ZFW                 : 59.56                      FWD_LIMIT_ZFW     ..."
+19883466;2024-05-07 07:58:50.503;XY;999;;7;HAM;human;AssignLoadplanAction;2024-05-07 07:58:50,503 INFO  [6dadcb703de40fe5] [XY0999 /07 HAM | human       | AssignLoadplanAction                |                                | default task-19]  Saved:;"com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750717  flightId = 496775 legId = 521041  deleted = false  fragmentId = LoadFragment ]
+BULK
+ Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
+ 4984180   NULL         ESTIMATE  200.00    KG   0         0.00      HAM       HAM       MUC       C         2         false     ICE/4.RMK/TEST UM DAAS DISPLAY ZU SEHEN.RFL/2.RFL/3.RFL/4.RFL/5.RFL/6.RFL/7.RFL/8 
+ 4984179   NULL         ESTIMATE  1500.00   KG   100       0.00      HAM       HAM       MUC       B         3         false     NULL 
+ 4984181   NULL         ESTIMATE  0.00      KG   0         0.00      HAM       HAM       MUC       TB        NULL      false     NULL 
+
+STATUS FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1 DGR_ITEMS 0"
+19883467;2024-05-07 07:58:52.113;XY;999;;7;HAM;human;AssignLoadplanAction;2024-05-07 07:58:52,113 INFO  [5691a100c6d47f3e] [XY0999 /07 HAM | human       | AssignLoadplanAction                |                                | default task-19]  Received:;"com.lhsystems.lc2.loadplan.dto.PositionAssignmentInputDTO [ id = NULL ]
+Action type    : ACTION_DRAG
+Items          : BULK
+ Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
+ 4984181   NULL         ESTIMATE  0.00      KG   0         0.00      HAM       HAM       MUC       TB        NULL      false     NULL 
+To positions   : 2"
+19883468;2024-05-07 07:58:52.114;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:52,114 INFO  [5691a100c6d47f3e] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883469;2024-05-07 07:58:52.114;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:52,114 INFO  [5691a100c6d47f3e] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 47216.00  KG               TOTAL_DEADLOAD_WI index       : 44.94                               
+ TOTAL_LOAD_WI                 : 1700.00   KG               TOTAL_TRAFFIC_LOAD            : 9200.00   KG              
+ FUEL_INDEX                    : 7.40                      
+ AZFW                          : 54716.00  KG               ATOW                          : 63516.00  KG                         
+ ALAW                          : 58016.00  KG               ATXW                          : 63716.00  KG                                  
+ AFT_LIMIT_ZFW                 : 59.56                      FWD_LIMIT_ZFW     ..."
+19883470;2024-05-07 07:58:52.114;XY;999;;7;HAM;human;AssignLoadplanAction;2024-05-07 07:58:52,114 INFO  [5691a100c6d47f3e] [XY0999 /07 HAM | human       | AssignLoadplanAction                |                                | default task-19]  Saved:;"com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750717  flightId = 496775 legId = 521041  deleted = false  fragmentId = LoadFragment ]
+BULK
+ Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
+ 4984180   NULL         ESTIMATE  200.00    KG   0         0.00      HAM       HAM       MUC       C         2         false     ICE/4.RMK/TEST UM DAAS DISPLAY ZU SEHEN.RFL/2.RFL/3.RFL/4.RFL/5.RFL/6.RFL/7.RFL/8 
+ 4984179   NULL         ESTIMATE  1500.00   KG   100       0.00      HAM       HAM       MUC       B         3         false     NULL 
+ 4984181   NULL         ESTIMATE  0.00      KG   0         0.00      HAM       HAM       MUC       TB        2         false     NULL 
+
+STATUS FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1 DGR_ITEMS 0"
+19883471;2024-05-07 07:58:53.900;XY;999;;7;HAM;human;AssignLoadplanAction;2024-05-07 07:58:53,900 INFO  [99f8d4dcc4ff112f] [XY0999 /07 HAM | human       | AssignLoadplanAction                |                                | default task-19]  Received:;"com.lhsystems.lc2.loadplan.dto.PositionAssignmentInputDTO [ id = NULL ]
+Action type    : ACTION_NIL_ALL"
+19883472;2024-05-07 07:58:53.900;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:53,900 INFO  [99f8d4dcc4ff112f] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883473;2024-05-07 07:58:53.901;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:53,901 INFO  [99f8d4dcc4ff112f] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 47216.00  KG               TOTAL_DEADLOAD_WI index       : 44.94                               
+ TOTAL_LOAD_WI                 : 1700.00   KG               TOTAL_TRAFFIC_LOAD            : 9200.00   KG              
+ FUEL_INDEX                    : 7.40                      
+ AZFW                          : 54716.00  KG               ATOW                          : 63516.00  KG                         
+ ALAW                          : 58016.00  KG               ATXW                          : 63716.00  KG                                  
+ AFT_LIMIT_ZFW                 : 59.56                      FWD_LIMIT_ZFW     ..."
+19883474;2024-05-07 07:58:53.901;XY;999;;7;HAM;human;AssignLoadplanAction;2024-05-07 07:58:53,901 INFO  [99f8d4dcc4ff112f] [XY0999 /07 HAM | human       | AssignLoadplanAction                |                                | default task-19]  Saved:;"com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750717  flightId = 496775 legId = 521041  deleted = false  fragmentId = LoadFragment ]
+BULK
+ Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
+ 4984180   NULL         ESTIMATE  200.00    KG   0         0.00      HAM       HAM       MUC       C         2         false     ICE/4.RMK/TEST UM DAAS DISPLAY ZU SEHEN.RFL/2.RFL/3.RFL/4.RFL/5.RFL/6.RFL/7.RFL/8 
+ 4984179   NULL         ESTIMATE  1500.00   KG   100       0.00      HAM       HAM       MUC       B         3         false     NULL 
+ 4984181   NULL         ESTIMATE  0.00      KG   0         0.00      HAM       HAM       MUC       TB        2         false     NULL 
+Nilled positions: 4 1 
+STATUS FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1 DGR_ITEMS 0"
+19883327;2024-05-07 07:58:56.957;XY;999;;7;HAM;human;CreateLoadingInstructionAction;2024-05-07 07:58:56,957 INFO  [5a2be57515419b1b] [XY0999 /07 HAM | human       | CreateLoadingInstructionAction      |                                | default task-19]  Sent:;"Message type        :   LOADING_INSTRUCTION
+Subject             :   XY0999/07MAY HAM-MUC; Loading Instruction Edition 01
+Attachment file name:   XY0999_07MAY_HAMMUC_Loading_Instruction_Edition_01
+Body                :
+
+LOADING INSTRUCTION/REPORT      PREPARED BY                    EDNO
+ALL WEIGHTS IN KILOGRAM       Max Muster                         01
+
+FROM/TO FLIGHT      A/C REG     VERSION                DATE    TIME
+HAM MUC XY 0999 /07 UUXCZ       Y186                   07MAY24 0958
+
+PLANNED JOINING LOAD
+MUC     Y 100                   C   200  M     0  B  1500
+
+JOINING SPECS :
+TRANSIT SPECS :
+RELOADS :
+                                                             ACTUAL
+LOADING INSTRUCTION                                          WEIGHT
+*******************************************************************
+CPT 1      MAX   809                                 :
+:                                                    :
+:1    NIL                                            :            D
+:REPORT:               ..."
+19883328;2024-05-07 07:58:56.958;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:56,958 INFO  [5a2be57515419b1b] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883329;2024-05-07 07:58:56.958;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:56,958 INFO  [5a2be57515419b1b] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 47216.00  KG               TOTAL_DEADLOAD_WI index       : 44.94                               
+ TOTAL_LOAD_WI                 : 1700.00   KG               TOTAL_TRAFFIC_LOAD            : 9200.00   KG              
+ FUEL_INDEX                    : 7.40                      
+ AZFW                          : 54716.00  KG               ATOW                          : 63516.00  KG                         
+ ALAW                          : 58016.00  KG               ATXW                          : 63716.00  KG                                  
+ AFT_LIMIT_ZFW                 : 59.56                      FWD_LIMIT_ZFW     ..."
+19883490;2024-05-07 07:58:56.958;XY;999;;7;HAM;human;CreateLoadingInstructionAction;2024-05-07 07:58:56,958 INFO  [5a2be57515419b1b] [XY0999 /07 HAM | human       | CreateLoadingInstructionAction      |                                | default task-19]  Saved:;STATUS LOADING_INSTRUCTION 1 FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1 DGR_ITEMS 0
+19883491;2024-05-07 07:58:58.530;XY;999;;7;HAM;human;CargoFinalAction;2024-05-07 07:58:58,530 INFO  [6a9134498b6d8e9a] [XY0999 /07 HAM | human       | CargoFinalAction                    | Cargo Final                    | default task-19]  Received:;Cargo final : true
+19883492;2024-05-07 07:58:58.530;XY;999;;7;HAM;human;CargoFinalAction;2024-05-07 07:58:58,530 INFO  [6a9134498b6d8e9a] [XY0999 /07 HAM | human       | CargoFinalAction                    | Cargo Final                    | default task-19]  Saved:;STATUS LOADING_INSTRUCTION 1 FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_FINAL 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1 DGR_ITEMS 0
+19883493;2024-05-07 07:58:59.421;XY;999;;7;HAM;human;RampFinalAction;2024-05-07 07:58:59,421 INFO  [ef08bcd6f5c6d38b] [XY0999 /07 HAM | human       | RampFinalAction                     | Ramp Final                     | default task-19]  Received:;"Caller user             : human
+Close ramp              : true
+Check discrepancy       : true"
+19883494;2024-05-07 07:58:59.422;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:59,422 INFO  [ef08bcd6f5c6d38b] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883495;2024-05-07 07:58:59.422;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:58:59,422 INFO  [ef08bcd6f5c6d38b] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 47216.00  KG               TOTAL_DEADLOAD_WI index       : 44.94                               
+ TOTAL_LOAD_WI                 : 1700.00   KG               TOTAL_TRAFFIC_LOAD            : 9200.00   KG              
+ FUEL_INDEX                    : 7.40                      
+ AZFW                          : 54716.00  KG               ATOW                          : 63516.00  KG                         
+ ALAW                          : 58016.00  KG               ATXW                          : 63716.00  KG                                  
+ AFT_LIMIT_ZFW                 : 59.56                      FWD_LIMIT_ZFW     ..."
+19883496;2024-05-07 07:58:59.422;XY;999;;7;HAM;human;RampFinalAction;2024-05-07 07:58:59,422 INFO  [ef08bcd6f5c6d38b] [XY0999 /07 HAM | human       | RampFinalAction                     | Ramp Final                     | default task-19]  Saved:;STATUS LOADING_INSTRUCTION 1 FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_FINAL 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1 DGR_ITEMS 0
+19883510;2024-05-07 07:59:06.946;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:59:06,946 INFO  [1b699a6148b15dd0] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 47216.00  KG               TOTAL_DEADLOAD_WI index       : 44.94                               
+ TOTAL_LOAD_WI                 : 1700.00   KG               TOTAL_TRAFFIC_LOAD            : 9200.00   KG              
+ FUEL_INDEX                    : 7.40                      
+ AZFW                          : 54716.00  KG               ATOW                          : 63516.00  KG                         
+ ALAW                          : 58016.00  KG               ATXW                          : 63716.00  KG                                  
+ AFT_LIMIT_ZFW                 : 59.56                      FWD_LIMIT_ZFW     ..."
+19883511;2024-05-07 07:59:06.946;XY;999;;7;HAM;human;UpdateLoadTableAction;2024-05-07 07:59:06,946 INFO  [1b699a6148b15dd0] [XY0999 /07 HAM | human       | UpdateLoadTableAction               |                                | default task-19]  Saved:;"com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750717  flightId = 496775 legId = 521041  deleted = false  fragmentId = LoadFragment ]
+BULK
+ Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
+ 4984159   NULL         ESTIMATE  1500.00   KG   100       0.00      HAM       HAM       MUC       B         3         false     NULL 
+ 4984158   NULL         ESTIMATE  200.00    KG   0         0.00      HAM       HAM       MUC       C         2         false     ICE/4.RMK/TEST UM DAAS DISPLAY ZU SEHEN.RFL/2.RFL/3.RFL/4.RFL/5.RFL/6.RFL/7.RFL/8 
+
+Total baggage      : 1500.00  KG               
+Total cargo        : 200.00   KG               
+Total EIC          : 0.00     KG               
+Total mail         : 0.00     KG               
+STATUS LOADING_INSTRUCTION 1 FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_FINAL 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRAT..."
+19883512;2024-05-07 07:59:08.414;XY;999;;7;HAM;human;RampFinalAction;2024-05-07 07:59:08,414 INFO  [b46b648c44eeeb7c] [XY0999 /07 HAM | human       | RampFinalAction                     | Ramp Final                     | default task-19]  Received:;"Caller user             : human
+Close ramp              : true
+Check discrepancy       : true"
+19883513;2024-05-07 07:59:08.414;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:59:08,414 INFO  [b46b648c44eeeb7c] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883514;2024-05-07 07:59:08.414;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:59:08,414 INFO  [b46b648c44eeeb7c] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 47216.00  KG               TOTAL_DEADLOAD_WI index       : 44.94                               
+ TOTAL_LOAD_WI                 : 1700.00   KG               TOTAL_TRAFFIC_LOAD            : 9200.00   KG              
+ FUEL_INDEX                    : 7.40                      
+ AZFW                          : 54716.00  KG               ATOW                          : 63516.00  KG                         
+ ALAW                          : 58016.00  KG               ATXW                          : 63716.00  KG                                  
+ AFT_LIMIT_ZFW                 : 59.56                      FWD_LIMIT_ZFW     ..."
+19883515;2024-05-07 07:59:08.415;XY;999;;7;HAM;human;RampFinalAction;2024-05-07 07:59:08,415 INFO  [b46b648c44eeeb7c] [XY0999 /07 HAM | human       | RampFinalAction                     | Ramp Final                     | default task-19]  Saved:;STATUS LOADING_INSTRUCTION 1 FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_FINAL 1 RAMP_FINAL 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1 DGR_ITEMS 0
+19883516;2024-05-07 07:59:10.720;XY;999;;7;HAM;human;CreateLoadsheetAction;2024-05-07 07:59:10,720 INFO  [525cf950c8038f84] [XY0999 /07 HAM | human       | CreateLoadsheetAction               |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  preliminary = false ]
+19883517;2024-05-07 07:59:10.721;XY;999;;7;HAM;human;CreateLoadsheetAction;2024-05-07 07:59:10,721 INFO  [525cf950c8038f84] [XY0999 /07 HAM | human       | CreateLoadsheetAction               |                                | default task-19]  Sent:;"Message type        :   LOADSHEET
+Subject             :   XY0999/07MAY HAM-MUC; Loadsheet Edition 01
+Attachment file name:   XY0999_07MAY_HAMMUC_Loadsheet_Edition_01
+Body                :
+ AKASA AIR
+ L O A D S H E E T             CHECKED:         APPROVED     EDNO
+ ALL WEIGHTS IN KILOGRAM       Muster                           01
+
+ FROM/TO FLIGHT      A/C REG    CONFIG     CREW    DATE      TIME
+ HAM MUC XY 0999/07  UUXCZ      Y186       2/04   07MAY24    0959
+ 
+                             WEIGHT DISTRIBUTION
+ LOAD IN COMPARTMENTS         1700   1/0  2/200  3/1500  4/0
+
+                             BAG/1500 CARGO/200 MAIL/0 EIC/0
+
+ PASSENGER / CABIN BAG        7500  100/000/000/000     TTL 100
+ CABIN CLASS                        Y  /100         
+ CABIN AREA                          0A/10  0B/19  0C/19  0D/20  
+                                     0E/16  0F/16    
+ TOB                                106
+
+ TOTAL TRAFFIC LOAD           9200
+ DRY OPERATING WEIGHT        45516
+ ZERO FUEL WEIGHT ACTUAL     547..."
+19883518;2024-05-07 07:59:10.722;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:59:10,722 INFO  [525cf950c8038f84] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883519;2024-05-07 07:59:10.722;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 07:59:10,722 INFO  [525cf950c8038f84] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 47216.00  KG               TOTAL_DEADLOAD_WI index       : 44.94                               
+ TOTAL_LOAD_WI                 : 1700.00   KG               TOTAL_TRAFFIC_LOAD            : 9200.00   KG              
+ FUEL_INDEX                    : 7.40                      
+ AZFW                          : 54716.00  KG               ATOW                          : 63516.00  KG                         
+ ALAW                          : 58016.00  KG               ATXW                          : 63716.00  KG                                  
+ AFT_LIMIT_ZFW                 : 59.56                      FWD_LIMIT_ZFW     ..."
+19883520;2024-05-07 07:59:10.722;XY;999;;7;HAM;human;CreateLoadsheetAction;2024-05-07 07:59:10,722 INFO  [525cf950c8038f84] [XY0999 /07 HAM | human       | CreateLoadsheetAction               |                                | default task-19]  Saved:;STATUS LOADSHEET 1 LOADING_INSTRUCTION 1 FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_FINAL 1 RAMP_FINAL 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1 DGR_ITEMS 0
+19883558;2024-05-07 08:00:11.461;XY;999;;7;HAM;human;UpdateLoadTableAction;2024-05-07 08:00:11,461 INFO  [502a3f58ba9cf3bc] [XY0999 /07 HAM | human       | UpdateLoadTableAction               |                                | default task-19]  Received:;"com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750717  flightId = 496775 legId = NULL  deleted = false  fragmentId = LoadFragment ]
+BULK
+ Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
+ 4984158   NULL         ESTIMATE  200.00    KG   0         0.00      HAM       HAM       MUC       C         2         true      ICE/4.RFL/2.RFL/3.RFL/4.RFL/5.RFL/6.RFL/7.RFL/8.RFL/9.RFL/10.RFL/11.RFL/12.RFL/13.RFL/14.RFL/15.RFL/16.RFL/17.RFL/18.RFL/19.RFL/20 
+ 4984159   NULL         ESTIMATE  1500.00   KG   100       0.00      HAM       HAM       MUC       B         3         true      NULL"
+19883559;2024-05-07 08:00:11.462;XY;999;;7;HAM;human;RampFinalAction;2024-05-07 08:00:11,462 INFO  [502a3f58ba9cf3bc] [XY0999 /07 HAM | human       | RampFinalAction                     | Reopen Ramp                    | default task-19]  Received:;"Caller user             : human
+Close ramp              : false
+Check discrepancy       : false
+User name               : human
+Confirmation message    : NULL"
+19883560;2024-05-07 08:00:11.462;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 08:00:11,462 INFO  [502a3f58ba9cf3bc] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883561;2024-05-07 08:00:11.462;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 08:00:11,462 INFO  [502a3f58ba9cf3bc] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 47216.00  KG               TOTAL_DEADLOAD_WI index       : 44.94                               
+ TOTAL_LOAD_WI                 : 1700.00   KG               TOTAL_TRAFFIC_LOAD            : 9200.00   KG              
+ FUEL_INDEX                    : 7.40                      
+ AZFW                          : 54716.00  KG               ATOW                          : 63516.00  KG                         
+ ALAW                          : 58016.00  KG               ATXW                          : 63716.00  KG                                  
+ AFT_LIMIT_ZFW                 : 59.56                      FWD_LIMIT_ZFW     ..."
+19883562;2024-05-07 08:00:11.462;XY;999;;7;HAM;human;RampFinalAction;2024-05-07 08:00:11,462 INFO  [502a3f58ba9cf3bc] [XY0999 /07 HAM | human       | RampFinalAction                     | Reopen Ramp                    | default task-19]  Saved:;STATUS LOADSHEET 1 LOADING_INSTRUCTION 1 FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_FINAL 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1 DGR_ITEMS 0
+19883563;2024-05-07 08:00:11.463;XY;999;;7;HAM;human;UpdateLoadTableAction;2024-05-07 08:00:11,463 INFO  [502a3f58ba9cf3bc] [XY0999 /07 HAM | human       | UpdateLoadTableAction               |                                | default task-19]  Saved:;"com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750717  flightId = 496775 legId = 521041  deleted = false  fragmentId = LoadFragment ]
+BULK
+ Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
+ 4983921   NULL         ESTIMATE  200.00    KG   0         0.00      HAM       HAM       MUC       C         2         true      ICE/4.RFL/2.RFL/3.RFL/4.RFL/5.RFL/6.RFL/7.RFL/8.RFL/9.RFL/10.RFL/11.RFL/12.RFL/13.RFL/14.RFL/15.RFL/16.RFL/17.RFL/18.RFL/19.RFL/20 
+ 4983920   NULL         ESTIMATE  1500.00   KG   100       0.00      HAM       HAM       MUC       B         3         true      NULL 
+
+Total baggage      : 1500.00  KG               
+Total cargo        : 200.00   KG               
+Total EIC          : 0.00     KG               
+Total mail         : 0.00     KG               
+STATUS LOADSHEET 1 LOADING_INSTRUCTION 1 FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_FINAL 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOM..."
+19883564;2024-05-07 08:00:22.286;XY;999;;7;HAM;human;RampFinalAction;2024-05-07 08:00:22,286 INFO  [1ef9227d331a93f8] [XY0999 /07 HAM | human       | RampFinalAction                     | Ramp Final                     | default task-19]  Received:;"Caller user             : human
+Close ramp              : true
+Check discrepancy       : true"
+19883565;2024-05-07 08:00:22.287;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 08:00:22,287 INFO  [1ef9227d331a93f8] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883566;2024-05-07 08:00:22.287;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 08:00:22,287 INFO  [1ef9227d331a93f8] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 47216.00  KG               TOTAL_DEADLOAD_WI index       : 44.94                               
+ TOTAL_LOAD_WI                 : 1700.00   KG               TOTAL_TRAFFIC_LOAD            : 9200.00   KG              
+ FUEL_INDEX                    : 7.40                      
+ AZFW                          : 54716.00  KG               ATOW                          : 63516.00  KG                         
+ ALAW                          : 58016.00  KG               ATXW                          : 63716.00  KG                                  
+ AFT_LIMIT_ZFW                 : 59.56                      FWD_LIMIT_ZFW     ..."
+19883567;2024-05-07 08:00:22.287;XY;999;;7;HAM;human;RampFinalAction;2024-05-07 08:00:22,287 INFO  [1ef9227d331a93f8] [XY0999 /07 HAM | human       | RampFinalAction                     | Ramp Final                     | default task-19]  Saved:;STATUS LOADSHEET 1 LOADING_INSTRUCTION 1 FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_FINAL 1 RAMP_FINAL 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1 FINAL_RELEASE 1 DGR_ITEMS 0
+19883568;2024-05-07 08:00:25.421;XY;999;;7;HAM;human;CreateLoadsheetAction;2024-05-07 08:00:25,421 INFO  [7850d17c245ae3b] [XY0999 /07 HAM | human       | CreateLoadsheetAction               |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  preliminary = false ]
+19883569;2024-05-07 08:00:25.421;XY;999;;7;HAM;human;CreateLoadsheetAction;2024-05-07 08:00:25,421 INFO  [7850d17c245ae3b] [XY0999 /07 HAM | human       | CreateLoadsheetAction               |                                | default task-19]  Sent:;"Message type        :   LOADSHEET
+Subject             :   XY0999/07MAY HAM-MUC; Loadsheet Edition 02
+Attachment file name:   XY0999_07MAY_HAMMUC_Loadsheet_Edition_02
+Body                :
+ AKASA AIR
+ L O A D S H E E T             CHECKED:         APPROVED     EDNO
+ ALL WEIGHTS IN KILOGRAM       Muster                           02
+
+ FROM/TO FLIGHT      A/C REG    CONFIG     CREW    DATE      TIME
+ HAM MUC XY 0999/07  UUXCZ      Y186       2/04   07MAY24    1000
+ 
+                             WEIGHT DISTRIBUTION
+ LOAD IN COMPARTMENTS         1700   1/0  2/200  3/1500  4/0
+
+                             BAG/1500 CARGO/200 MAIL/0 EIC/0
+
+ PASSENGER / CABIN BAG        7500  100/000/000/000     TTL 100
+ CABIN CLASS                        Y  /100         
+ CABIN AREA                          0A/10  0B/19  0C/19  0D/20  
+                                     0E/16  0F/16    
+ TOB                                106
+
+ TOTAL TRAFFIC LOAD           9200
+ DRY OPERATING WEIGHT        45516
+ ZERO FUEL WEIGHT ACTUAL     547..."
+19883570;2024-05-07 08:00:25.422;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 08:00:25,422 INFO  [7850d17c245ae3b] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Received:;com.lhsystems.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 521041 ]
+19883571;2024-05-07 08:00:25.422;XY;999;;7;HAM;human;CalculateWeightAndTrimAction;2024-05-07 08:00:25,422 INFO  [7850d17c245ae3b] [XY0999 /07 HAM | human       | CalculateWeightAndTrimAction        |                                | default task-19]  Saved:;"START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 47216.00  KG               TOTAL_DEADLOAD_WI index       : 44.94                               
+ TOTAL_LOAD_WI                 : 1700.00   KG               TOTAL_TRAFFIC_LOAD            : 9200.00   KG              
+ FUEL_INDEX                    : 7.40                      
+ AZFW                          : 54716.00  KG               ATOW                          : 63516.00  KG                         
+ ALAW                          : 58016.00  KG               ATXW                          : 63716.00  KG                                  
+ AFT_LIMIT_ZFW                 : 59.56                      FWD_LIMIT_ZFW     ..."
+19883572;2024-05-07 08:00:25.422;XY;999;;7;HAM;human;CreateLoadsheetAction;2024-05-07 08:00:25,422 INFO  [7850d17c245ae3b] [XY0999 /07 HAM | human       | CreateLoadsheetAction               |                                | default task-19]  Saved:;STATUS LOADSHEET 2 LOADING_INSTRUCTION 1 FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_FINAL 1 RAMP_FINAL 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1 FINAL_RELEASE 1 DGR_ITEMS 0
