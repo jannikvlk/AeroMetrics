@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 TOTAL Pax: 100    Y: 100  Jump: 0    StandBy: NULL  Male: 100  Female: 0  Child: 0  Infant: 0  Total bag: 0  Total bag weight: 0.0 KG  Baggage weight type: STANDARD
  Distribution        : STANDARD_DISTRIBUTION    
  Section             : 0A                       0B                       0C                       0D                       0E                       0F                       
@@ -5,3 +6,14 @@ TOTAL Pax: 100    Y: 100  Jump: 0    StandBy: NULL  Male: 100  Female: 0  Child:
  Distribution        : Y10                      Y19                      Y19                      Y20                      Y16                      Y16                      
  Undistributed pax   : 0                        
 STATUS AIRCRAFT_CONFIG 1 EZFW 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1
+=======
+START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
+ TOTAL_DEADLOAD_WI weight      : 45516.00  KG               TOTAL_DEADLOAD_WI index       : 37.42                               
+ TOTAL_LOAD_WI                 : 0.00      KG               TOTAL_TRAFFIC_LOAD            : 7500.00   KG              
+ FUEL_INDEX                    : 0.00                      
+ AZFW                          : 53016.00  KG               ATOW                          : 53016.00  KG                         
+ ALAW                          : 53016.00  KG               ATXW                          : 53016.00  KG                                  
+ AFT_LIMIT_ZFW                 : 53.14                      FWD_LIMIT_ZFW     ...
+>>>>>>> 19b627119a54cec73ba9dd76d4bf903d95754737
