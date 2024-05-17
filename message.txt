@@ -1,17 +1,9 @@
-START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
-
- DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
-
- PAX_WI weight                 : 7500.00   KG               PAX_WI index                  : 0.74                               
-
- TOTAL_DEADLOAD_WI weight      : 45516.00  KG               TOTAL_DEADLOAD_WI index       : 37.42                               
-
- TOTAL_LOAD_WI                 : 0.00      KG               TOTAL_TRAFFIC_LOAD            : 7500.00   KG              
-
- FUEL_INDEX                    : 0.00                      
-
- AZFW                          : 53016.00  KG               ATOW                          : 53016.00  KG                         
-
- ALAW                          : 53016.00  KG               ATXW                          : 53016.00  KG                                  
-
- AFT_LIMIT_ZFW                 : 53.14                      FWD_LIMIT_ZFW     ...
+START_WI weight               : 45102.00  KG               START_WI index                : 37.23                     
+ DO_WI weight                  : 45516.00  KG               DO_WI index                   : 37.42                     
+ PAX_WI weight                 : 0.00      KG               PAX_WI index                  : 0.00                               
+ TOTAL_DEADLOAD_WI weight      : 45516.00  KG               TOTAL_DEADLOAD_WI index       : 37.42                               
+ TOTAL_LOAD_WI                 : 0.00      KG               TOTAL_TRAFFIC_LOAD            : 0.00      KG              
+ FUEL_INDEX                    : 0.00                      
+ AZFW                          : 45516.00  KG               ATOW                          : 45516.00  KG                         
+ ALAW                          : 45516.00  KG               ATXW                          : 45516.00  KG                                  
+ AFT_LIMIT_ZFW                 : 43.21                      FWD_LIMIT_ZFW     ...
