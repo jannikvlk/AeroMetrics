@@ -1,7 +1,7 @@
-com.lhsystems.lc2.manualloadplanning.dto.LoadDTO [ id = 1750717  flightId = 496775 legId = 521041  deleted = false  fragmentId = LoadFragment ]
-BULK
- Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
- 4984196   NULL         ESTIMATE  1500.00   KG   100       0.00      HAM       HAM       MUC       B         SBY       false     NULL 
- 4984178   NULL         ESTIMATE  200.00    KG   0         0.00      HAM       HAM       MUC       C         SBY       false     ICE/4.RMK/TEST UM DAAS DISPLAY ZU SEHEN.RFL/2.RFL/3.RFL/4.RFL/5.RFL/6.RFL/7.RFL/8 
- 4984197   NULL         ESTIMATE  0.00      KG   0         0.00      HAM       HAM       MUC       TB        SBY       false     NULL 
-STATUS FUEL 1 AIRCRAFT_CONFIG 1 EZFW 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1 DGR_ITEMS 0
+TOTAL Pax: 100    Y: 100  Jump: 0    StandBy: NULL  Male: 100  Female: 0  Child: 0  Infant: 0  Total bag: 0  Total bag weight: 0.0 KG  Baggage weight type: STANDARD
+ Distribution        : STANDARD_DISTRIBUTION    
+ Section             : 0A                       0B                       0C                       0D                       0E                       0F                       
+ Capacity            : Y18                      Y36                      Y36                      Y36                      Y30                      Y30                      
+ Distribution        : Y10                      Y19                      Y19                      Y20                      Y16                      Y16                      
+ Undistributed pax   : 0                        
+STATUS AIRCRAFT_CONFIG 1 EZFW 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 1
