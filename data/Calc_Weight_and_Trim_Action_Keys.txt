@@ -1,0 +1,51 @@
+
+1. START_WI weight: Initial weight of the aircraft at the start of the process (45032.00 KG).
+2. START_WI index: Initial center of gravity (CG) index at the start of the process (36.75).
+3. DO_WI weight: Dry Operating Weight, the weight of the aircraft including crew, crew baggage, catering, and other necessary items (45446.00 KG).
+4. DO_WI index: CG index for the Dry Operating Weight (36.94).
+5. PAX_WI weight: Total weight of passengers onboard (13630.00 KG).
+6. PAX_WI index: CG index contribution of the passenger load (-2.94).
+7. TOTAL_DEADLOAD_WI weight: Total weight of all non-fuel items, including cargo and baggage (47715.00 KG).
+8. TOTAL_DEADLOAD_WI index: CG index for the total deadload (47.32).
+9. TOTAL_LOAD_WI: The combined weight of all loaded items (2269.00 KG).
+10. TOTAL_TRAFFIC_LOAD: Total weight of all traffic load, including passengers, baggage, and cargo (15899.00 KG).
+11. FUEL_INDEX: CG index contribution of the fuel (9.00).
+12. AZFW: Actual Zero Fuel Weight, the total weight of the aircraft minus usable fuel (61345.00 KG).
+13. ATOW: Actual Take-Off Weight, the weight of the aircraft at the point of takeoff (69144.00 KG).
+14. ALAW: Actual Landing Weight, the weight of the aircraft at landing (64828.00 KG).
+15. ATXW: Actual Taxi Weight, the weight of the aircraft including fuel burned during taxiing (69496.00 KG).
+16. AFT_LIMIT_ZFW: Aft CG limit for Zero Fuel Weight (65.40).
+17. FWD_LIMIT_ZFW: Forward CG limit for Zero Fuel Weight (21.68).
+18. AFT_LIMIT_TOW: Aft CG limit for Take-Off Weight (74.50).
+19. FWD_LIMIT_TOW: Forward CG limit for Take-Off Weight (25.44).
+20. AFT_LIMIT_LAW: Aft CG limit for Landing Weight (not provided, NULL).
+21. FWD_LIMIT_LAW: Forward CG limit for Landing Weight (not provided, NULL).
+22. LIZFW: CG position in terms of the leading edge of the mean aerodynamic chord at Zero Fuel Weight (44.38).
+23. LITOW: CG position in terms of the leading edge of the mean aerodynamic chord at Take-Off Weight (53.38).
+24. LILAW: CG position in terms of the leading edge of the mean aerodynamic chord at Landing Weight (45.38).
+25. MAC_AT_ZFW: Mean Aerodynamic Chord position at Zero Fuel Weight (19.80).
+26. MAC_AT_TOW: Mean Aerodynamic Chord position at Take-Off Weight (22.75).
+27. MAC_AT_LAW: Mean Aerodynamic Chord position at Landing Weight (20.16).
+28. DEADLOAD_MAC: Mean Aerodynamic Chord for deadload items (21.12).
+29. UNDERLOAD: Difference between maximum allowable load and actual load (4130.00 KG).
+30. LIMITING_WEIGHT: The limiting weight factor for the flight (LIMITING_WEIGHT_LAW).
+31. ALLOWED TOW: Maximum allowable Take-Off Weight (73274.00 KG).
+32. ALLOWED ZFW: Maximum allowable Zero Fuel Weight (61345.00 KG).
+33. ALLOWED LAW: Maximum allowable Landing Weight (64828.00 KG).
+34. ALLOWED TXW: Maximum allowable Taxi Weight (69496.00 KG).
+35. STABTO: Stabilizer trim setting for takeoff (NULL).
+36. OPTIMAL_TRIM: Optimal trim setting for the flight (53.50).
+37. IDEAL_ADDITIONAL_LOAD_AFT: Ideal additional load that can be added aft (592.02 KG).
+38. IDEAL_ADDITIONAL_LOAD_FWD: Ideal additional load that can be added forward (-592.02 KG).
+39. TAIL_TIPPING_WI weight: Weight at which the aircraft would tail tip (62364.50 KG).
+40. TAIL_TIPPING_WI index: CG index at which tail tipping would occur (103.96).
+41. TAIL_TIPPING_INDEX_EXCEEDED: Indicates if the tail tipping index is exceeded (false).
+42. FWD_MOVABLE_PAX: Number of passengers that can be moved forward to adjust CG (NULL).
+43. AFT_MOVABLE_PAX: Number of passengers that can be moved aft to adjust CG (NULL).
+44. INDEX_OUT_OF_BALANCE: Indicates if the CG index is out of balance (NULL).
+45. LOAD_TO_AFT: Load that needs to be moved to the aft (NULL).
+46. LOAD_TO_FWD: Load that needs to be moved to the forward (NULL).
+47. ESTIMATED_TRAFFIC_LOAD: Estimated total traffic load (15899.00 KG).
+48. ESTIMATED_ZFW: Estimated Zero Fuel Weight (61345.00 KG).
+49. DELTA_ZFW: Difference between estimated and actual Zero Fuel Weight (-2055.00 KG).
+50. ZFW_TOLERANCE_EXCEEDED: Indicates if the ZFW tolerance is exceeded (NULL).

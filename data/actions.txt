@@ -1,0 +1,98 @@
+
+1. ASMMsgProcessor: Processes ASM (Airline Service Messaging) messages which may include information on flight schedules and changes.
+
+2. AcceptTransitDataAction: Handles the acceptance and processing of transit data for passengers and cargo.
+
+3. AcceptTransitLoadAction: Manages the acceptance of load data during transit, ensuring all load information is correctly recorded.
+
+4. AcceptTransitNotocAction: Manages acceptance of Notoc (Notification to Captain) data during transit for hazardous materials.
+
+5. AssignLCCAction: Assigns load control center responsibilities for a flight, determining which team will manage load planning.
+
+6. AssignLoadplanAction: Assigns specific load plans to flights, ensuring proper distribution of cargo and baggage.
+
+7. AssignUnassignViewAction: Manages the assignment and unassignment of view permissions or roles in the system.
+
+8. CalculateWeightAndTrimAction: Calculates the weight and balance (trim) of the aircraft to ensure safe operation.
+
+9. CargoFinalAction: Finalizes cargo load information before departure, ensuring all data is complete and accurate.
+
+10. ChangeFlightLegStateAction: Changes the state of a flight leg, such as from planned to in-progress or completed.
+
+11. CheckinMsgProcessor: Processes check-in messages, updating the system with passenger check-in information.
+
+12. CloseLegAction: Closes a flight leg in the system, indicating that all operations for that leg are complete.
+
+13. CreatePostDepartureMessagesAction: Generates messages to be sent after the flight departs, such as notifications to relevant parties.
+
+14. CreateLoadingInstructionAction: Creates loading instructions for the ground crew, detailing how to load the aircraft.
+
+15. CreateLoadsheetAction: Generates the loadsheet, a document detailing the distribution of weight on the aircraft.
+
+16. CreateZFWMessageAction: Creates a message detailing the Zero Fuel Weight (ZFW) of the aircraft.
+
+17. CreateBaggageLoadItemsAction: Creates entries for baggage items to be loaded onto the aircraft.
+
+18. ClearFlightsAction: Clears flight data from the system, possibly for data management or to prepare for new entries.
+
+19. InternalCreateLoadingInstructionAct: Similar to CreateLoadingInstructionAction, but likely used internally within the airline's systems.
+
+20. InternalCreateLoadsheetAction: Similar to CreateLoadsheetAction, but for internal use within the airline's operations.
+
+21. FlightPlanFiguresInMsgProcessor: Processes incoming messages related to flight plan figures, updating the system with this data.
+
+22. RampFinalAction: Finalizes ramp operations, ensuring all ground handling tasks are complete.
+
+23. CrewMsgProcessor: Processes messages related to crew assignments and information.
+
+24. PAXBOOKINGINMsgProcessor: Processes incoming passenger booking messages, updating the booking system.
+
+25. EstimateStorePaxDataAction: Estimates and stores passenger data for future planning and operations.
+
+26. ReopenLegAction: Reopens a previously closed flight leg, possibly for updates or corrections.
+
+27. GetCabinConfigurationsAction: Retrieves the cabin configuration for a specific flight, detailing seat layout and passenger distribution.
+
+28. FuelDataInitializer: Initializes fuel data for a flight, preparing the system for fuel management.
+
+29. SendPostDepartureMessagesAction: Sends messages after the flight has departed, such as updates to the destination airport.
+
+30. SetActualBagWeightIndicatorAction: Sets indicators for the actual weight of baggage loaded onto the aircraft.
+
+31. TransferCheckinDataAction: Transfers check-in data between systems or modules within the airline's IT infrastructure.
+
+32. StoreAircraftDataAction: Stores data related to the aircraft, such as its configuration, performance parameters, and operational history.
+
+33. SpecialPaxWeightAction: Manages special passenger weight data, possibly for passengers with unique weight requirements.
+
+34. StorePaxDataGuiAction: Stores passenger data via a graphical user interface, allowing for manual input and adjustments.
+
+35. StoreCKIAverageWeightAction: Stores average weight data for checked-in passengers, used for weight and balance calculations.
+
+36. ResetLoadingListRecordsAction: Resets records related to loading lists, possibly to clear errors or update data.
+
+37. StoreRegistrationAndConfigurationAc: Stores aircraft registration and configuration data, crucial for operational planning.
+
+38. TransferCargoAction: Manages the transfer of cargo data between different systems or modules.
+
+39. SendLoadingInstructionAction: Sends loading instructions to relevant parties, ensuring everyone is informed about how to load the aircraft.
+
+40. SendLoadsheetAction: Sends the loadsheet to necessary recipients, providing details on weight distribution.
+
+41. UpdateHistoricalFlightLegInfoAction: Updates historical data for flight legs, maintaining accurate records.
+
+42. UpdateFuelDataAction: Updates fuel data for a flight, ensuring accurate fuel management.
+
+43. UpdateEstimatesAction: Updates various estimates related to the flight, such as time of arrival or fuel consumption.
+
+44. UpdateCrewDataAction: Updates crew data, reflecting changes in assignments or crew details.
+
+45. UpdateFlightAction: Updates general flight data, ensuring all information is current and accurate.
+
+46. UpdateLoadTableAction: Updates load tables, which contain detailed information on cargo and baggage distribution.
+
+47. UpdateSupplementaryInfoAction: Updates supplementary information related to the flight, which could include various operational details.
+
+48. UpdateTransitLoadTableAction: Updates load tables specifically for transit flights, ensuring accurate data for multi-leg journeys.
+
+49. StorePaxDataAction: Stores passenger data, ensuring all relevant information is captured in the system.
