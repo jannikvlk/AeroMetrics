@@ -1,0 +1,13 @@
+com.onesystem.lc2.paxactuals.dto.PaxDataDTO [ id = 2295980 ]
+ Baggage weight type: ACTUAL         
+MAA            
+                Y              Jump           Standby        Male           Female         Child          Infant         Bags           BWgt           Average        
+Checkin         170            NULL           NULL           90             71             9              0              139            1466.00 KG     10.55 KG       
+BLR            
+                Y              Jump           Standby        Male           Female         Child          Infant         Bags           BWgt           Average        
+Checkin         14             NULL           NULL           4              9              1              0              12             138.00 KG      11.50 KG       
+
+ Distribution   : CKI_DISTRIBUTION 
+ Section        : 0A             0B             0C             0D             0E             0F             
+ Capacity       : Y33            Y30            Y30            Y30            Y30            Y36            
+ Distribution   : Y31            Y30            Y29            Y29            Y29            Y36
