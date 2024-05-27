@@ -8,7 +8,7 @@ AssignUnassignViewAction: Anzeige der Zuordnung eines Flug(legs) an einen Loadco
 AutoLoadBulkAction: automatische Ladeplanung (Bulk = Palette)
 AutoLoadULDAction: automatische Ladeplanung (ULD = Container)
 AutomaticNotificationAction: automatische Benachrichtigung
-CalculateWeightAndTrimAction: Berechnung der Gewichtsverteilung
+CalculateWeightAndTrimAction: Berechnung der Gewichtsverteilung - INCLUDE
 CargoFinalAction: Mitteilung der aktuellen Fracht-Daten
 CargoFinalActionTDM: Datenbanktransaktion
 ChangeFlightLegStateAction: Änderung des Flugleg-Status
@@ -25,11 +25,11 @@ CreateAndSendFuelOrderAction: Erstellen und Senden der Treibstoffbestellung
 CreateAndSendUldOrdMessageAction: Erstellen und Senden der Containerbestellung
 CreateBaggageLoadItemsAction: Erstellen der Gepäck-Ladeanweisung
 CreateLoadingInstructionAction: Erstellen der Loading Instruction
-CreateLoadsheetAction: Erstellen des Loadsheets
+CreateLoadsheetAction: Erstellen des Loadsheets - INCLUDE
 CreatePostDepartureMessagesAction: Erstellen einer Information nach Abflug
-CreateZFWMessageAction: Erstellen der Gewichtsschätzung
+CreateZFWMessageAction: Erstellen der Gewichtsschätzung - INCLUDE
 CrewMsgProcessor: Verarbeitung einer Crew Message
-EstimateStorePaxDataAction: Erstellen und Speichern einer Passagierdaten-Schätzung
+EstimateStorePaxDataAction: Erstellen und Speichern einer Passagierdaten-Schätzung - INCLUDE
 FinalFreighterBulkAction: Abschluss der Ladeplanung (Bulk)
 FinalFreighterULDAction: Abschluss der Ladeplanung (ULD)
 FinalLoadItemCheckAction: Abschluss der Ladepositionen
@@ -41,7 +41,7 @@ FuelDataRefreshAction: Aktualisierung der Treibstoffdaten
 FuelOrderProcessAction: Verarbeitung der Treibstoffbestellung
 FWAFlightFinalizationAction: Flugabschluss
 InternalCreateLoadingInstructionAct: Datenbanktransaktion
-InternalCreateLoadsheetAction: Datenbanktransaktion
+InternalCreateLoadsheetAction: Datenbanktransaktion - IGNORE
 PAXBOOKINGINMsgProcessor: Verarbeitung von Passierdaten
 RampFinalAction: Schließen eines Fluges durch den Ramp Agent
 ReopenLegAction: Wiedereröffnung eines Fluges
@@ -49,7 +49,7 @@ ResetLoadingListRecordsAction: Datenbanktransaktion
 SelectFuelOrderAction: Datenbanktransaktion
 SendFuelOrderAction: Senden der Treibstoffbestellung
 SendLoadingInstructionAction: Senden der Loading Instruction an den Loadcontroller
-SendLoadsheetAction: Senden des Loadsheets
+SendLoadsheetAction: Senden des Loadsheets - INCLUDE
 SendPostDepartureMessagesAction: Senden einer Information nach Abflug
 SetActualBagWeightIndicatorAction: Festlegen des Gepäckindikators
 SetCKIPaxDistributionAction: Festlegen der Passagierverteilung nach Check-in
