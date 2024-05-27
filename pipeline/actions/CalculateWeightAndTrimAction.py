@@ -6,7 +6,7 @@ from utils import add_to_df
 
 ACTION = "CalculateWeightAndTrimAction"
 
-def extract_abc(df):
+def extract_abcd(df):
 
     action_df = df[df.action_name == ACTION]
     random_sample(action_df)

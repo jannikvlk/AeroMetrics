@@ -20,7 +20,7 @@ def extract_data_from_xml(xml_string):
             data_dict[key] = None
     return data_dict
 
-def extract_abc(df):
+def extract_abcd(df):
 
     action_df = df[df.action_name == ACTION]
     random_sample(action_df)

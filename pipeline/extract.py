@@ -11,7 +11,7 @@ abc_file_path = os.path.join(os.path.dirname(__file__), '../data', 'ABCD_tripfil
 df_abcd = pd.read_parquet(abc_file_path, engine="pyarrow")
 
 df = pd.DataFrame()
-#CalculateWeightAndTrimAction.extract_abc(df_abcd)
-#StorePaxDataAction.extract_abc(df_abcd)
-#CreateZFWMessageAction.extract_abc(df_abcd)
-CreatLoadSheetAction.extract_abc(df_abcd)
+#CalculateWeightAndTrimAction.extract_abcd(df_abcd)
+#StorePaxDataAction.extract_abcd(df_abcd)
+#CreateZFWMessageAction.extract_abcd(df_abcd)
+CreatLoadSheetAction.extract_abcd(df_abcd)
