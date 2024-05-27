@@ -1,20 +1,20 @@
-AcceptTransitDataAction: Empfang von Transit-Daten
-AcceptTransitLoadAction: Empfang von Transit-Daten
-AcceptTransitNotocAction: Empfang von Transit-Daten
-ASMMsgProcessor: Verarbeitung einer ASM Message
-AssignLCCAction: Zuweisung eines LoadControlCenters
-AssignLoadplanAction: Zuordnung eines Flug(legs) an einen Loadcontroller
-AssignUnassignViewAction: Anzeige der Zuordnung eines Flug(legs) an einen Loadcontroller
-AutoLoadBulkAction: automatische Ladeplanung (Bulk = Palette)
-AutoLoadULDAction: automatische Ladeplanung (ULD = Container)
-AutomaticNotificationAction: automatische Benachrichtigung
+AcceptTransitDataAction: Empfang von Transit-Daten - IGNORE
+AcceptTransitLoadAction: Empfang von Transit-Daten - IGNORE
+AcceptTransitNotocAction: Empfang von Transit-Daten - IGNORE
+ASMMsgProcessor: Verarbeitung einer ASM Message - IGNORE
+AssignLCCAction: Zuweisung eines LoadControlCenters - IGNORE
+AssignLoadplanAction: Zuordnung eines Flug(legs) an einen Loadcontroller - IGNORE (BULK ITEMS COUNT AND ESTIMATED WEIGHT)
+AssignUnassignViewAction: Anzeige der Zuordnung eines Flug(legs) an einen Loadcontroller - IGNORE
+AutoLoadBulkAction: automatische Ladeplanung (Bulk = Palette) - IGNORE (BULK ITEMS COUNT AND ESTIMATED WEIGHT)
+AutoLoadULDAction: automatische Ladeplanung (ULD = Container) - IGNORE (BULK AND ULD INFO WEIGHTS ESTIMATED)
+AutomaticNotificationAction: automatische Benachrichtigung - IGNORE
 CalculateWeightAndTrimAction: Berechnung der Gewichtsverteilung - INCLUDE
-CargoFinalAction: Mitteilung der aktuellen Fracht-Daten
-CargoFinalActionTDM: Datenbanktransaktion
-ChangeFlightLegStateAction: Änderung des Flugleg-Status
-ChatConfirmMessageAction: Empfang einer Nachricht zwischen Loadcontroller und Pilot
-ChatSendMessageAction: Senden einer Nachricht zwischen Loadcontroller und Pilot
-CheckinMsgProcessor: Verarbeitung einer Check-in Message
+CargoFinalAction: Mitteilung der aktuellen Fracht-Daten - IGNORE (NO INFOS)
+CargoFinalActionTDM: Datenbanktransaktion - IGNORE (SAME AS ABOVE) 
+ChangeFlightLegStateAction: Änderung des Flugleg-Status - IGNORE
+ChatConfirmMessageAction: Empfang einer Nachricht zwischen Loadcontroller und Pilot - IGNORE (Nachrichtenverlauf zwischen Pilopt und Loadcontroller)
+ChatSendMessageAction: Senden einer Nachricht zwischen Loadcontroller und Pilot - IGNORE (Nachrichtenverlauf zwischen Pilopt und Loadcontroller)
+CheckinMsgProcessor: Verarbeitung einer Check-in Message - INCLUDE (AIRCRAFT TYPE)
 ClearFlightsAction: Datenbanktransaktion
 CloseLegAction: Schließen eines Fluglegs
 CopyCargoTableAction: Datenbanktransaktion
@@ -24,7 +24,7 @@ CopyPaxLoadDataAction: Datenbanktransaktion
 CreateAndSendFuelOrderAction: Erstellen und Senden der Treibstoffbestellung
 CreateAndSendUldOrdMessageAction: Erstellen und Senden der Containerbestellung
 CreateBaggageLoadItemsAction: Erstellen der Gepäck-Ladeanweisung
-CreateLoadingInstructionAction: Erstellen der Loading Instruction
+CreateLoadingInstructionAction: Erstellen der Loading Instruction - IGNORE (POTENTIAL)
 CreateLoadsheetAction: Erstellen des Loadsheets - INCLUDE
 CreatePostDepartureMessagesAction: Erstellen einer Information nach Abflug
 CreateZFWMessageAction: Erstellen der Gewichtsschätzung - INCLUDE
@@ -40,7 +40,7 @@ FuelCalculationAction: Treibstoffberechnung
 FuelDataRefreshAction: Aktualisierung der Treibstoffdaten
 FuelOrderProcessAction: Verarbeitung der Treibstoffbestellung
 FWAFlightFinalizationAction: Flugabschluss
-InternalCreateLoadingInstructionAct: Datenbanktransaktion
+InternalCreateLoadingInstructionAct: Datenbanktransaktion - IGNORE
 InternalCreateLoadsheetAction: Datenbanktransaktion - IGNORE
 PAXBOOKINGINMsgProcessor: Verarbeitung von Passierdaten
 RampFinalAction: Schließen eines Fluges durch den Ramp Agent
@@ -48,7 +48,7 @@ ReopenLegAction: Wiedereröffnung eines Fluges
 ResetLoadingListRecordsAction: Datenbanktransaktion
 SelectFuelOrderAction: Datenbanktransaktion
 SendFuelOrderAction: Senden der Treibstoffbestellung
-SendLoadingInstructionAction: Senden der Loading Instruction an den Loadcontroller
+SendLoadingInstructionAction: Senden der Loading Instruction an den Loadcontroller - IGNORE (POTENTIAL)
 SendLoadsheetAction: Senden des Loadsheets - INCLUDE
 SendPostDepartureMessagesAction: Senden einer Information nach Abflug
 SetActualBagWeightIndicatorAction: Festlegen des Gepäckindikators
@@ -59,7 +59,7 @@ StoreCKIAverageWeightAction: Speichern von durchschnittlichen Check-In-Werten
 StorePaxDataAction: Speichern von Passagierdaten (Schnittstelle)
 StorePaxDataGuiAction: Speichern von Passagierdaten (GUI)
 StoreRegistrationAndConfigurationAc: Speichern der Flugzeugregistration und Konfiguration
-TdmCreateLoadingInstructionAction: Datenbanktransaktion
+TdmCreateLoadingInstructionAction: Datenbanktransaktion - IGNORE (POTENTIAL)
 TransferCargoAction: Übermitteln von Frachtdaten
 TransferCheckinDataAction: Übermitteln von Check-In Daten
 UpdateCargoMailEstimatesAction: Update der Fracht- und Post-Daten

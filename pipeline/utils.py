@@ -16,4 +16,5 @@ def add_to_df(df, extracted_data, idx):
 def random_sample(df):
     random_index = random.randint(0, len(df) - 1)
     random_sample = str(df.iloc[random_index].entry_details)
-    write_to_file(random_sample, "pipeline/random_sampel.txt")
+    print(random_sample)
+    write_to_file(random_sample, "random_sampel.txt")
