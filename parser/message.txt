@@ -1,1 +1,0 @@
-com.onesystem.lc2.common.dto.SingleAttributeDTO[ id = NULL  deleted = false  legId = 544314 ]
