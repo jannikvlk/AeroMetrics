@@ -14,61 +14,61 @@ CargoFinalActionTDM: Datenbanktransaktion - IGNORE (SAME AS ABOVE)
 ChangeFlightLegStateAction: Änderung des Flugleg-Status - IGNORE
 ChatConfirmMessageAction: Empfang einer Nachricht zwischen Loadcontroller und Pilot - IGNORE (Nachrichtenverlauf zwischen Pilopt und Loadcontroller)
 ChatSendMessageAction: Senden einer Nachricht zwischen Loadcontroller und Pilot - IGNORE (Nachrichtenverlauf zwischen Pilopt und Loadcontroller)
-CheckinMsgProcessor: Verarbeitung einer Check-in Message - INCLUDE (AIRCRAFT TYPE)
-ClearFlightsAction: Datenbanktransaktion
-CloseLegAction: Schließen eines Fluglegs
-CopyCargoTableAction: Datenbanktransaktion
-CopyLoadItemsAction: Datenbanktransaktion
-CopyPaxDataAction: Datenbanktransaktion
-CopyPaxLoadDataAction: Datenbanktransaktion
-CreateAndSendFuelOrderAction: Erstellen und Senden der Treibstoffbestellung
-CreateAndSendUldOrdMessageAction: Erstellen und Senden der Containerbestellung
-CreateBaggageLoadItemsAction: Erstellen der Gepäck-Ladeanweisung
-CreateLoadingInstructionAction: Erstellen der Loading Instruction - IGNORE (POTENTIAL)
+CheckinMsgProcessor: Verarbeitung einer Check-in Message - INCLUDE (AIRCRAFT TYPE (for abcd only aircraft configuration))
+ClearFlightsAction: Datenbanktransaktion - IGNORE
+CloseLegAction: Schließen eines Fluglegs - IGNORE
+CopyCargoTableAction: Datenbanktransaktion - IGNORE
+CopyLoadItemsAction: Datenbanktransaktion - IGNORE (BULK AND ULD WEIGHTS)
+CopyPaxDataAction: Datenbanktransaktion - POTENTIAL (Baggage Weight Information)
+CopyPaxLoadDataAction: Datenbanktransaktion - IGNORE
+CreateAndSendFuelOrderAction: Erstellen und Senden der Treibstoffbestellung - IGNORE (No Values)
+CreateAndSendUldOrdMessageAction: Erstellen und Senden der Containerbestellung - IGNORE
+CreateBaggageLoadItemsAction: Erstellen der Gepäck-Ladeanweisung - POTENTIAL (Estimated BULK AND ULD WEIGHTS)
+CreateLoadingInstructionAction: Erstellen der Loading Instruction - POTENTIAL ()
 CreateLoadsheetAction: Erstellen des Loadsheets - INCLUDE
-CreatePostDepartureMessagesAction: Erstellen einer Information nach Abflug
+CreatePostDepartureMessagesAction: Erstellen einer Information nach Abflug - IGNORE
 CreateZFWMessageAction: Erstellen der Gewichtsschätzung - INCLUDE
-CrewMsgProcessor: Verarbeitung einer Crew Message
+CrewMsgProcessor: Verarbeitung einer Crew Message - IGNORE
 EstimateStorePaxDataAction: Erstellen und Speichern einer Passagierdaten-Schätzung - INCLUDE
-FinalFreighterBulkAction: Abschluss der Ladeplanung (Bulk)
-FinalFreighterULDAction: Abschluss der Ladeplanung (ULD)
-FinalLoadItemCheckAction: Abschluss der Ladepositionen
-FinalLoadPlanAction: Abschluss der Ladeplanung
-FlightArrivalAction: Flugankunft
-FlightDepartureAction: Flugabflug
-FuelCalculationAction: Treibstoffberechnung
-FuelDataRefreshAction: Aktualisierung der Treibstoffdaten
-FuelOrderProcessAction: Verarbeitung der Treibstoffbestellung
-FWAFlightFinalizationAction: Flugabschluss
+FinalFreighterBulkAction: Abschluss der Ladeplanung (Bulk) - IGNORE (too less msgs NO)
+FinalFreighterULDAction: Abschluss der Ladeplanung (ULD) - IGNORE (too less msgs NO)
+FinalLoadItemCheckAction: Abschluss der Ladepositionen - IGNORE (too less msgs NO)
+FinalLoadPlanAction: Abschluss der Ladeplanung - IGNORE (too less msgs NO)
+FlightArrivalAction: Flugankunft - IGNORE (no data)
+FlightDepartureAction: Flugabflug - IGNORE (no data)
+FuelCalculationAction: Treibstoffberechnung - IGNORE (no data)
+FuelDataRefreshAction: Aktualisierung der Treibstoffdaten - IGNORE (no data)
+FuelOrderProcessAction: Verarbeitung der Treibstoffbestellung - IGNORE (no data)
+FWAFlightFinalizationAction: Flugabschluss - IGNORE (no data)
 InternalCreateLoadingInstructionAct: Datenbanktransaktion - IGNORE
 InternalCreateLoadsheetAction: Datenbanktransaktion - IGNORE
-PAXBOOKINGINMsgProcessor: Verarbeitung von Passierdaten
-RampFinalAction: Schließen eines Fluges durch den Ramp Agent
-ReopenLegAction: Wiedereröffnung eines Fluges
-ResetLoadingListRecordsAction: Datenbanktransaktion
-SelectFuelOrderAction: Datenbanktransaktion
-SendFuelOrderAction: Senden der Treibstoffbestellung
-SendLoadingInstructionAction: Senden der Loading Instruction an den Loadcontroller - IGNORE (POTENTIAL)
+PAXBOOKINGINMsgProcessor: Verarbeitung von Passierdaten - IGNORE
+RampFinalAction: Schließen eines Fluges durch den Ramp Agent - POTENTIAL (TOTAL BAGS WEIGHTS & RAMP STATUS)
+ReopenLegAction: Wiedereröffnung eines Fluges - IGNORE
+ResetLoadingListRecordsAction: Datenbanktransaktion - IGNORE (Everywhere None)
+SelectFuelOrderAction: Datenbanktransaktion IGNORE (Edition Numer: {})
+SendFuelOrderAction: Senden der Treibstoffbestellung - !!!! INCLUDE NEED (FUEL WEIGHT (BLOCK FUEL) & AICRAFT TYPE !Not available for airline abcd)
+SendLoadingInstructionAction: Senden der Loading Instruction an den Loadcontroller - POTENTIAL (loading instructions for zyxw in spanish)
 SendLoadsheetAction: Senden des Loadsheets - INCLUDE
-SendPostDepartureMessagesAction: Senden einer Information nach Abflug
-SetActualBagWeightIndicatorAction: Festlegen des Gepäckindikators
-SetCKIPaxDistributionAction: Festlegen der Passagierverteilung nach Check-in
-SpecialPaxWeightAction: Meldung von speziellen passagierbezogenen Gewichten
-StoreAircraftDataAction: Speichern von Flugzeugdaten
-StoreCKIAverageWeightAction: Speichern von durchschnittlichen Check-In-Werten
-StorePaxDataAction: Speichern von Passagierdaten (Schnittstelle)
-StorePaxDataGuiAction: Speichern von Passagierdaten (GUI)
-StoreRegistrationAndConfigurationAc: Speichern der Flugzeugregistration und Konfiguration
-TdmCreateLoadingInstructionAction: Datenbanktransaktion - IGNORE (POTENTIAL)
-TransferCargoAction: Übermitteln von Frachtdaten
-TransferCheckinDataAction: Übermitteln von Check-In Daten
-UpdateCargoMailEstimatesAction: Update der Fracht- und Post-Daten
-UpdateCrewDataAction: Update der Crew-Daten
-UpdateEstimatesAction: Update der Schätzwerte
-UpdateFlightAction: Update von Flugdaten
-UpdateFuelDataAction: Update von Treibstoffdaten
-UpdateHistoricalFlightLegInfoAction: Update historischer Flugdaten
-UpdateLastEzfwSentAction: Update der letzten Schätzwerte (EZFW)
-UpdateLoadTableAction: Datenbanktransaktion
-UpdateSupplementaryInfoAction: Update von Zusatzinformationen
-UpdateTransitLoadTableAction: Datenbanktransaktion
+SendPostDepartureMessagesAction: Senden einer Information nach Abflug - IGNORE
+SetActualBagWeightIndicatorAction: Festlegen des Gepäckindikators - !!!! INCLUDE NEED (TOTAL BAGGAGE weight ACTUAL EXCEPT for mnop airline)
+SetCKIPaxDistributionAction: Festlegen der Passagierverteilung nach Check-in - POTENTIAL (TOTALE BAG WEIGHT for only zyxw other airlines not data)
+SpecialPaxWeightAction: Meldung von speziellen passagierbezogenen Gewichten . POTENTIAL (TRUE for special pax Fals if not)
+StoreAircraftDataAction: Speichern von Flugzeugdaten - !!!! NEED INCLUDE ((AIRCRAFT), CREW & CATERING WEIGHTS)
+StoreCKIAverageWeightAction: Speichern von durchschnittlichen Check-In-Werten - POTENTIAL (AVG Check in weights für destination)
+StorePaxDataAction: Speichern von Passagierdaten (Schnittstelle) - POTENTIAL (TOTAL BAG WEIGHTS FOR ABCD)
+StorePaxDataGuiAction: Speichern von Passagierdaten (GUI) - !!!! NEED INCLUDE (TOTAL BAG WEIGHTS & passenger data)
+StoreRegistrationAndConfigurationAc: Speichern der Flugzeugregistration und Konfiguration !!!! NEED INCLUDE (START WEIGHT (BASIC EMPTY WEIGHT) + CREW + CATERING)
+TdmCreateLoadingInstructionAction: Datenbanktransaktion - POTENTIAL
+TransferCargoAction: Übermitteln von Frachtdaten - !!! NEED INCLUDE (CARGO Weights)
+TransferCheckinDataAction: Übermitteln von Check-In Daten !!!! NEED INCLUDE (Loadsheet phase Baggage weight (loadshee probably real weights)& Checkin phase baggage weight (checkin probably estimated) & Gender )
+UpdateCargoMailEstimatesAction: Update der Fracht- und Post-Daten !!! NEED INCLUDE (ESTIMATES for cargo and mail & TOTAL from load table for cargo, mail, baggage)
+UpdateCrewDataAction: Update der Crew-Daten - IGNORE (COUNT of crew members)
+UpdateEstimatesAction: Update der Schätzwerte - !!! NEED INCLUDE (DRY OPERATING WEIGHT (Basic Empty Weight) & ESTIMATION FOR ZFW & ESTIMATION FOR PAYLOAD (TRAFFIC LOAD) CARGO, PASSANGERS, BAGGAGE)
+UpdateFlightAction: Update von Flugdaten - IGNORE 
+UpdateFuelDataAction: Update von Treibstoffdaten !!! NEED INCLUDE (FULE DATA)
+UpdateHistoricalFlightLegInfoAction: Update historischer Flugdaten - IGNORE
+UpdateLastEzfwSentAction: Update der letzten Schätzwerte (EZFW) - POTENTIAL (update for estimated ZFW but only for mnop)
+UpdateLoadTableAction: Datenbanktransaktion - POTENTIAL (ESTIMATES AND ACTUAL FOR ULD BULK AND TOTAL BAGGAG)
+UpdateSupplementaryInfoAction: Update von Zusatzinformationen - IGNORE
+UpdateTransitLoadTableAction: Datenbanktransaktion - POTENTIAL (BAggage infos for transits)
