@@ -1,0 +1,74 @@
+AcceptTransitDataAction: Empfang von Transit-Daten
+AcceptTransitLoadAction: Empfang von Transit-Daten
+AcceptTransitNotocAction: Empfang von Transit-Daten
+ASMMsgProcessor: Verarbeitung einer ASM Message
+AssignLCCAction: Zuweisung eines LoadControlCenters
+AssignLoadplanAction: Zuordnung eines Flug(legs) an einen Loadcontroller
+AssignUnassignViewAction: Anzeige der Zuordnung eines Flug(legs) an einen Loadcontroller
+AutoLoadBulkAction: automatische Ladeplanung (Bulk = Palette)
+AutoLoadULDAction: automatische Ladeplanung (ULD = Container)
+AutomaticNotificationAction: automatische Benachrichtigung
+CalculateWeightAndTrimAction: Berechnung der Gewichtsverteilung
+CargoFinalAction: Mitteilung der aktuellen Fracht-Daten
+CargoFinalActionTDM: Datenbanktransaktion
+ChangeFlightLegStateAction: Änderung des Flugleg-Status
+ChatConfirmMessageAction: Empfang einer Nachricht zwischen Loadcontroller und Pilot
+ChatSendMessageAction: Senden einer Nachricht zwischen Loadcontroller und Pilot
+CheckinMsgProcessor: Verarbeitung einer Check-in Message
+ClearFlightsAction: Datenbanktransaktion
+CloseLegAction: Schließen eines Fluglegs
+CopyCargoTableAction: Datenbanktransaktion
+CopyLoadItemsAction: Datenbanktransaktion
+CopyPaxDataAction: Datenbanktransaktion
+CopyPaxLoadDataAction: Datenbanktransaktion
+CreateAndSendFuelOrderAction: Erstellen und Senden der Treibstoffbestellung
+CreateAndSendUldOrdMessageAction: Erstellen und Senden der Containerbestellung
+CreateBaggageLoadItemsAction: Erstellen der Gepäck-Ladeanweisung
+CreateLoadingInstructionAction: Erstellen der Loading Instruction
+CreateLoadsheetAction: Erstellen des Loadsheets
+CreatePostDepartureMessagesAction: Erstellen einer Information nach Abflug
+CreateZFWMessageAction: Erstellen der Gewichtsschätzung
+CrewMsgProcessor: Verarbeitung einer Crew Message
+EstimateStorePaxDataAction: Erstellen und Speichern einer Passagierdaten-Schätzung
+FinalFreighterBulkAction: Abschluss der Ladeplanung (Bulk)
+FinalFreighterULDAction: Abschluss der Ladeplanung (ULD)
+FinalLoadItemCheckAction: Abschluss der Ladepositionen
+FinalLoadPlanAction: Abschluss der Ladeplanung
+FlightArrivalAction: Flugankunft
+FlightDepartureAction: Flugabflug
+FuelCalculationAction: Treibstoffberechnung
+FuelDataRefreshAction: Aktualisierung der Treibstoffdaten
+FuelOrderProcessAction: Verarbeitung der Treibstoffbestellung
+FWAFlightFinalizationAction: Flugabschluss
+InternalCreateLoadingInstructionAct: Datenbanktransaktion
+InternalCreateLoadsheetAction: Datenbanktransaktion
+PAXBOOKINGINMsgProcessor: Verarbeitung von Passierdaten
+RampFinalAction: Schließen eines Fluges durch den Ramp Agent
+ReopenLegAction: Wiedereröffnung eines Fluges
+ResetLoadingListRecordsAction: Datenbanktransaktion
+SelectFuelOrderAction: Datenbanktransaktion
+SendFuelOrderAction: Senden der Treibstoffbestellung
+SendLoadingInstructionAction: Senden der Loading Instruction an den Loadcontroller
+SendLoadsheetAction: Senden des Loadsheets
+SendPostDepartureMessagesAction: Senden einer Information nach Abflug
+SetActualBagWeightIndicatorAction: Festlegen des Gepäckindikators
+SetCKIPaxDistributionAction: Festlegen der Passagierverteilung nach Check-in
+SpecialPaxWeightAction: Meldung von speziellen passagierbezogenen Gewichten
+StoreAircraftDataAction: Speichern von Flugzeugdaten
+StoreCKIAverageWeightAction: Speichern von durchschnittlichen Check-In-Werten
+StorePaxDataAction: Speichern von Passagierdaten (Schnittstelle)
+StorePaxDataGuiAction: Speichern von Passagierdaten (GUI)
+StoreRegistrationAndConfigurationAc: Speichern der Flugzeugregistration und Konfiguration
+TdmCreateLoadingInstructionAction: Datenbanktransaktion
+TransferCargoAction: Übermitteln von Frachtdaten
+TransferCheckinDataAction: Übermitteln von Check-In Daten
+UpdateCargoMailEstimatesAction: Update der Fracht- und Post-Daten
+UpdateCrewDataAction: Update der Crew-Daten
+UpdateEstimatesAction: Update der Schätzwerte
+UpdateFlightAction: Update von Flugdaten
+UpdateFuelDataAction: Update von Treibstoffdaten
+UpdateHistoricalFlightLegInfoAction: Update historischer Flugdaten
+UpdateLastEzfwSentAction: Update der letzten Schätzwerte (EZFW)
+UpdateLoadTableAction: Datenbanktransaktion
+UpdateSupplementaryInfoAction: Update von Zusatzinformationen
+UpdateTransitLoadTableAction: Datenbanktransaktion
