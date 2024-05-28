@@ -1,24 +1,5 @@
-******************** PRELIMINARY FUEL ORDER ********************
-FLT: MN01202    DATE: 06MAY24   ETD: 0530Z    DUB - MAN      OFP:4 
-320            FIN:            REG: MNDMN            FUEL SHEET:2 
-------------------------------------------------------------------
-BLOCK FUEL:   7400 KGS
-      |      |      |      |      |      |      |      |      |
-      |      |      |      |      |      |      |      |      |KGS
-------+------+------+------+------+------+------+------+------+
- AFTER FUELLING ENTER TANK FIGURES IF DIFFERENT THAN ABOVE
-      |      |      |      |      |      |      |      |      |
-------+------+------+------+------+------+------+------+------+
- BEFORE FUELLING FIGURES - (FUELLER TO ENTER)
-      |      |      |      |      |      |      |      |      |
-------+------+------+------+------+------+------+------+------+
-TOTAL FUEL ADDED:            (LITRES) (U.S.GAL) TYPE (A) (A1) (B)
-------------------------------------------------------------------
-SPECIFIC DENSITY
-------------------------------------------------------------------
-REMARKS:
-
-------------------------------------------------------------------
-NAME: preplanning duty
-              PLEASE REFUEL AIRCRAFT ACCURATELY
-SERVICED BY:(NAME/TRUCK)
+TOTAL Pax: 174    Y: 174  Jump: 0    StandBy: NULL  Male: 125  Female: 49  Child: 0  Infant: 1  Total bag: 108  Total bag weight: 1068.0 KG  Baggage weight type: ACTUAL
+ Distribution        : STANDARD_DISTRIBUTION    
+ Section             : 0A                       0B                       0C                       0D                       0E                       0F                       
+ Capacity            : Y12                      Y36                      Y30                      Y30                      Y30                      Y36                      
+ Distribution        : Y12                      Y36                      Y30                      Y30                      Y30                      Y36

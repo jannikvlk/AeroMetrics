@@ -7,8 +7,9 @@ from utils import add_to_df
 
 ACTION = "SendFuelOrderAction"
 
-#def extract_abcd(df):
-# for abcd no data for this action
+def extract_abcd(df):
+    pass
+    # for abcd no data for this action
 
 def extract_mnop(df):
     action_df = df[df.action_name == ACTION]
