@@ -26,5 +26,5 @@ def extract_abcd(df):
             # iterate all rows
             add_to_df(action_df, extracted_data, idx)
 
-    action_df.to_csv(f"pipeline/actions/actions_data/{ACTION}.csv")
+    action_df.to_csv(f"pipeline/actions/actions_data/abcd_{ACTION}.csv")
     return action_df

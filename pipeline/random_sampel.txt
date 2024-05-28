@@ -1,12 +1,24 @@
-com.onesystem.lc2.manualloadplanning.dto.LoadDTO [ id = 2271446  flightId = 519628 legId = 545178  deleted = false  fragmentId = LoadFragment ]
-BULK
- Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
- 7416493   NULL         ESTIMATE  714.00    KG   87        0.00      MAA       MAA       BLR       B         NULL      false      
- 7416494   NULL         ESTIMATE  0.00      KG   0         0.00      MAA       MAA       BLR       TB        NULL      false      
- 7417614   NULL         ESTIMATE  211.00    KG   23        0.00      IXZ       IXZ       BLR       B         2         true      NULL 
+******************** PRELIMINARY FUEL ORDER ********************
+FLT: MN01202    DATE: 06MAY24   ETD: 0530Z    DUB - MAN      OFP:4 
+320            FIN:            REG: MNDMN            FUEL SHEET:2 
+------------------------------------------------------------------
+BLOCK FUEL:   7400 KGS
+      |      |      |      |      |      |      |      |      |
+      |      |      |      |      |      |      |      |      |KGS
+------+------+------+------+------+------+------+------+------+
+ AFTER FUELLING ENTER TANK FIGURES IF DIFFERENT THAN ABOVE
+      |      |      |      |      |      |      |      |      |
+------+------+------+------+------+------+------+------+------+
+ BEFORE FUELLING FIGURES - (FUELLER TO ENTER)
+      |      |      |      |      |      |      |      |      |
+------+------+------+------+------+------+------+------+------+
+TOTAL FUEL ADDED:            (LITRES) (U.S.GAL) TYPE (A) (A1) (B)
+------------------------------------------------------------------
+SPECIFIC DENSITY
+------------------------------------------------------------------
+REMARKS:
 
-Total baggage      : 925.00   KG               
-Total cargo        : 0.00     KG               
-Total EIC          : 0.00     KG               
-Total mail         : 0.00     KG               
-STATUS FUEL 1 AIRCRAFT_CONFIG 1 EZFW 2 CARGO_TRANSFER 1 CABIN_CONFIG 1 TRANSIT_ACCEPTANCE 1 TRANSIT_PAX 1 CALC_HIST_DATA 1 CHECK_IN_OPEN 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 2 REGISTRATION 1 REGISTRATION_CHANGE 6
+------------------------------------------------------------------
+NAME: preplanning duty
+              PLEASE REFUEL AIRCRAFT ACCURATELY
+SERVICED BY:(NAME/TRUCK)
