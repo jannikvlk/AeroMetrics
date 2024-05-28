@@ -26,10 +26,10 @@ def extract_abcd(df):
             extracted_data = {}
 
             if pax_match:
-                extracted_data['total_passangers'] = int(pax_match.group(1))
+                extracted_data['actual_total_passangers'] = int(pax_match.group(1))
 
             if baggage_weight_match:
-                extracted_data['total_bags_weight'] = float(baggage_weight_match.group(1))
+                extracted_data['actual_total_bags_weight'] = float(baggage_weight_match.group(1))
 
             add_to_df(action_df, extracted_data, idx)
 
@@ -38,7 +38,7 @@ def extract_abcd(df):
         else:
             print(current_row)
             break
-        
+
     action_df.to_csv(f"pipeline/actions/actions_data/mnop_{ACTION}.csv")
     return action_df
 
