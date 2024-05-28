@@ -47,11 +47,11 @@ RampFinalAction: Schließen eines Fluges durch den Ramp Agent - POTENTIAL (TOTAL
 ReopenLegAction: Wiedereröffnung eines Fluges - IGNORE
 ResetLoadingListRecordsAction: Datenbanktransaktion - IGNORE (Everywhere None)
 SelectFuelOrderAction: Datenbanktransaktion IGNORE (Edition Numer: {})
-SendFuelOrderAction: Senden der Treibstoffbestellung - !!!! INCLUDE NEED (FUEL WEIGHT (BLOCK FUEL) & AICRAFT TYPE !Not available for airline abcd)
+SendFuelOrderAction: Senden der Treibstoffbestellung - !!!! INCLUDE (FUEL WEIGHT (BLOCK FUEL) & AICRAFT TYPE !Not available for airline abcd)
 SendLoadingInstructionAction: Senden der Loading Instruction an den Loadcontroller - POTENTIAL (loading instructions for zyxw in spanish)
 SendLoadsheetAction: Senden des Loadsheets - INCLUDE
 SendPostDepartureMessagesAction: Senden einer Information nach Abflug - IGNORE
-SetActualBagWeightIndicatorAction: Festlegen des Gepäckindikators - !!!! INCLUDE NEED (TOTAL BAGGAGE weight ACTUAL EXCEPT for mnop airline)
+SetActualBagWeightIndicatorAction: Festlegen des Gepäckindikators - !!!! INCLUDE (TOTAL BAGGAGE weight ACTUAL EXCEPT for mnop airline)
 SetCKIPaxDistributionAction: Festlegen der Passagierverteilung nach Check-in - POTENTIAL (TOTALE BAG WEIGHT for only zyxw other airlines not data)
 SpecialPaxWeightAction: Meldung von speziellen passagierbezogenen Gewichten . POTENTIAL (TRUE for special pax Fals if not)
 StoreAircraftDataAction: Speichern von Flugzeugdaten - !!!! NEED INCLUDE ((AIRCRAFT), CREW & CATERING WEIGHTS)

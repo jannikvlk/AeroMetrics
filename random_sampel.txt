@@ -1,5 +1,12 @@
-TOTAL Pax: 189    Y: 189  Jump: 0    StandBy: NULL  Male: 130  Female: 58  Child: 1  Infant: 4  Total bag: 147  Total bag weight: 1574.0 KG  Baggage weight type: ACTUAL
- Distribution        : STANDARD_DISTRIBUTION    
- Section             : 0A                       0B                       0C                       0D                       0E                       0F                       
- Capacity            : Y33                      Y30                      Y30                      Y30                      Y30                      Y36                      
- Distribution        : Y33                      Y30                      Y30                      Y30                      Y30                      Y36
+Configuration
+Start Weight : 44415.0 KG Start Index: 37.90
+Crew         : 2/4
+Water(%)     : NULL
+Category    | Weight          | Index   
+Galley:
+A           | 26.00    KG     | -0.43   
+A           | 178.00   KG     | -2.58   
+A           | 103.00   KG     | 1.44    
+A           | 107.00   KG     | 1.70    
+Total Weight: 44829.00 KG     Index: 38.03   
+STATUS AIRCRAFT_CONFIG 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 AUTO_MODE_ACTIVE 1 REGISTRATION 1 REGISTRATION_CHANGE 1
