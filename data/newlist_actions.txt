@@ -47,18 +47,18 @@ RampFinalAction: Schließen eines Fluges durch den Ramp Agent - POTENTIAL (TOTAL
 ReopenLegAction: Wiedereröffnung eines Fluges - IGNORE
 ResetLoadingListRecordsAction: Datenbanktransaktion - IGNORE (Everywhere None)
 SelectFuelOrderAction: Datenbanktransaktion IGNORE (Edition Numer: {})
-SendFuelOrderAction: Senden der Treibstoffbestellung - !!!! INCLUDE (FUEL WEIGHT (BLOCK FUEL) & AICRAFT TYPE !Not available for airline abcd)
+SendFuelOrderAction: Senden der Treibstoffbestellung - INCLUDED (FUEL WEIGHT (BLOCK FUEL) & AICRAFT TYPE !Not available for airline abcd)
 SendLoadingInstructionAction: Senden der Loading Instruction an den Loadcontroller - POTENTIAL (loading instructions for zyxw in spanish)
-SendLoadsheetAction: Senden des Loadsheets - INCLUDE
+SendLoadsheetAction: Senden des Loadsheets - INCLUDED
 SendPostDepartureMessagesAction: Senden einer Information nach Abflug - IGNORE
-SetActualBagWeightIndicatorAction: Festlegen des Gepäckindikators - !!!! INCLUDE (TOTAL BAGGAGE weight ACTUAL EXCEPT for mnop airline)
+SetActualBagWeightIndicatorAction: Festlegen des Gepäckindikators - INCLUDED (TOTAL BAGGAGE weight ACTUAL EXCEPT for mnop airline)
 SetCKIPaxDistributionAction: Festlegen der Passagierverteilung nach Check-in - POTENTIAL (TOTALE BAG WEIGHT for only zyxw other airlines not data)
 SpecialPaxWeightAction: Meldung von speziellen passagierbezogenen Gewichten . POTENTIAL (TRUE for special pax Fals if not)
 StoreAircraftDataAction: Speichern von Flugzeugdaten - !!!! NEED INCLUDE ((AIRCRAFT), CREW & CATERING WEIGHTS)
 StoreCKIAverageWeightAction: Speichern von durchschnittlichen Check-In-Werten - POTENTIAL (AVG Check in weights für destination)
 StorePaxDataAction: Speichern von Passagierdaten (Schnittstelle) - POTENTIAL (TOTAL BAG WEIGHTS FOR ABCD)
 StorePaxDataGuiAction: Speichern von Passagierdaten (GUI) - !!!! NEED INCLUDE (TOTAL BAG WEIGHTS & passenger data)
-StoreRegistrationAndConfigurationAc: Speichern der Flugzeugregistration und Konfiguration !!!! NEED INCLUDE (START WEIGHT (BASIC EMPTY WEIGHT) + CREW + CATERING)
+StoreRegistrationAndConfigurationAc: Speichern der Flugzeugregistration und Konfiguration INCLUDED (START WEIGHT (BASIC EMPTY WEIGHT) + CREW + CATERING)
 TdmCreateLoadingInstructionAction: Datenbanktransaktion - POTENTIAL
 TransferCargoAction: Übermitteln von Frachtdaten - !!! NEED INCLUDE (CARGO Weights)
 TransferCheckinDataAction: Übermitteln von Check-In Daten !!!! NEED INCLUDE (Loadsheet phase Baggage weight (loadshee probably real weights)& Checkin phase baggage weight (checkin probably estimated) & Gender )

@@ -1,11 +1,63 @@
-Configuration
-Start Weight : 29060.0 KG Start Index: 68.32
-Crew         : 2/3
-Water(%)     : 50.0
-Category    | Weight          | Index   
-Correction  | 400.00   KG     | -2.28    | REASON_CREW
-Correction  | 55.00    KG     | -1.24    | REASON_WATER
-Galley:
-SIMPLES     | 216.00   KG     | 1.55    
-Total Weight: 29731.00 KG     Index: 66.35   
-STATUS AIRCRAFT_CONFIG 1 CARGO_FINAL 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 CALC_HIST_DATA 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOZY_ITEMS_GEN 1 EZFW_COUNTER 1 REGISTRATION 1 REGISTRATION_CHANGE 2
+
+Email receivers     :
+Message type        :   LOADSHEET
+Subject             :   AB2629/06MAY GOX-DEL; Loadsheet Edition 02
+Attachment file name:   AB2629_06MAY_GOXDEL_Loadsheet_Edition_02
+Body                :
+ ABCD AIR
+ L O A D S H E E T             CHECKED:         APPROVED     EDNO
+ ALL WEIGHTS IN KILOGRAM       CLC 010                        02
+
+ FROM/TO FLIGHT      A/C REG    CONFIG     CREW    DATE      TIME
+ GOX DEL AB 2629/06  ABCAS      Y189       2/05   06MAY24    1712
+ 
+                             WEIGHT DISTRIBUTION
+ LOAD IN COMPARTMENTS         1516   1/0  2/0  3/1218  4/298
+
+                             BAG/1516 CARGO/0 MAIL/0 EIC/0
+
+ PASSENGER / CABIN BAG       13090  116/057/003/001     TTL 177
+ CABIN CLASS                        Y  /176         
+ CABIN AREA                          0A/33  0B/30  0C/30  0D/25  
+                                     0E/23  0F/35    
+ TOB                                184
+
+ TOTAL TRAFFIC LOAD          14606
+ DRY OPERATING WEIGHT        44605
+ ZERO FUEL WEIGHT ACTUAL     59211  MAX  65952         ADJ       
+ TAKE OFF FUEL                8780
+ TAKE OFF WEIGHT ACTUAL      67991  MAX  75024         ADJ       
+ TRIP                         5030
+ LANDING WEIGHT ACTUAL       62961  MAX  69308    L    ADJ  68958
+ TAXI FUEL                     220
+ 
+ PANTRY                        414
+
+ BALANCE AND SEATING CONDITIONS           LAST MINUTE CHANGES
+                                   DEST  SPEC  CL/CPT + -  WEIGHT
+ ZFI 45.95         MACZFW 20.39    ....  ....  ...... ...  ......
+ TOI 53.39         MACTOW 22.80    ....  ....  ...... ...  ......
+                                   ....  ....  ...... ...  ......
+                                   ....  ....  ...... ...  ......
+
+ UNDERLOAD BEFORE LMC  5997                  LMC TOTAL + -
+
+ CAPTAINS INFORMATION/NOTES - RMKS
+ SI: PREPARED BY HUMAN CLC010 AT CLC
+ SI: BAGS IN C3/4
+ SI: 12kgs grt weight added
+
+ FWD ZFW LIMIT    21.97  / AFT ZFW LIMIT    65.56
+ FWD TOW LIMIT    24.74  / AFT TOW LIMIT    73.10
+ OPERATING EMPTY WEIGHT / INDEX:  44106 /   38.88
+ B737 – 8 / 8200 AIRCRAFT TYPE LOADSHEET
+ THIS IS TO CERTIFY THAT THE AIRCRAFT IS LOADED IN ACCORDANCE
+ WITH THE AFM
+
+
+ CAPTAIN..............                 SIGNATURE ...............
+
+ COMPUTERIZED LS VIDE APPROVAL NO. WR-AW0ORG(MG)/4/2022-DAW/MUM
+ DATED 21.11.2022 
+ LMC TOLERANCE FOR +/- 500 KGS PAYLOAD ONLY
+ FUEL LMC IS NOT PERMITTED
