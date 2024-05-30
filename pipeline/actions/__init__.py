@@ -1,11 +1,14 @@
+import os
 import importlib
-import pkgutil
 
-# Iterate through the modules in the 'actions' package
-for loader, module_name, is_pkg in pkgutil.iter_modules(__path__):
-    full_module_name = f"{__name__}.{module_name}"
-    try:
-        module = importlib.import_module(full_module_name)
-        setattr(globals(), module_name, module)
-    except Exception as e:
-        print(f"Failed to import module {full_module_name}: {e}")
+# List all Python files in the current directory
+module_dir = os.path.dirname(__file__)
+module_files = [
+    f for f in os.listdir(module_dir) if f.endswith(".py") and f != "__init__.py"
+]
+
+# Dynamically import all modules and add them to the current namespace
+for module_file in module_files:
+    module_name = module_file[:-3]  # Remove the .py extension
+    module = importlib.import_module(f".{module_name}", package=__name__)
+    globals()[module_name] = module

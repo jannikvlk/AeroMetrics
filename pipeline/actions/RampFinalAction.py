@@ -1,4 +1,5 @@
 import re
+import json
 
 
 def extract(message: str):
@@ -74,7 +75,7 @@ def extract(message: str):
             else:
                 i += 1
 
-        return data
+        return json.dumps(data)
     if "Discrepancy check result" in message:
         """ Example Message: 'Discrepancy check result\r\n
         Discrepancy happend: true\r\n
@@ -113,13 +114,18 @@ def extract(message: str):
                 }
             ]
         }
+    
+        
+        LOADTABLE: This might refer to the planned or documented load of baggage for a specific flight or destination.
+        CKI: This could stand for "Check-In," referring to the actual bags checked in for the flight.
+        SUM: This represents the summary or difference between the planned/documented load and the actual checked-in load.
         """
         # Initialize an empty dictionary
         result = {"Discrepancy check result": {}, "Discrepancies": []}
 
         # Split the report into lines
         lines = message.split("\n")
-        # print(lines)
+
 
         # Parse the first part of the report
         result["Discrepancy check result"]["Discrepancy happened"] = (
@@ -130,7 +136,7 @@ def extract(message: str):
         for line in lines[
             4:7
         ]:  # One error in the data where the loadtable is repeated twice
-            print(line)
+            
             if line.strip():
                 columns = line.split()
                 discrepancy = {
@@ -141,7 +147,7 @@ def extract(message: str):
                 }
                 result["Discrepancies"].append(discrepancy)
 
-        return result
+        return json.dumps(result)
     if "Caller user" in message:
         """ This does not include weight data. e.g.:
         'Caller user             : human\r\n
@@ -152,4 +158,4 @@ def extract(message: str):
         instructions. I have instructed the high loader driver to engage all restraining locks and nets.'
         """
         return None
-    raise ValueError(f"Unknown message: {message}")
+    raise NotImplementedError("This message is not supported yet")
