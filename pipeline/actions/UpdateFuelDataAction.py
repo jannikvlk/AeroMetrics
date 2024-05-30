@@ -13,7 +13,7 @@ def extract_abcd(df):
     for idx, row in tqdm(action_df.iterrows(), total=action_df.shape[0], desc="Processing rows"):
         current_row = row["entry_details"]
 
-        if 
+        # if 
 
 def extract_mnop(df):
     pass
