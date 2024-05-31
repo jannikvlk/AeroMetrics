@@ -9,6 +9,7 @@ from actions import CheckinMsgProcessor
 from actions import SendFuelOrderAction
 from actions import SetActualBagWeightIndicatorAction
 from actions import StoreRegistrationAndConfigurationAc
+from actions import UpdateFuelDataAction
 
 # Read the parquet files
 abc_file_path = os.path.join(os.path.dirname(__file__), '../data', 'ABCD_tripfiles.parquet')
@@ -23,4 +24,5 @@ df = pd.DataFrame()
 #CheckinMsgProcessor.extract_abcd(df_abcd)
 #SendFuelOrderAction.extract_abcd(df_abcd)
 #SetActualBagWeightIndicatorAction.extract_abcd(df_abcd)
-StoreRegistrationAndConfigurationAc.extract_abcd(df_abcd)
+#StoreRegistrationAndConfigurationAc.extract_abcd(df_abcd)
+UpdateFuelDataAction.extract_abcd(df_abcd)
