@@ -1,3 +1,5 @@
-MW mzfw=65952.0 KG mtxw=82871.0 KG mtow=82500.0 KG mlaw=68958.0 KG
-FUEL  trip=4660.0 KG taxi=341.0 KG takeoff=8459.0 KG ballast=null edno=8
-STATUS LOADING_INSTRUCTION 1 FUEL 2 AIRCRAFT_CONFIG 1 EZFW 2 CARGO_TRANSFER 1 CABIN_CONFIG 1 CALC_HIST_DATA 1 CHECK_IN_OPEN 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 2 REGISTRATION 1 REGISTRATION_CHANGE 3
+BOM            
+                Y              Jump           Standby        Male           Female         Child          Infant         Bags           BWgt           Average        
+Checkin         194            NULL           NULL           131            60             3              1              105            1149.00 KG     10.94 KG       
+Loadsheet       194            NULL           0              131            60             3              1              126            1379.00 KG     10.94 KG       
+Distribution type : CKI_DISTRIBUTION
