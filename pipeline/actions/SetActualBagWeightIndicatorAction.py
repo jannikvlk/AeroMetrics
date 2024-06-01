@@ -9,7 +9,7 @@ ACTION = "SetActualBagWeightIndicatorAction"
 
 def extract_abcd(df):
     action_df = df[df.action_name == ACTION]
-    random_sample(action_df)
+    output_df = action_df[["id"]].copy()
     	
     for idx, row in tqdm(action_df.iterrows(), total=action_df.shape[0], desc="Processing rows"):
         current_row = row["entry_details"]
@@ -31,7 +31,7 @@ def extract_abcd(df):
             if baggage_weight_match:
                 extracted_data['actual_total_bags_weight'] = float(baggage_weight_match.group(1))
 
-            add_to_df(action_df, extracted_data, idx)
+            add_to_df(output_df, extracted_data, idx)
 
         elif current_row == None:
             pass
@@ -39,8 +39,8 @@ def extract_abcd(df):
             print(current_row)
             break
 
-    action_df.to_csv(f"pipeline/actions/actions_data/mnop_{ACTION}.csv")
-    return action_df
+    output_df.to_csv(f"pipeline/actions/actions_data/mnop_{ACTION}.csv")
+    return output_df
 
 
 def extract_mnop(df):

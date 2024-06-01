@@ -13,6 +13,7 @@ def extract_abcd(df):
 
 def extract_mnop(df):
     action_df = df[df.action_name == ACTION]
+    output_df = action_df[["id"]].copy()
 
     for idx, row in tqdm(action_df.iterrows(), total=action_df.shape[0], desc="Processing rows"):
         current_row = row["entry_details"]
@@ -33,7 +34,7 @@ def extract_mnop(df):
                 extracted_data['Metric'] = match.group(3)
                 extracted_data['FuelOrderState'] = "PRELIMINARY"
 
-            add_to_df(action_df, extracted_data, idx)
+            add_to_df(output_df, extracted_data, idx)
 
 
         elif "FINAL FUEL ORDER" in current_row:
@@ -52,7 +53,7 @@ def extract_mnop(df):
                 extracted_data['Metric'] = match.group(3)
                 extracted_data['FuelOrderState'] = "FINAL"
 
-            add_to_df(action_df, extracted_data, idx)
+            add_to_df(output_df, extracted_data, idx)
 
         elif "com.systemone.lc2.common.dto.SendDocumentDTO" in current_row:
             pass
@@ -62,5 +63,5 @@ def extract_mnop(df):
             print(current_row)
             break
     
-    action_df.to_csv(f"pipeline/actions/actions_data/mnop_{ACTION}.csv")
-    return action_df
+    output_df.to_csv(f"pipeline/actions/actions_data/abcd_{ACTION}.csv")
+    return output_df

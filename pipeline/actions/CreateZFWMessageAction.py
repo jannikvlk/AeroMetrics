@@ -23,7 +23,7 @@ def extract_data_from_xml(xml_string):
 def extract_abcd(df):
 
     action_df = df[df.action_name == ACTION]
-    random_sample(action_df)
+    output_df = action_df[["id"]].copy()
 
     for idx, row in tqdm(action_df.iterrows(), total=action_df.shape[0], desc="Processing rows"):
         current_row = row["entry_details"]
@@ -32,11 +32,11 @@ def extract_abcd(df):
             # skip system row because of lacking information
             if "Receiver queue" in current_row:
                 extracted_data = extract_data_from_xml(current_row)
-                add_to_df(action_df, extracted_data, idx)
+                add_to_df(output_df, extracted_data, idx)
             else: pass
         except Exception as e:
             print(e)
             break
 
-    action_df.to_csv(f"pipeline/actions/actions_data/abcd_{ACTION}.csv")
-    return action_df
+    output_df.to_csv(f"pipeline/actions/actions_data/abcd_{ACTION}.csv")
+    return output_df

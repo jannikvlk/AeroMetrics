@@ -8,7 +8,7 @@ ACTION = "StorePaxDataAction"
 
 def extract_abcd(df):
     action_df = df[df.action_name == ACTION]
-    random_sample(action_df)
+    output_df = action_df[["id"]].copy()
 
     for idx, row in tqdm(action_df.iterrows(), total=action_df.shape[0], desc="Processing rows"):
         current_row = row["entry_details"]
@@ -36,7 +36,7 @@ def extract_abcd(df):
             # add to teh data frame if match
             if match:
                 extracted_data = match.groupdict()
-                add_to_df(action_df, extracted_data, idx)
+                add_to_df(output_df, extracted_data, idx)
 
             else:
                 print("No match found")
@@ -65,7 +65,7 @@ def extract_abcd(df):
             if match:
                 extracted_data = match.groupdict()
                 #print(extracted_data)
-                add_to_df(action_df, extracted_data, idx)
+                add_to_df(output_df, extracted_data, idx)
             else:
                 print("----")
                 print("No match found")
@@ -78,5 +78,5 @@ def extract_abcd(df):
             break
 
 
-    action_df.to_csv(f"pipeline/actions/actions_data/abcd_{ACTION}.csv")
-    return action_df
+    output_df.to_csv(f"pipeline/actions/actions_data/abcd_{ACTION}.csv")
+    return output_df

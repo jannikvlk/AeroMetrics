@@ -9,6 +9,7 @@ from utils import add_to_df
 ACTION = "CheckinMsgProcessor"
 def extract_abcd(df):
     action_df = df[df.action_name == ACTION]
+    output_df = action_df[["id"]].copy()
     random_sample(action_df)
 
     patterns = {
@@ -32,7 +33,7 @@ def extract_abcd(df):
                 else:
                     extracted_data[key] = np.nan
 
-            add_to_df(action_df, extracted_data, idx)
+            add_to_df(output_df, extracted_data, idx)
 
         elif "The message was processed successfully" in current_row:
             pass
@@ -40,5 +41,5 @@ def extract_abcd(df):
             print(current_row)
             break
 
-    action_df.to_csv(f"pipeline/actions/actions_data/abcd_{ACTION}.csv")
-    return action_df
+    output_df.to_csv(f"pipeline/actions/actions_data/abcd_{ACTION}.csv")
+    return output_df

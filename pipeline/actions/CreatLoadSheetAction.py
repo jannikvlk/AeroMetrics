@@ -9,7 +9,7 @@ ACTION = "CreateLoadsheetAction"
 
 def extract_abcd(df):
     action_df = df[df.action_name == ACTION]
-    random_sample(action_df)
+    output_df = action_df[["id"]].copy()
 
     for idx, row in tqdm(action_df.iterrows(), total=action_df.shape[0], desc="Processing rows"):
         current_row = row["entry_details"]
@@ -29,7 +29,7 @@ def extract_abcd(df):
             extracted_data['TAKE_OFF_WEIGHT_ACTUAL'] = takeoff_weight_actual_match.group(1) if takeoff_weight_actual_match else None
             extracted_data['Weights_unit'] = 'KILOGRAM' if all_weights_match else None
 
-            add_to_df(action_df, extracted_data, idx)
+            add_to_df(output_df, extracted_data, idx)
         elif "STATUS LOADSHEET" in current_row:
             pass
         elif "STATUS LOADING_INSTRUCTION" in current_row:
@@ -39,5 +39,5 @@ def extract_abcd(df):
         else:
             print(current_row)
 
-    action_df.to_csv(f"pipeline/actions/actions_data/abcd_{ACTION}.csv")
-    return action_df
+    output_df.to_csv(f"pipeline/actions/actions_data/abcd_{ACTION}.csv")
+    return output_df
