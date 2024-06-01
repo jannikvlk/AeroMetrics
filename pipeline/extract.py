@@ -13,9 +13,10 @@ from actions import UpdateFuelDataAction
 from actions import EstimateStorePaxDataAction
 from actions import CreateLoadingInstructionAction
 from actions import SendLoadingInstructionAction
+from actions import CreateBaggageLoadItemsAction
 
 # Read the parquet files
-abc_file_path = os.path.join(os.path.dirname(__file__), '../data', 'ABCD_tripfiles.parquet')
+abc_file_path = os.path.join(os.path.dirname(__file__), '../data', 'MNOP_tripfiles.parquet')
 df_abcd = pd.read_parquet(abc_file_path, engine="pyarrow")
 
 df = pd.DataFrame()
@@ -29,4 +30,5 @@ df = pd.DataFrame()
 #SetActualBagWeightIndicatorAction.extract_abcd(df_abcd)
 #StoreRegistrationAndConfigurationAc.extract_abcd(df_abcd)
 #UpdateFuelDataAction.extract_abcd(df_abcd)
-EstimateStorePaxDataAction.extract_abcd(df_abcd)
+#EstimateStorePaxDataAction.extract_abcd(df_abcd)
+CreateBaggageLoadItemsAction.extract_abcd(df_abcd)
