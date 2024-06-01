@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 com.onesystem.lc2.paxactuals.dto.PaxDataDTO [ id = 2302962 ]
  Baggage weight type: HISTORIC       
 BLR            
@@ -8,3 +9,10 @@ Booked          177            NULL           0              121            52  
  Section        : 0A             0B             0C             0D             0E             0F             
  Capacity       : Y33            Y30            Y30            Y30            Y30            Y36            
  Distribution   : Y31            Y28            Y28            Y28            Y28            Y34
+=======
+BOM            
+                Y              Jump           Standby        Male           Female         Child          Infant         Bags           BWgt           Average        
+Checkin         194            NULL           NULL           131            60             3              1              105            1149.00 KG     10.94 KG       
+Loadsheet       194            NULL           0              131            60             3              1              126            1379.00 KG     10.94 KG       
+Distribution type : CKI_DISTRIBUTION
+>>>>>>> 5538f2fd7271e28c3d774cbfe320c58882d813ac
