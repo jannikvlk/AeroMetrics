@@ -14,20 +14,41 @@ def extract_abcd(df):
         current_row = row["entry_details"]
 
         if "com.onesystem.lc2.paxactuals.dto.PaxDataDTO" in current_row:
+            pattern = (
+                    r"Booked\s+"                      # Match the word 'Booked'
+                    r"(\d+)\s+"                       # Match Y value (digits)
+                    r"(NULL|\d+)\s+"                  # Match Jump value (NULL or digits)
+                    r"(NULL|\d+)\s+"                  # Match Standby value (NULL or digits)
+                    r"(NULL|\d+)\s+"                  # Match Male value (NULL or digits)
+                    r"(NULL|\d+)\s+"                  # Match Female value (NULL or digits)
+                    r"(NULL|\d+)\s+"                  # Match Child value (NULL or digits)
+                    r"(NULL|\d+)\s+"                  # Match Infant value (NULL or digits)
+                    r"(NULL|\d+)\s+"                  # Match Bags value (NULL or digits)
+                    r"(NULL|[\d.]+)\s+KG\s+"          # Match BWgt value (NULL or digits with decimal point)
+                    r"(NULL|[\d.]+)\s+"               # Match Average value (NULL or digits with decimal point)
+                )
+            matches = re.findall(pattern, current_row, re.DOTALL)
+            keys = [
+                "estimated_Y", "estimated_Jump", "estimated_Standby", "estimated_Male", "estimated_Female", "estimated_Child", "estimated_Infant", "estimated_Bags", "estimated_BWgt", "estimated_Average_BWgt"
+            ]
 
-            keys_to_extract = ['Baggage weight type', 'Standby', 'Male', 'Female', 'Child', 'Infant', 'Bags', 'BWgt', 'Average']
-            extracted_values = {}
+            if matches:
+                values = matches[0]
+                extracted_data = dict(zip(keys, values))
 
-            # Use regular expressions to extract the values
-            for key in keys_to_extract:
-                match = re.search(rf'{key}:\s*\'([\w\s\r\n]+)\'', current_row)
-                if match:
-                    value = match.group(1).strip()
-                    extracted_values[key] = value
+                add_to_df(output_df, extracted_data, idx)
 
-            # Print the extracted values
-            print("Extracted Values:")
-            print(extracted_values)
+            else:
+                print("No matches found.")
+                print(current_row)
+                break
+
+        
+        elif "STATUS AIRCRAFT_CONFIG" or "STATUS FUEL" in current_row:
+            pass
+        else:
+            print(current_row)
+            break
 
 
 
