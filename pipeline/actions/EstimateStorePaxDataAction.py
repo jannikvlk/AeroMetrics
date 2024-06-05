@@ -26,7 +26,6 @@ def extract(message):
             values = matches[0]
             extracted_data = dict(zip(keys, values))
 
-            print(json.dumps(extracted_data))
             return json.dumps(extracted_data)
 
     
