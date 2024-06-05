@@ -1,28 +1,18 @@
 import re
-from tqdm import tqdm
-import pandas as pd
-
-from utils import random_sample
-from utils import add_to_df
+import json
 
 ACTION = "SendFuelOrderAction"
 
-def extract_abcd(df):
-    pass
-    # for abcd no data for this action
+"""
+No Data for abcd and jsut 4 for zyxw
+"""
 
-def extract_mnop(df):
-    action_df = df[df.action_name == ACTION]
-    output_df = action_df[["id"]].copy()
-
-    for idx, row in tqdm(action_df.iterrows(), total=action_df.shape[0], desc="Processing rows"):
-        current_row = row["entry_details"]
-
-        if "PRELIMINARY FUEL ORDER" in current_row:
+def extract(message):
+        if "PRELIMINARY FUEL ORDER" in message:
             pattern = re.compile(r"\b(\d{3})\b.*?BLOCK FUEL:\s+(\d+)\s+(\w+)", re.DOTALL)
 
             # Search for matches in the text
-            match = pattern.search(current_row)
+            match = pattern.search(message)
 
             # Initialize the dictionary
             extracted_data = {}
@@ -34,14 +24,14 @@ def extract_mnop(df):
                 extracted_data['Metric'] = match.group(3)
                 extracted_data['FuelOrderState'] = "PRELIMINARY"
 
-            add_to_df(output_df, extracted_data, idx)
+            return json.dumps(extracted_data)
 
 
-        elif "FINAL FUEL ORDER" in current_row:
+        elif "FINAL FUEL ORDER" in message:
             pattern = re.compile(r"\b(\d{3})\b.*?BLOCK FUEL:\s+(\d+)\s+(\w+)", re.DOTALL)
 
             # Search for matches in the text
-            match = pattern.search(current_row)
+            match = pattern.search(message)
 
             # Initialize the dictionary
             extracted_data = {}
@@ -53,15 +43,12 @@ def extract_mnop(df):
                 extracted_data['Metric'] = match.group(3)
                 extracted_data['FuelOrderState'] = "FINAL"
 
-            add_to_df(output_df, extracted_data, idx)
+            return json.dumps(extracted_data)
 
-        elif "com.systemone.lc2.common.dto.SendDocumentDTO" in current_row:
+        elif "com.systemone.lc2.common.dto.SendDocumentDTO" in message:
             pass
 
         else:
-            print("x")
-            print(current_row)
-            break
+            print(message)
+            pass
     
-    output_df.to_csv(f"pipeline/actions/actions_data/abcd_{ACTION}.csv")
-    return output_df
