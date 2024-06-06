@@ -1,3 +1,0 @@
-data/ABCD_tripfiles.csv filter=lfs diff=lfs merge=lfs -text
-data/MNOP_tripfiles.csv filter=lfs diff=lfs merge=lfs -text
-data/ZYXW_tripfiles.csv filter=lfs diff=lfs merge=lfs -text
