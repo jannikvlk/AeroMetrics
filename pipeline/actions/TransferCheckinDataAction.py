@@ -2,6 +2,7 @@ import re
 import pandas as pd
 import os
 from tqdm import tqdm
+import json
 
 ACTION = "TransferCheckinDataAction"
 
@@ -59,7 +60,8 @@ def extract_transfer_checkin_data(df):
                     'Capacity': capacity,
                     'Distribution': distribution
                 }
-                extracted_data_list.append(extracted_data)
+                
+            return json.dumps(extracted_data)
 
         elif match2:
             station, y_pax, jump_pax, standby_pax, male_pax, female_pax, child_pax, infant_pax, total_bags, bag_weight, average_weight = match2.groups()
@@ -78,18 +80,9 @@ def extract_transfer_checkin_data(df):
                 'Total_Bag_Weight_KG': bag_weight,
                 'Average_Weight_KG': average_weight
             }
-            extracted_data_list.append(extracted_data)
+            
+            return json.dumps(extracted_data)
 
-    # Konvertiere die Liste von Dictionaries in einen DataFrame
-    extracted_df = pd.DataFrame(extracted_data_list)
-
-    # Speichere den DataFrame in eine CSV-Datei
-    output_dir = "pipeline/actions/actions_data"
-    os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, f"transfer_checkin_data_{ACTION}.csv")
-    extracted_df.to_csv(output_path, index=False)
-
-    extracted_df.to_csv(f"pipeline/actions/actions_data/abcd_{ACTION}.csv")
-    return extracted_df
+   
 
     
