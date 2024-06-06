@@ -1,8 +1,5 @@
 import re
-from tqdm import tqdm
-
-from utils import random_sample
-from utils import add_to_df
+import json
 
 ACTION = "CreateZFWMessageAction"
 
@@ -20,23 +17,14 @@ def extract_data_from_xml(xml_string):
             data_dict[key] = None
     return data_dict
 
-def extract_abcd(df):
+def extract(message):
 
-    action_df = df[df.action_name == ACTION]
-    output_df = action_df[["id"]].copy()
-
-    for idx, row in tqdm(action_df.iterrows(), total=action_df.shape[0], desc="Processing rows"):
-        current_row = row["entry_details"]
-
-        try:
-            # skip system row because of lacking information
-            if "Receiver queue" in current_row:
-                extracted_data = extract_data_from_xml(current_row)
-                add_to_df(output_df, extracted_data, idx)
-            else: pass
-        except Exception as e:
-            print(e)
-            break
-
-    output_df.to_csv(f"pipeline/actions/actions_data/abcd_{ACTION}.csv")
-    return output_df
+    if "Receiver queue" in message:
+        extracted_data = extract_data_from_xml(message)
+        return json.dumps(extracted_data)
+    
+    elif "EmptyDTO - no input expected" or "STATUS " in message:
+        pass
+    else: 
+        print(message)
+        pass

@@ -1,5 +1,2 @@
-TOTAL Pax: 160    Y: 148  J: 12  Jump: 0    StandBy: NULL  Male: 77  Female: 81  Child: 2  Infant: 1  Total bag: 155  Total bag weight: 2325.0 KG  Baggage weight type: STANDARD
- Distribution        : CKI_DISTRIBUTION         
- Section             : 0A                       0B                       0C                       
- Capacity            : J16                      Y84                      Y84                      
- Distribution        : J12                      Y75                      Y73
+FUEL  trip=1200.0 KG taxi=70.0 KG takeoff=3800.0 KG ballast=null edno=12
+STATUS FUEL 9 AIRCRAFT_CONFIG 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 CALC_HIST_DATA 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 REGISTRATION 1 REGISTRATION_CHANGE 1

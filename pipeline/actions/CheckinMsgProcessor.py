@@ -1,45 +1,32 @@
 import re
-from tqdm import tqdm
-import pandas as pd
+import json
 import numpy as np
 
-from utils import random_sample
-from utils import add_to_df
-
 ACTION = "CheckinMsgProcessor"
-def extract_abcd(df):
-    action_df = df[df.action_name == ACTION]
-    output_df = action_df[["id"]].copy()
-    random_sample(action_df)
-
+def extract(message):
     patterns = {
         'aircraft_regTailNbr': r'<(?:n:)?regTailNbr>\s*(.*?)\s*<\/(?:n:)?regTailNbr>',
         'aircraftType': r'<(?:n:)?aircraftType>\s*(.*?)\s*<\/(?:n:)?aircraftType>',
         'aircraft_configuration': r'<(?:n:)?configuration>\s*(.*?)\s*<\/(?:n:)?configuration>'
     }
     
-    for idx, row in tqdm(action_df.iterrows(), total=action_df.shape[0], desc="Processing rows"):
-        current_row = row["entry_details"]
 
-        if '<?xml version="1.0" encoding="UTF-8"?>' in current_row:
-            # Dictionary to store the extracted values
-            extracted_data = {}
+    if '<?xml version="1.0" encoding="UTF-8"?>' in message:
+        # Dictionary to store the extracted values
+        extracted_data = {}
 
-            # Extract data using re
-            for key, pattern in patterns.items():
-                match = re.search(pattern, current_row)
-                if match:
-                    extracted_data[key] = match.group(1)
-                else:
-                    extracted_data[key] = np.nan
+        # Extract data using re
+        for key, pattern in patterns.items():
+            match = re.search(pattern, message)
+            if match:
+                extracted_data[key] = match.group(1)
+            else:
+                extracted_data[key] = np.nan
 
-            add_to_df(output_df, extracted_data, idx)
+        return json.dumps(extracted_data)
 
-        elif "The message was processed successfully" in current_row:
-            pass
-        else:
-            print(current_row)
-            break
-
-    output_df.to_csv(f"pipeline/actions/actions_data/abcd_{ACTION}.csv")
-    return output_df
+    elif "The message was processed successfully" in message:
+        pass
+    else:
+        print(message)
+        pass
