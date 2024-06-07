@@ -1,27 +1,2 @@
-com.systemone.lc2.manualloadplanning.dto.LoadDTO [ id = 9398702  flightId = 2293511 legId = 2404210  deleted = false  fragmentId = LoadFragment ]
-BULK
- Item Id   Number       Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
- 42449172  NULL         ESTIMATE  60.00     KG   3         0.00      ORY       ORY       VCP       BJ        52        true      NULL 
-ULD
- Item Id   ULD       Number    Airline   Special   Status    Weight         Pieces    Volume    Origin    Onl.Sta.  Dest.     Category  Position  Confirmed  Remarks  
- 42449180  PAG       3         ZY        NULL      ESTIMATE  4000.00   KG   0         0.00      ORY       ORY       VCP       C         41P       true      PER 
- 42449171  PMC       6         ZY        NULL      ESTIMATE  4000.00   KG   0         0.00      ORY       ORY       VCP       C         33P       true      PER 
- 42449184  AKE       9         ZY        NULL      ESTIMATE  600.00    KG   30        0.00      ORY       ORY       VCP       B         25L       true      NULL 
- 42449175  AKE       16        ZY        NULL      ESTIMATE  600.00    KG   30        0.00      ORY       ORY       VCP       BJ        22L       true      NULL 
- 42449177  AKE       13        ZY        NULL      ESTIMATE  600.00    KG   30        0.00      ORY       ORY       VCP       B         23L       true      NULL 
- 42449181  AKE       10        ZY        NULL      ESTIMATE  600.00    KG   30        0.00      ORY       ORY       VCP       B         25R       true      NULL 
- 42449176  LCR       1         ZY        NULL      ESTIMATE  0.00      KG   0         0.00      ORY       ORY       VCP       X         31P       true      NULL 
- 42449178  PAG       4         ZY        NULL      ESTIMATE  1482.00   KG   0         0.00      ORY       ORY       VCP       C         32P       true      PER 
- 42449169  AKE       11        ZY        NULL      ESTIMATE  600.00    KG   30        0.00      ORY       ORY       VCP       B         26R       true      NULL 
- 42449182  PMC       2         ZY        NULL      ESTIMATE  4000.00   KG   0         0.00      ORY       ORY       VCP       C         42P       true      PER 
- 42449173  AKE       12        ZY        NULL      ESTIMATE  600.00    KG   30        0.00      ORY       ORY       VCP       B         26L       true      NULL 
- 42449170  AKE       15        ZY        NULL      ESTIMATE  500.00    KG   25        0.00      ORY       ORY       VCP       BJ        22R       true      NULL 
- 42449179  AKE       8         ZY        NULL      ESTIMATE  600.00    KG   30        0.00      ORY       ORY       VCP       B         24R       true      NULL 
- 42449174  AKE       7         ZY        NULL      ESTIMATE  600.00    KG   30        0.00      ORY       ORY       VCP       B         24L       true      NULL 
- 42449183  AKE       14        ZY        NULL      ESTIMATE  600.00    KG   30        0.00      ORY       ORY       VCP       B         23R       true      NULL 
-
-Total baggage      : 5960.00  KG               
-Total cargo        : 13482.00 KG               
-Total EIC          : 0.00     KG               
-Total mail         : 0.00     KG               
-STATUS AIRCRAFT_CONFIG 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 TRANSIT_ACCEPTANCE 1 TRANSIT_PAX 1 AUTO_MODE_ACTIVE 1 REGISTRATION 1 REGISTRATION_CHANGE 1
+FUEL  trip=1200.0 KG taxi=70.0 KG takeoff=3800.0 KG ballast=null edno=12
+STATUS FUEL 9 AIRCRAFT_CONFIG 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 CALC_HIST_DATA 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 REGISTRATION 1 REGISTRATION_CHANGE 1
