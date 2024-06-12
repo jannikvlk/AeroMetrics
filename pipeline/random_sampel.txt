@@ -1,2 +1,67 @@
-FUEL  trip=1200.0 KG taxi=70.0 KG takeoff=3800.0 KG ballast=null edno=12
-STATUS FUEL 9 AIRCRAFT_CONFIG 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 CALC_HIST_DATA 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 REGISTRATION 1 REGISTRATION_CHANGE 1
+
+Email receivers     :
+Message type        :   LOADING_INSTRUCTION
+Subject             :   AB2378/02MAY DEL-GOX; Loading Instruction Edition 02
+Attachment file name:   AB2378_02MAY_DELGOX_Loading_Instruction_Edition_02
+Body                :
+
+LOADING INSTRUCTION/REPORT      PREPARED BY                    EDNO
+ALL WEIGHTS IN KILOGRAM       HUMAN CLC 011                    02
+
+FROM/TO FLIGHT      A/C REG     VERSION                DATE    TIME
+DEL GOX AB 2378 /02 ABCAI       Y189                   02MAY24 1128
+
+PLANNED JOINING LOAD
+GOX     Y 102                   C     0  M     0  B  1038
+
+JOINING SPECS :
+TRANSIT SPECS :
+RELOADS :
+                                                             ACTUAL
+LOADING INSTRUCTION                                          WEIGHT
+*******************************************************************
+CPT 1      MAX   809                                 :
+:                                                    :
+:1    NIL                                            :            D
+:REPORT:                                             :            O
+:                                                    :            O
+:                                                    :            R
+:                                                    :____________
+:                                         CPT 1 TOTAL:
+___________________________________________________________________
+CPT 2      MAX  2670                                 :
+:                                                    :
+:2    NIL                                            :            
+:REPORT:                                             :            
+:                                                    :____________
+:                                         CPT 2 TOTAL:
+___________________________________________________________________
+CPT 3      MAX  4086                                 :
+:                                                    :
+:3                                                   :            
+:ONLOAD:  GOX  B/1038                                :            
+:REPORT:                                             :            
+:                                                    :____________
+:                                         CPT 3 TOTAL:
+___________________________________________________________________
+CPT 4      MAX   763                                 :
+:                                                    :
+:4    NIL                                            :            D
+:REPORT:                                             :            O
+:                                                    :            O
+:                                                    :            R
+:                                                    :____________
+:                                         CPT 4 TOTAL:
+*******************************************************************
+SI:BAGS IN COMP 3
+SI:HUMAN 9819993780
+SI:022-69397881
+
+THIS AIRCRAFT HAS BEEN LOADED       CONTAINERS/PALLETS AND BULKLOAD
+IN ACCORDANCE WITH THESE            HAVE BEEN SECURED IN ACCORDANCE
+INSTRUCTIONS AND DEVIATIONS         WITH COMPANY INSTRUCTIONS.
+SHOWN IN THIS REPORT.
+
+LOADING SUPERVISOR/OFFICER :        LOADING SUPERVISOR/OFFICER :
+
+SIGNATURE :                         SIGNATURE :
