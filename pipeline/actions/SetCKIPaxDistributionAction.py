@@ -4,7 +4,6 @@ import json
 
 def parse_first_line(first_line):
 
-
     # Fixed keys in the first line
     keys = [
         "TOTAL Pax",
@@ -93,12 +92,12 @@ def parse_remaining_lines(lines):
 
 
 def extract(message):
-        """
+    """
     MEssage:
     'TOTAL Pax: 6    Y: 6  Jump: 0    StandBy: NULL  Male: 2  Female: 2  Child: 2  Infant: 0  Total bag: 6  Total bag weight: 72.0 KG  Baggage weight type: HISTORIC
-    Distribution        : CKI_DISTRIBUTION         
-    Section             : 0A                       0C                       
-    Capacity            : Y72                      Y102                     
+    Distribution        : CKI_DISTRIBUTION
+    Section             : 0A                       0C
+    Capacity            : Y72                      Y102
     Distribution        : Y0                       Y0'
 
     Data
@@ -119,7 +118,6 @@ def extract(message):
        'Distribution': 'CKI_DISTRIBUTION'
     }'
     """
-
 
     if message is None:
         return None
