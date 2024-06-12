@@ -3,33 +3,6 @@ import json
 
 
 def parse_first_line(first_line):
-    """
-    MEssage:
-    'TOTAL Pax: 6    Y: 6  Jump: 0    StandBy: NULL  Male: 2  Female: 2  Child: 2  Infant: 0  Total bag: 6  Total bag weight: 72.0 KG  Baggage weight type: HISTORIC
-    Distribution        : CKI_DISTRIBUTION         
-    Section             : 0A                       0C                       
-    Capacity            : Y72                      Y102                     
-    Distribution        : Y0                       Y0'
-
-    Data
-    '{'TOTAL Pax': 6,
-        'Y': 6,
-        'Jump': 0,
-        'StandBy': None,
-        'Male': 2,
-        'Female': 2,
-        'Child': 2,
-        'Infant': 0,
-        'Total bag': 6,
-        'Total bag weight': 72.0,
-        'Baggage weight type': 'HISTORIC',
-        'Weight unit': 'KG',
-        'Sections': {'0A': {'Capacity': 'Y72', 'Distribution': 'Y0'},
-        '0C': {'Capacity': 'Y102', 'Distribution': 'Y0'}},
-       'Distribution': 'CKI_DISTRIBUTION'
-    }'
-    """
-
 
     # Fixed keys in the first line
     keys = [
@@ -119,6 +92,33 @@ def parse_remaining_lines(lines):
 
 
 def extract(message):
+    """
+    MEssage:
+    'TOTAL Pax: 6    Y: 6  Jump: 0    StandBy: NULL  Male: 2  Female: 2  Child: 2  Infant: 0  Total bag: 6  Total bag weight: 72.0 KG  Baggage weight type: HISTORIC
+    Distribution        : CKI_DISTRIBUTION
+    Section             : 0A                       0C
+    Capacity            : Y72                      Y102
+    Distribution        : Y0                       Y0'
+
+    Data
+    '{'TOTAL Pax': 6,
+        'Y': 6,
+        'Jump': 0,
+        'StandBy': None,
+        'Male': 2,
+        'Female': 2,
+        'Child': 2,
+        'Infant': 0,
+        'Total bag': 6,
+        'Total bag weight': 72.0,
+        'Baggage weight type': 'HISTORIC',
+        'Weight unit': 'KG',
+        'Sections': {'0A': {'Capacity': 'Y72', 'Distribution': 'Y0'},
+        '0C': {'Capacity': 'Y102', 'Distribution': 'Y0'}},
+       'Distribution': 'CKI_DISTRIBUTION'
+    }'
+    """
+
     if message is None:
         return None
     if "TOTAL Pax" in message:
