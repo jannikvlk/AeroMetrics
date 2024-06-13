@@ -1,2 +1,19 @@
-FUEL  trip=1200.0 KG taxi=70.0 KG takeoff=3800.0 KG ballast=null edno=12
-STATUS FUEL 9 AIRCRAFT_CONFIG 1 CARGO_TRANSFER 1 CABIN_CONFIG 1 CALC_HIST_DATA 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 REGISTRATION 1 REGISTRATION_CHANGE 1
+
+com.systemone.lc2.fuelhandling.dto.FuelDTO [ id = 0  flightId = 669168 legId = 68108979  deleted = false  fragmentId = FuelDataFragment ]
+ StandardFuel        : No                        Non standard fuel   : Yes                      
+ EditionNumber       : 8                         Fueling Indicator   : false                     TruckOnSbyIndicator : false                    
+                                           Manual Non Standard Index : 1.65                     
+ Actual OFP No       : 21                        Density             : 0.785 KGPERCUBICMETER     Trip Fuel           : 38803.0 KG               
+ FZFW                : 132300.0 KG               Max Fuel Cap        : 110953.0 KG              
+ EZFW sent           : NULL                      Minimum TOF         : 47868.0 KG               
+ Triggerd by         : MANUAL_INPUT                                                              Take Off Fuel       : 4108900.0 KG               
+                                                 Taxi Fuel           : 600.0 KG                 
+
+                                                 Fuel Index          : 1.6500000000000021        Planning Fuel       : NULL                     
+
+ Flight Time         : 0753                      Remarks             :                          
+
+                      MAIN_1           TRIM          
+ Block Fuel           47100.0 KG       2400.0 KG     
+ Take Off Fuel        46500.0 KG       2400.0 KG     
+ Capacity             106000.0 KG      4953.0 KG
