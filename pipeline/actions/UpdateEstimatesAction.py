@@ -11,7 +11,37 @@ def extract(message: str):
             STATUS FUEL 2 AIRCRAFT_CONFIG 1 EZFW 2 CARGO_TRANSFER 1 CABIN_CONFIG 1 CALC_HIST_DATA 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 2 REGISTRATION 1 REGISTRATION_CHANGE 2',"""
 
         # Initialize an empty dictionary to store key-value pairs
-        key_value_pairs = {}
+        all_keys = {
+            "AIRCRAFT_CONFIG",
+            "AUTOMATION_STARTED",
+            "AUTO_MODE_ACTIVE",
+            "BAG_LOAD_ITEMS_GEN",
+            "Bag Weight",
+            "CABIN_CONFIG",
+            "CALC_HIST_DATA",
+            "CARGO_FINAL",
+            "CARGO_TRANSFER",
+            "CHECK_IN_OPEN",
+            "Cargo",
+            "DGR_ITEMS",
+            "DOW",
+            "EZFW",
+            "EZFW_COUNTER",
+            "FUEL",
+            "FUEL_ORDER",
+            "Mail",
+            "OFP",
+            "Pax Weight",
+            "REGISTRATION",
+            "REGISTRATION_CHANGE",
+            "TRANSIT_ACCEPTANCE",
+            "TRANSIT_PAX",
+            "Weight Unit",
+            "ZFW",
+        }
+
+        # Initialize the dictionary with None for all keys
+        key_value_pairs = {key: None for key in all_keys}
 
         # Split the message into two parts
         parts = message.split("\r\n")
@@ -30,7 +60,9 @@ def extract(message: str):
                 key_value_pairs[keyword] = (
                     float(value.strip()) if "." in value.strip() else int(value.strip())
                 )
-                key_value_pairs["Weight Unit"] = unit.strip()
+                key_value_pairs["Weight Unit"] = (
+                    unit.strip()
+                )  # Assuming only one unit is present in the message
 
         # Process the status-related part
         status_pairs = status_part.split()
