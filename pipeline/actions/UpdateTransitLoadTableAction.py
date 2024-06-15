@@ -3,6 +3,8 @@ import json
 
 
 def extract(message):
+
+    
     if "lc2.manualloadplanning.dto.LoadDTO" in message:
         # Normalize line breaks to just '\n' for easier processing
         normalized_text = message.replace("\r\n", "\n").strip()
