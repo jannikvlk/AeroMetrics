@@ -2,58 +2,62 @@ import re
 import json
 import utils
 
-ACTION = "StorePaxDataAction"
+from actions.remove_typos import remove_typos
 
-def extract(message):
+
+def extract(message: str) -> str | None:
+    message = remove_typos(message)
 
     # skip system row because of lacking information
-    if "Y              Jump           Standby        Male           Female         Child          Infant         Bags           BWgt           Average" or "                Y              J              Jump           Standby        Male           Female         Child          Infant         Bags           BWgt           Average        " in message:
+    if (
+        "Y              Jump           Standby        Male           Female         Child          Infant         Bags           BWgt           Average"
+        or "                Y              J              Jump           Standby        Male           Female         Child          Infant         Bags           BWgt           Average        "
+        in message
+    ):
         pattern = re.compile(
-        r'(?P<type>\w+)\s+'
-        r'(?P<Y>\d+|NULL)\s+'
-        r'(?P<Jump>\d+|NULL)\s+'
-        r'(?P<Standby>\d+|NULL)\s+'
-        r'(?P<Male>\d+|NULL)\s+'
-        r'(?P<Female>\d+|NULL)\s+'
-        r'(?P<Child>\d+|NULL)\s+'
-        r'(?P<Infant>\d+|NULL)\s+'
-        r'(?P<Bags>\d+|NULL)\s+'
-        r'(?P<BWgt>[0-9.]+|NULL)\s*KG\s+'
-        r'(?P<Average>[0-9.]+|NULL)\s*'
+            r"(?P<type>\w+)\s+"
+            r"(?P<Y>\d+|NULL)\s+"
+            r"(?P<Jump>\d+|NULL)\s+"
+            r"(?P<Standby>\d+|NULL)\s+"
+            r"(?P<Male>\d+|NULL)\s+"
+            r"(?P<Female>\d+|NULL)\s+"
+            r"(?P<Child>\d+|NULL)\s+"
+            r"(?P<Infant>\d+|NULL)\s+"
+            r"(?P<Bags>\d+|NULL)\s+"
+            r"(?P<BWgt>[0-9.]+|NULL)\s*KG\s+"
+            r"(?P<Average>[0-9.]+|NULL)\s*"
         )
-
 
         match = pattern.search(message)
 
         if match:
             extracted_data = match.groupdict()
             return json.dumps(extracted_data)
-        
+
         else:
-            #print("No match found.")
-            #utils.write_to_file(message, "sample.txt")
-            #raise NotImplemented
+            # print("No match found.")
+            # utils.write_to_file(message, "sample.txt")
+            # raise NotImplemented
             pass
 
     elif "com.onesystem.lc2.paxactuals.dto.PaxDataDTO" in message:
 
         # pattern to extract infos from string
         pattern = re.compile(
-        r'(?P<type>Checkin|Loadsheet)\s+'
-        r'(?P<Y>\d+|\w+)\s+'
-        r'(?P<Jump>\d+|\w+)\s+'
-        r'(?P<Standby>\d+|\w+)\s+'
-        r'(?P<Male>\d+|\w+)\s+'
-        r'(?P<Female>\d+|\w+)\s+'
-        r'(?P<Child>\d+|\w+)\s+'
-        r'(?P<Infant>\d+|\w+)\s+'
-        r'(?P<Bags>\d+|\w+)\s+'
-        r'(?P<BWgt>[0-9.]+|\w+)\s+'
-        #r'(?P<Average>[0-9.]+|\w+)'
-    )
+            r"(?P<type>Checkin|Loadsheet)\s+"
+            r"(?P<Y>\d+|\w+)\s+"
+            r"(?P<Jump>\d+|\w+)\s+"
+            r"(?P<Standby>\d+|\w+)\s+"
+            r"(?P<Male>\d+|\w+)\s+"
+            r"(?P<Female>\d+|\w+)\s+"
+            r"(?P<Child>\d+|\w+)\s+"
+            r"(?P<Infant>\d+|\w+)\s+"
+            r"(?P<Bags>\d+|\w+)\s+"
+            r"(?P<BWgt>[0-9.]+|\w+)\s+"
+            # r'(?P<Average>[0-9.]+|\w+)'
+        )
         # find match from pattern
         match = pattern.search(message)
-        
 
         # add to teh data frame if match
         if match:
@@ -68,17 +72,17 @@ def extract(message):
 
     elif "TOTAL Pax" in message:
         pattern = re.compile(
-                r'(?:TOTAL Pax:\s*(?P<TOTAL_Pax>\w+)\s*)?'
-                r'(?:Y:\s*(?P<Y>\w+)\s*)?'
-                r'(?:Jump:\s*(?P<Jump>\w+|NULL)\s*)?'
-                r'(?:StandBy:\s*(?P<Standby>\w+|NULL)\s*)?'
-                r'(?:Male:\s*(?P<Male>\w+|NULL)\s*)?'
-                r'(?:Female:\s*(?P<Female>\w+|NULL)\s*)?'
-                r'(?:Child:\s*(?P<Child>\w+|NULL)\s*)?'
-                r'(?:Infant:\s*(?P<Infant>\w+|NULL)\s*)?'
-                r'(?:Total bag:\s*(?P<Bags>\w+)\s*)?'
-                r'(?:Total bag weight:\s*(?P<BWgt>[\d.]+ KG)\s*)?'
-                r'(?:Baggage weight type:\s*(?P<Baggage_weight_type>\w+))?.*'
+            r"(?:TOTAL Pax:\s*(?P<TOTAL_Pax>\w+)\s*)?"
+            r"(?:Y:\s*(?P<Y>\w+)\s*)?"
+            r"(?:Jump:\s*(?P<Jump>\w+|NULL)\s*)?"
+            r"(?:StandBy:\s*(?P<Standby>\w+|NULL)\s*)?"
+            r"(?:Male:\s*(?P<Male>\w+|NULL)\s*)?"
+            r"(?:Female:\s*(?P<Female>\w+|NULL)\s*)?"
+            r"(?:Child:\s*(?P<Child>\w+|NULL)\s*)?"
+            r"(?:Infant:\s*(?P<Infant>\w+|NULL)\s*)?"
+            r"(?:Total bag:\s*(?P<Bags>\w+)\s*)?"
+            r"(?:Total bag weight:\s*(?P<BWgt>[\d.]+ KG)\s*)?"
+            r"(?:Baggage weight type:\s*(?P<Baggage_weight_type>\w+))?.*"
         )
         match = pattern.search(message)
 
@@ -87,9 +91,9 @@ def extract(message):
             return json.dumps(extracted_data)
         else:
             print("No match found")
-            #utils.write_to_file(message, "sample.txt")
+            # utils.write_to_file(message, "sample.txt")
             pass
-                
+
     else:
         print("Format not found!")
         utils.write_to_file(message, "sample.txt")

@@ -4,9 +4,11 @@ import os
 from tqdm import tqdm
 import json
 
-ACTION = "TransferCheckinDataAction"
+from actions.remove_typos import remove_typos
 
-def extract(message):
+
+def extract(message: str) -> str | None:
+    message = remove_typos(message)
     # Define the regular expressions to extract the information
     pattern1 = r"TOTAL\s+Pax:\s+(\d+)\s+Y:\s+(\d+)\s+Jump:\s+(\d+)\s+StandBy:\s+(NULL|\d+)\s+Male:\s+(\d+)\s+Female:\s+(\d+)\s+Child:\s+(\d+)\s+Infant:\s+(\d+)\s+Total\s+bag:\s+(\d+)\s+Total\s+bag\s+weight:\s+([\d.]+)\s+KG\s+Baggage\s+weight\s+type:\s+(\w+)\s+Distribution\s+:\s+(\w+)\s+Section\s+:\s+([\w\s]+)\s+Capacity\s+:\s+([\w\s]+)\s+Distribution\s+:\s+([\w\s]+)"
     pattern2 = r"(?:([A-Z]+))\s+Y\s+(\d+)\s+Jump\s+(NULL|\d+)\s+Standby\s+(NULL|\d+)\s+Male\s+(\d+)\s+Female\s+(\d+)\s+Child\s+(\d+)\s+Infant\s+(\d+)\s+Bags\s+(\d+)\s+BWgt\s+([\d.]+)\s+KG\s+Average\s+([\d.]+)\s+KG"
@@ -39,43 +41,55 @@ def extract(message):
 
         for section, capacity, distribution in zip(sections, capacities, distributions):
             extracted_data = {
-                'Loadsheet_Number': loadsheet_number,
-                'Total_Pax': total_pax,
-                'Y_Pax': y_pax,
-                'Jump_Pax': jump_pax,
-                'Standby_Pax': standby_pax,
-                'Male_Pax': male_pax,
-                'Female_Pax': female_pax,
-                'Child_Pax': child_pax,
-                'Infant_Pax': infant_pax,
-                'Total_Bags': total_bags,
-                'Total_Bag_Weight_KG': total_bag_weight,
-                'Baggage_Weight_Type': bag_weight_type,
-                'Distribution_Type': distribution_type,
-                'Section': section,
-                'Capacity': capacity,
-                'Distribution': distribution
+                "Loadsheet_Number": loadsheet_number,
+                "Total_Pax": total_pax,
+                "Y_Pax": y_pax,
+                "Jump_Pax": jump_pax,
+                "Standby_Pax": standby_pax,
+                "Male_Pax": male_pax,
+                "Female_Pax": female_pax,
+                "Child_Pax": child_pax,
+                "Infant_Pax": infant_pax,
+                "Total_Bags": total_bags,
+                "Total_Bag_Weight_KG": total_bag_weight,
+                "Baggage_Weight_Type": bag_weight_type,
+                "Distribution_Type": distribution_type,
+                "Section": section,
+                "Capacity": capacity,
+                "Distribution": distribution,
             }
             extracted_data_list.append(extracted_data)
 
         return json.dumps(extracted_data_list)
 
     elif match2:
-        station, y_pax, jump_pax, standby_pax, male_pax, female_pax, child_pax, infant_pax, total_bags, bag_weight, average_weight = match2.groups()
+        (
+            station,
+            y_pax,
+            jump_pax,
+            standby_pax,
+            male_pax,
+            female_pax,
+            child_pax,
+            infant_pax,
+            total_bags,
+            bag_weight,
+            average_weight,
+        ) = match2.groups()
 
         extracted_data = {
-            'Loadsheet_Number': loadsheet_number,
-            'Station': station,
-            'Y_Pax': y_pax,
-            'Jump_Pax': jump_pax,
-            'Standby_Pax': standby_pax,
-            'Male_Pax': male_pax,
-            'Female_Pax': female_pax,
-            'Child_Pax': child_pax,
-            'Infant_Pax': infant_pax,
-            'Total_Bags': total_bags,
-            'Total_Bag_Weight_KG': bag_weight,
-            'Average_Weight_KG': average_weight
+            "Loadsheet_Number": loadsheet_number,
+            "Station": station,
+            "Y_Pax": y_pax,
+            "Jump_Pax": jump_pax,
+            "Standby_Pax": standby_pax,
+            "Male_Pax": male_pax,
+            "Female_Pax": female_pax,
+            "Child_Pax": child_pax,
+            "Infant_Pax": infant_pax,
+            "Total_Bags": total_bags,
+            "Total_Bag_Weight_KG": bag_weight,
+            "Average_Weight_KG": average_weight,
         }
 
         return json.dumps(extracted_data)

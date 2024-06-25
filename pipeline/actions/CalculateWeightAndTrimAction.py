@@ -1,9 +1,11 @@
 import re
 import json
-ACTION = "CalculateWeightAndTrimAction"
+
+from actions.remove_typos import remove_typos
 
 
-def extract(message):
+def extract(message: str) -> str | None:
+    message = remove_typos(message)
 
     # skip system row because of lacking information
     if "onesystem" in message:
@@ -15,4 +17,3 @@ def extract(message):
         extracted_data = {match[0].strip(): match[2] for match in matches}
 
         return json.dumps(extracted_data)
-

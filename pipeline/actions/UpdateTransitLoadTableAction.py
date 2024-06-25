@@ -2,9 +2,12 @@ import re
 import json
 
 
-def extract(message):
+from actions.remove_typos import remove_typos
 
-    
+
+def extract(message: str) -> str | None:
+    message = remove_typos(message)
+
     if "lc2.manualloadplanning.dto.LoadDTO" in message:
         # Normalize line breaks to just '\n' for easier processing
         normalized_text = message.replace("\r\n", "\n").strip()

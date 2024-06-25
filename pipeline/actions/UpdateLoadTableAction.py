@@ -2,7 +2,10 @@ import re
 import json
 
 
-def extract(message: str):
+from actions.remove_typos import remove_typos
+
+
+def extract(message: str) -> str | None:
     """
     com.onesystem.lc2.manualloadplanning.dto.LoadDTO [ id = 2259193  flightId = 517500 legId = 542905  deleted = false  fragmentId = LoadFragment ]
     BULK
@@ -19,7 +22,7 @@ def extract(message: str):
 
     STATUS LOADING_INSTRUCTION 1 FUEL 1 AIRCRAFT_CONFIG 1 EZFW 2 CARGO_TRANSFER 1 CABIN_CONFIG 1 TRANSIT_ACCEPTANCE 1 TRANSIT_PAX 1 CALC_HIST_DATA 1 CHECK_IN_OPEN 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 2 REGISTRATION 1 REGISTRATION_CHANGE 5
     """
-
+    message = remove_typos(message)
     data = {
         "LoadDTO": {
             "id": None,

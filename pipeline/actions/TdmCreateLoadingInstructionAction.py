@@ -1,15 +1,11 @@
 import json
 import re
 
+from actions.remove_typos import remove_typos
 
-def extract(message: str):
-    typos = {
-        "BAG_LOZY_ITEMS_GEN": "BAG_LOAD_ITEMS_GEN",
-        "LOZYING_INSTRUCTION": "LOADING_INSTRUCTION",
-        "LOZYSHEET": "LOADSHEET",
-    }  # Fix typos in the messages from zyxw
-    for key, value in typos.items():
-        message = message.replace(key, value)
+
+def extract(message: str) -> str | None:
+    message = remove_typos(message)
 
     if "com.systemone.lc2.common.dto.SingleAttributeDTO" in message:
         return None
