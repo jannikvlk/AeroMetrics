@@ -6,7 +6,7 @@ from actions.remove_typos import remove_typos
 
 def extract(message: str) -> str | None:
     message = remove_typos(message)
-    if "com.onesystem.lc2.paxactuals.dto.PaxDataDTO" in message:
+    if "paxactuals.dto.PaxDataDTO" in message:
         pattern = (
             r"Booked\s+"  # Match the word 'Booked'
             r"(\d+)\s+"  # Match Y value (digits)
@@ -39,6 +39,13 @@ def extract(message: str) -> str | None:
             extracted_data = dict(zip(keys, values))
 
             return json.dumps(extracted_data)
+        else:
+            return None
 
-    elif "STATUS AIRCRAFT_CONFIG" or "STATUS FUEL" in message:
-        pass
+    elif (
+        "STATUS AIRCRAFT_CONFIG" in message
+        or "STATUS FUEL" in message
+        or "STATUS LOADING_INSTRUCTION" in message
+    ):
+        return None
+    raise NotImplementedError("This message is not supported yet:", message)

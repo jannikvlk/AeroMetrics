@@ -73,4 +73,4 @@ def extract(message: str) -> str | None:
         return None
     if "lc2.common.dto.SingleAttributeDTO" in message:
         return None
-    return None
+    raise NotImplementedError("This message is not supported yet:", message)

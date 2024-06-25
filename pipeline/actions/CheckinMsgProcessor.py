@@ -28,7 +28,5 @@ def extract(message: str) -> str | None:
         return json.dumps(extracted_data)
 
     elif "The message was processed successfully" in message:
-        pass
-    else:
-        print(message)
-        pass
+        return None
+    raise NotImplementedError("This message is not supported yet:", message)

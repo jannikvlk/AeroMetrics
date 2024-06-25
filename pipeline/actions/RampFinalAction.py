@@ -151,4 +151,4 @@ def extract(message: str) -> str | None:
         instructions. I have instructed the high loader driver to engage all restraining locks and nets.'
         """
         return None
-    raise NotImplementedError("This message is not supported yet")
+    raise NotImplementedError("This message is not supported yet:", message)

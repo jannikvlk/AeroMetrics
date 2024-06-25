@@ -13,7 +13,7 @@ ATOW = FZFW + Total Fuel (trip fuel + take off fuel + taxi fuel)
 
 def extract(message: str) -> str | None:
     message = remove_typos(message)
-    if "com.onesystem.lc2.fuelhandling.dto.FuelDTO" in message:
+    if "fuelhandling.dto.FuelDTO" in message:
         keys_to_extract = ["FZFW", "Trip Fuel", "Take Off Fuel", "Taxi Fuel"]
         dict_keys = ["final_zfw", "trip_fuel", "taxi_fuel", "take_off_fuel"]
         extracted_data = {}
@@ -31,7 +31,7 @@ def extract(message: str) -> str | None:
 
         return json.dumps(extracted_data)
 
-    elif "STATUS LOADING_INSTRUCTION" or "STATUS LOADSHEET 1" in message:
+    elif "STATUS LOADING_INSTRUCTION" in message or "STATUS LOADSHEET" in message:
         keys_to_extract = ["trip", "takeoff", "taxi"]
         dict_keys = ["trip_fuel", "taxi_fuel", "take_off_fuel"]
         extracted_data = {}
@@ -43,5 +43,8 @@ def extract(message: str) -> str | None:
                 extracted_data[dict_keys[i]] = value
 
         return json.dumps(extracted_data)
-    else:
-        pass
+
+    if "STATUS AIRCRAFT_CONFIG" in message or "STATUS FUEL" in message:
+        # TODO
+        return None
+    raise NotImplementedError("This message is not supported yet:", message)

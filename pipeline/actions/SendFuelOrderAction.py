@@ -48,8 +48,5 @@ def extract(message: str) -> str | None:
         return json.dumps(extracted_data)
 
     elif "com.systemone.lc2.common.dto.SendDocumentDTO" in message:
-        pass
-
-    else:
-        print(message)
-        pass
+        return None
+    raise NotImplementedError("This message is not supported yet:", message)
