@@ -1,5 +1,6 @@
 import re
 import json
+from actions.remove_typos import remove_typos
 
 
 def parse_first_line(first_line):
@@ -91,7 +92,7 @@ def parse_remaining_lines(lines):
     return remaining_data
 
 
-def extract(message):
+def extract(message: str) -> str | None:
     """
     MEssage:
     'TOTAL Pax: 6    Y: 6  Jump: 0    StandBy: NULL  Male: 2  Female: 2  Child: 2  Infant: 0  Total bag: 6  Total bag weight: 72.0 KG  Baggage weight type: HISTORIC
@@ -119,6 +120,7 @@ def extract(message):
     }'
     """
 
+    message = remove_typos(message)
     if message is None:
         return None
     if "TOTAL Pax" in message:

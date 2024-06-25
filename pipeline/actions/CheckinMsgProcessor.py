@@ -2,14 +2,16 @@ import re
 import json
 import numpy as np
 
-ACTION = "CheckinMsgProcessor"
-def extract(message):
+from actions.remove_typos import remove_typos
+
+
+def extract(message: str) -> str | None:
+    message = remove_typos(message)
     patterns = {
-        'aircraft_regTailNbr': r'<(?:n:)?regTailNbr>\s*(.*?)\s*<\/(?:n:)?regTailNbr>',
-        'aircraftType': r'<(?:n:)?aircraftType>\s*(.*?)\s*<\/(?:n:)?aircraftType>',
-        'aircraft_configuration': r'<(?:n:)?configuration>\s*(.*?)\s*<\/(?:n:)?configuration>'
+        "aircraft_regTailNbr": r"<(?:n:)?regTailNbr>\s*(.*?)\s*<\/(?:n:)?regTailNbr>",
+        "aircraftType": r"<(?:n:)?aircraftType>\s*(.*?)\s*<\/(?:n:)?aircraftType>",
+        "aircraft_configuration": r"<(?:n:)?configuration>\s*(.*?)\s*<\/(?:n:)?configuration>",
     }
-    
 
     if '<?xml version="1.0" encoding="UTF-8"?>' in message:
         # Dictionary to store the extracted values

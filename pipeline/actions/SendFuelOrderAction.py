@@ -1,54 +1,55 @@
 import re
 import json
 
-ACTION = "SendFuelOrderAction"
+from actions.remove_typos import remove_typos
+
 
 """
 No Data for abcd and jsut 4 for zyxw
 """
 
-def extract(message):
-        if "PRELIMINARY FUEL ORDER" in message:
-            pattern = re.compile(r"\b(\d{3})\b.*?BLOCK FUEL:\s+(\d+)\s+(\w+)", re.DOTALL)
 
-            # Search for matches in the text
-            match = pattern.search(message)
+def extract(message: str) -> str | None:
+    message = remove_typos(message)
+    if "PRELIMINARY FUEL ORDER" in message:
+        pattern = re.compile(r"\b(\d{3})\b.*?BLOCK FUEL:\s+(\d+)\s+(\w+)", re.DOTALL)
 
-            # Initialize the dictionary
-            extracted_data = {}
+        # Search for matches in the text
+        match = pattern.search(message)
 
-            # If a match is found, extract the data and store it in the dictionary
-            if match:
-                extracted_data['AircraftType'] = match.group(1)
-                extracted_data['BlockFuel'] = match.group(2)
-                extracted_data['Metric'] = match.group(3)
-                extracted_data['FuelOrderState'] = "PRELIMINARY"
+        # Initialize the dictionary
+        extracted_data = {}
 
-            return json.dumps(extracted_data)
+        # If a match is found, extract the data and store it in the dictionary
+        if match:
+            extracted_data["AircraftType"] = match.group(1)
+            extracted_data["BlockFuel"] = match.group(2)
+            extracted_data["Metric"] = match.group(3)
+            extracted_data["FuelOrderState"] = "PRELIMINARY"
 
+        return json.dumps(extracted_data)
 
-        elif "FINAL FUEL ORDER" in message:
-            pattern = re.compile(r"\b(\d{3})\b.*?BLOCK FUEL:\s+(\d+)\s+(\w+)", re.DOTALL)
+    elif "FINAL FUEL ORDER" in message:
+        pattern = re.compile(r"\b(\d{3})\b.*?BLOCK FUEL:\s+(\d+)\s+(\w+)", re.DOTALL)
 
-            # Search for matches in the text
-            match = pattern.search(message)
+        # Search for matches in the text
+        match = pattern.search(message)
 
-            # Initialize the dictionary
-            extracted_data = {}
+        # Initialize the dictionary
+        extracted_data = {}
 
-            # If a match is found, extract the data and store it in the dictionary
-            if match:
-                extracted_data['AircraftType'] = match.group(1)
-                extracted_data['BlockFuel'] = match.group(2)
-                extracted_data['Metric'] = match.group(3)
-                extracted_data['FuelOrderState'] = "FINAL"
+        # If a match is found, extract the data and store it in the dictionary
+        if match:
+            extracted_data["AircraftType"] = match.group(1)
+            extracted_data["BlockFuel"] = match.group(2)
+            extracted_data["Metric"] = match.group(3)
+            extracted_data["FuelOrderState"] = "FINAL"
 
-            return json.dumps(extracted_data)
+        return json.dumps(extracted_data)
 
-        elif "com.systemone.lc2.common.dto.SendDocumentDTO" in message:
-            pass
+    elif "com.systemone.lc2.common.dto.SendDocumentDTO" in message:
+        pass
 
-        else:
-            print(message)
-            pass
-    
+    else:
+        print(message)
+        pass

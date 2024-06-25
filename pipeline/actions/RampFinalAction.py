@@ -1,15 +1,11 @@
 import re
 import json
 
+from actions.remove_typos import remove_typos
 
-def extract(message: str):
-    typos = {
-        "BAG_LOZY_ITEMS_GEN": "BAG_LOAD_ITEMS_GEN",
-        "LOZYING_INSTRUCTION": "LOADING_INSTRUCTION",
-        "LOZYSHEET": "LOADSHEET",
-    }  # Fix typos in the messages from zyxw
-    for key, value in typos.items():
-        message = message.replace(key, value)
+
+def extract(message: str) -> str | None:
+    message = remove_typos(message)
 
     if "STATUS" in message:
         """ 
@@ -26,7 +22,6 @@ def extract(message: str):
             "AUTOMATION_STARTED",
             "AUTO_MODE_ACTIVE",
             "BAG_LOAD_ITEMS_GEN",
-            
             "BAG_ULD_ORD",
             "CABIN_CONFIG",
             "CALC_HIST_DATA",
@@ -43,8 +38,6 @@ def extract(message: str):
             "LDM",
             "LOADING_INSTRUCTION",
             "LOADSHEET",
-            
-            
             "OFFBLOCK",
             "OFP",
             "PDM",
@@ -80,10 +73,11 @@ def extract(message: str):
         """ Example Message: 'Discrepancy check result\r\n
         Discrepancy happend: true\r\n
         Discrepancies\r\n 
-        Type        Destination     Bag pieces  Bag     weight  \r\n
-        LOZYTABLE   REC             170         3400.00 KG      \r\n
-        CKI         REC             0           0.00    KG \r\n
-        SUM         REC             170         3400.00 KG'
+        Type                      Destination               Bag pieces                Bag 
+        weight               \r\nLOZYTABLE                  REC                       
+        170                       3400.00 KG                \r\nCKI                        
+        REC                       0                         0.00    KG                
+        \r\nSUM                        REC                       170                       3400.00 KG'
 
         The message is formatted like a table with some information in a header.
         Data is extracted into a dictionary with the following structure:

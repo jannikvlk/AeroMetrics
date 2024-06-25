@@ -1,9 +1,12 @@
-import json, re
+import json
+import re
 
 
-def extract(message: str):
+from actions.remove_typos import remove_typos
 
 
+def extract(message: str) -> str | None:
+    message = remove_typos(message)
 
 
     if "Pax Weight =" in message:
