@@ -94,4 +94,4 @@ def extract(message: str) -> str | None:
 
         return json.dumps(extracted_data)
 
-    return json.dumps({})
+    return None

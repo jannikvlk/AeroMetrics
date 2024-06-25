@@ -15,3 +15,7 @@ def remove_typos(message: str) -> str | None:
     for key, value in TYPOS.items():
         message = message.replace(key, value)
     return message
+
+
+def test():
+    return 1
