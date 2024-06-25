@@ -59,3 +59,12 @@ def extract(message: str) -> str | None:
             }
 
         return json.dumps(extracted_data, indent=4)
+    if "common.dto.SingleAttributeDTO" in message:
+        return None
+    if (
+        "STATUS LOADING_INSTRUCTION" in message
+        or "STATUS LOADSHEET" in message
+        or "STATUS FUEL" in message
+    ):
+        return None
+    raise NotImplementedError("This message is not supported yet:", message)

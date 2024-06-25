@@ -65,4 +65,4 @@ def extract(message: str) -> str | None:
 
     if "Telex receivers" in message or "Email receivers" in message:
         return None  # not relevant enough
-    raise NotImplementedError("This message is not supported yet")
+    raise NotImplementedError("This message is not supported yet:", message)

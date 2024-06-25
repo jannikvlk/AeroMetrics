@@ -1,54 +1,76 @@
 import re
 import json
-
 from actions.remove_typos import remove_typos
 
 
 def extract(message: str) -> str | None:
     message = remove_typos(message)
+  
+
     if (
-        "Message type        :   LOADSHEET"
+        "Message type        :   LOADSHEET" in message
         or "Message type        :   LOADING_INSTRUCTION" in message
     ):
-        pattern_edno = r"(EDNO|Edition number) (\d+)"
-        pattern_takeoff_weight_actual = r"(TAKE OFF WEIGHT ACTUAL|TAKE OFF WEIGHT  ACTUAL)\s+(\d+)"  # Match one or more digits for takeoff weight
-        pattern_tow = r"\bTOW\b\s+(\d+)"
-        pattern_all_weights = r"ALL WEIGHTS IN KILOGRAM"  # Exact match for weights unit
+        """{
+                'TOTAL TRAFFIC LOAD'
+                'DRY OPERATING WEIGHT'
+                'ZERO FUEL WEIGHT ACTUAL'
+                'TAKE OFF FUEL'
+                'TAKE OFF WEIGHT ACTUAL'
+                'TRIP'
+                'LANDING WEIGHT ACTUAL'
+                },"""
+        
+        
+        patterns = {}
+        if "TRIP FUEL" in message:
+            # This identifies zyxw messages because they are the only ones with TRIP followed by FUEL
+            patterns = {
+                "TOTAL TRAFFIC LOAD": r"TOTAL\s+TRAFFIC\s+LOAD\s+(\d+)",
+                "DRY OPERATING WEIGHT": r"DRY\s+OPERATING\s+WEIGHT\s+(\d+)",
+                "ZERO FUEL WEIGHT ACTUAL": r"ZERO\s+FUEL\s+WEIGHT\s+ACTUAL\s+(\d+)",
+                "TAKE OFF FUEL": r"TAKE\s+OFF\s+FUEL\s+(\d+)",
+                "TAKE OFF WEIGHT ACTUAL": r"TAKE\s+OFF\s+WEIGHT\s+ACTUAL\s+(\d+)",
+                "TRIP FUEL": r"TRIP\s+FUEL\s+(\d+)",
+                "LANDING WEIGHT ACTUAL": r"LANDING\s+WEIGHT\s+ACTUAL\s+(\d+)",
+            }
 
-        # Extract information using regular expressions
-        edno_match = re.search(pattern_edno, message)
-        takeoff_weight_actual_match = re.search(pattern_takeoff_weight_actual, message)
-        tow_match = re.search(pattern_tow, message)
-        all_weights_match = re.search(pattern_all_weights, message)
+        elif "ZERO FUEL WEIGHT ACTUAL" in message: # This identifies abcd messages
+          
+            patterns = {
+                "TOTAL TRAFFIC LOAD": r"TOTAL TRAFFIC LOAD\s+(\d+)",
+                "DRY OPERATING WEIGHT": r"DRY OPERATING WEIGHT\s+(\d+)",
+                "ZERO FUEL WEIGHT ACTUAL": r"ZERO FUEL WEIGHT ACTUAL\s+(\d+)",
+                "TAKE OFF FUEL": r"TAKE OFF FUEL\s+(\d+)",
+                "TAKE OFF WEIGHT ACTUAL": r"TAKE OFF WEIGHT ACTUAL\s+(\d+)",
+                "TRIP FUEL": r"TRIP\s+(\d+)",
+                "LANDING WEIGHT ACTUAL": r"LANDING WEIGHT ACTUAL\s+(\d+)",
+            }
+        elif "ZFW" in message:
+            # This identifies mnop messages because they are the only ones with abbreviations like ZFW
+            patterns = {
+            "DRY OPERATING WEIGHT": r"DOW\s+(\d+)", # DOW
+            "TOTAL TRAFFIC LOAD": r"PAY\s+(\d+)", # PAY
+            "ZERO FUEL WEIGHT ACTUAL": r"ZFW\s+(\d+)", # ZFW
+            "TAKE OFF FUEL": r"TOF\s+(\d+)", # TOF
+            "TAKE OFF WEIGHT ACTUAL": r"TOW\s+(\d+)", # TOW
+            "TRIP FUEL": r"TIF\s+(\d+)", # TIF
+            "LANDING WEIGHT ACTUAL": r"LAW\s+(\d+)" # LAW
+            }
+        
+        extracted_weights = {}
+        for key, pattern in patterns.items():
+            match = re.search(pattern, message)
+            if match:
+                extracted_weights[key] = int(match.group(1))
+            else:
+                extracted_weights[key] = None  # Assign None if the value is not found
+        
+        return json.dumps(extracted_weights)
+    
 
-        extracted_data = {}
-        extracted_data["EDNO"] = edno_match.group(1) if edno_match else None
-        extracted_data["TAKE_OFF_WEIGHT_ACTUAL"] = (
-            tow_match.group(1)
-            if tow_match
-            else (
-                takeoff_weight_actual_match.group(1)
-                if takeoff_weight_actual_match
-                else None
-            )
-        )
-        extracted_data["Weights_unit"] = "KILOGRAM" if all_weights_match else None
-
-        if extracted_data["TAKE_OFF_WEIGHT_ACTUAL"] == None:
-            pass
-
-        json.dumps(extracted_data)
-    elif (
-        "STATUS LOADSHEET"
-        or "STATUS LOADING_INSTRUCTION"
-        or "Email receivers     :" in message
-    ):
-        pass
-    elif (
-        "com.systemone.lc2.common.dto.SendDocumentDTO"
-        or "com.onesystem.lc2.common.dto.SendDocumentDTO" in message
-    ):
-        pass
-    else:
-        print(message)
-        pass
+    if "STATUS LOADSHEET" in message or "STATUS LOADING_INSTRUCTION" in message:
+        return None
+    if "lc2.common.dto.SendDocumentDTO" in message:
+        return None
+    raise NotImplementedError("This message is not supported yet")

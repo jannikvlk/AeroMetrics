@@ -58,3 +58,7 @@ def extract(message: str) -> str | None:
             }
 
         return json.dumps(extracted_data, indent=4)
+
+    if "common.dto.SendDocumentDTO" in message:
+        return None
+    raise NotImplementedError("This message is not supported yet:", message)

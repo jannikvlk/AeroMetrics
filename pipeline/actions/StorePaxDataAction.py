@@ -11,6 +11,7 @@ def extract(message: str) -> str | None:
     # skip system row because of lacking information
     if (
         "Y              Jump           Standby        Male           Female         Child          Infant         Bags           BWgt           Average"
+        in message
         or "                Y              J              Jump           Standby        Male           Female         Child          Infant         Bags           BWgt           Average        "
         in message
     ):
@@ -33,14 +34,10 @@ def extract(message: str) -> str | None:
         if match:
             extracted_data = match.groupdict()
             return json.dumps(extracted_data)
-
         else:
-            # print("No match found.")
-            # utils.write_to_file(message, "sample.txt")
-            # raise NotImplemented
-            pass
+            return None
 
-    elif "com.onesystem.lc2.paxactuals.dto.PaxDataDTO" in message:
+    elif "lc2.paxactuals.dto.PaxDataDTO" in message:
 
         # pattern to extract infos from string
         pattern = re.compile(
@@ -66,9 +63,7 @@ def extract(message: str) -> str | None:
             return json.dumps(extracted_data)
 
         else:
-            print("No match found")
-            print(message)
-            pass
+            return None
 
     elif "TOTAL Pax" in message:
         pattern = re.compile(
@@ -90,11 +85,6 @@ def extract(message: str) -> str | None:
             extracted_data = match.groupdict()
             return json.dumps(extracted_data)
         else:
-            print("No match found")
-            # utils.write_to_file(message, "sample.txt")
-            pass
+            return None
 
-    else:
-        print("Format not found!")
-        utils.write_to_file(message, "sample.txt")
-        pass
+    raise NotImplementedError("This message is not supported yet:", message)

@@ -37,8 +37,6 @@ def extract(message: str) -> str | None:
         extracted_data = extract_data_from_xml(message)
         return json.dumps(extracted_data)
 
-    elif "EmptyDTO - no input expected" or "STATUS " in message:
-        pass
-    else:
-        print(message)
-        pass
+    elif "EmptyDTO - no input expected" in message or "STATUS " in message:
+        return None
+    raise NotImplementedError("This message is not supported yet:", message)

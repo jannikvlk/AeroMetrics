@@ -26,8 +26,6 @@ def extract(message: str) -> str | None:
             extracted_data["basic_empty_weight_metric"] = match.group(4)
 
         return json.dumps(extracted_data)
-    elif "systemone" or "onesystem" in message:
-        pass
-    else:
-        print(message)
-        pass
+    elif "systemone" in message or "onesystem" in message:
+        return None
+    raise NotImplementedError("This message is not supported yet:", message)

@@ -18,4 +18,4 @@ def remove_typos(message: str) -> str | None:
 
 
 def test():
-    return 1
+    return 2
