@@ -4,3 +4,4 @@ __pycache__
 /docs/Jan_Docs
 myenv
 *_test.parquet
+*.csv
