@@ -14,32 +14,33 @@ def extract(message: str) -> str | None:
             STATUS FUEL 2 AIRCRAFT_CONFIG 1 EZFW 2 CARGO_TRANSFER 1 CABIN_CONFIG 1 CALC_HIST_DATA 1 AUTO_MODE_ACTIVE 1 AUTOMATION_STARTED 0 BAG_LOAD_ITEMS_GEN 1 EZFW_COUNTER 2 REGISTRATION 1 REGISTRATION_CHANGE 2',"""
 
         # Initialize an empty dictionary to store key-value pairs
+        # commented keys relate to status messages which are not relevant
         all_keys = {
-            "AIRCRAFT_CONFIG",
-            "AUTOMATION_STARTED",
-            "AUTO_MODE_ACTIVE",
-            "BAG_LOAD_ITEMS_GEN",
+            # "AIRCRAFT_CONFIG",
+            # "AUTOMATION_STARTED",
+            # "AUTO_MODE_ACTIVE",
+            # "BAG_LOAD_ITEMS_GEN",
             "Bag Weight",
-            "CABIN_CONFIG",
-            "CALC_HIST_DATA",
-            "CARGO_FINAL",
-            "CARGO_TRANSFER",
-            "CHECK_IN_OPEN",
+            # "CABIN_CONFIG",
+            # "CALC_HIST_DATA",
+            # "CARGO_FINAL",
+            # "CARGO_TRANSFER",
+            # "CHECK_IN_OPEN",
             "Cargo",
-            "DGR_ITEMS",
+            # "DGR_ITEMS",
             "DOW",
-            "EZFW",
-            "EZFW_COUNTER",
-            "FUEL",
-            "FUEL_ORDER",
+            # "EZFW",
+            # "EZFW_COUNTER",
+            # "FUEL",
+            # "FUEL_ORDER",
             "Mail",
-            "OFP",
+            # "OFP",
             "Pax Weight",
-            "REGISTRATION",
-            "REGISTRATION_CHANGE",
-            "TRANSIT_ACCEPTANCE",
-            "TRANSIT_PAX",
-            "Weight Unit",
+            # "REGISTRATION",
+            # "REGISTRATION_CHANGE",
+            # "TRANSIT_ACCEPTANCE",
+            # "TRANSIT_PAX",
+            # "Weight Unit",
             "ZFW",
         }
 
@@ -84,7 +85,8 @@ def extract(message: str) -> str | None:
                     except ValueError:
                         pass
                 key_value_pairs[key] = value
-
+        key_value_pairs["EZFW"] = key_value_pairs.pop("ZFW", None)
+            
         return json.dumps(key_value_pairs)
     if (
         "com.onesystem.lc2.estimateshandling.dto.EstimateWeightsDTO" in message
