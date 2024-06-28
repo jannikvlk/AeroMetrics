@@ -5,3 +5,4 @@ __pycache__
 myenv
 *_test.parquet
 *.csv
+/pipeline/celonis_credentials.json
