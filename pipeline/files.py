@@ -2,13 +2,19 @@
 from pathlib import Path
 
 DATA_DIR = Path("../data")
-AB_DIR = Path("")
-MN_DIR = Path("")
-ZY_DIR = Path("")
+AB_DIR = Path("abcd")
+MN_DIR = Path("mnop")
+ZY_DIR = Path("zyxw")
+
+
 
 CSV_FILE_AB = DATA_DIR.joinpath(AB_DIR, "ABCD_tripfiles.csv")
 CSV_FILE_MN = DATA_DIR.joinpath(MN_DIR, "MNOP_tripfiles.csv")
 CSV_FILE_ZY = DATA_DIR.joinpath(ZY_DIR, "ZYXW_tripfiles.csv")
+
+CSV_FILE_AB_FIXED = DATA_DIR.joinpath(AB_DIR, "ABCD_tripfiles_fixed.csv")
+CSV_FILE_MN_FIXED = DATA_DIR.joinpath(MN_DIR, "MNOP_tripfiles_fixed.csv")
+CSV_FILE_ZY_FIXED = DATA_DIR.joinpath(ZY_DIR, "ZYXW_tripfiles_fixed.csv")
 
 PARQUET_FILE_AB = DATA_DIR.joinpath(AB_DIR, "ABCD_tripfiles.parquet")
 PARQUET_FILE_MN = DATA_DIR.joinpath(MN_DIR, "MNOP_tripfiles.parquet")

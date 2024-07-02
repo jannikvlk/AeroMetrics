@@ -124,7 +124,7 @@ def extract(message: str) -> str | None:
     if message is None:
         return None
     if "TOTAL Pax" in message:
-        lines = message.split("\r\n")
+        lines = message.split("\n")
         data = parse_first_line(lines[0])
         if "Distribution" in message:
             data.update(parse_remaining_lines(lines[1:]))

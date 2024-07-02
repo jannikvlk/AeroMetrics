@@ -48,9 +48,10 @@ def extract(message: str) -> str | None:
         key_value_pairs = {key: None for key in all_keys}
 
         # Split the message into two parts
-        parts = message.split("\r\n")
+        parts = message.split("\n")
+
         main_part = parts[0]
-        status_part = parts[1]
+        
 
         # Define the expected keywords and units for weights
         weight_keywords = ["Pax Weight", "Bag Weight", "Cargo", "Mail", "DOW", "ZFW"]
@@ -67,24 +68,27 @@ def extract(message: str) -> str | None:
                 key_value_pairs["Weight Unit"] = (
                     unit.strip()
                 )  # Assuming only one unit is present in the message
-
+        if len(parts) > 1:
+            status_part = parts[1]
         # Process the status-related part
-        status_pairs = status_part.split()
-        status_pairs.pop(0)  # Remove the 'STATUS' keyword
+            status_pairs = status_part.split()
+            status_pairs.pop(0)  # Remove the 'STATUS' keyword
 
-        for i in range(0, len(status_pairs), 2):
-            if i + 1 < len(status_pairs):
-                key = status_pairs[i]
-                value = status_pairs[i + 1]
-                # Convert value to int or float if it is a number
-                if value.isdigit():
-                    value = int(value)
-                else:
-                    try:
-                        value = float(value)
-                    except ValueError:
-                        pass
-                key_value_pairs[key] = value
+            for i in range(0, len(status_pairs), 2):
+                if i + 1 < len(status_pairs):
+                    key = status_pairs[i]
+                    value = status_pairs[i + 1]
+                    # Convert value to int or float if it is a number
+                    if value.isdigit():
+                        value = int(value)
+                    else:
+                        try:
+                            value = float(value)
+                        except ValueError:
+                            pass
+                    key_value_pairs[key] = value
+        else:
+            print("No status part found", message)
         key_value_pairs["EZFW"] = key_value_pairs.pop("ZFW", None)
             
         return json.dumps(key_value_pairs)
@@ -157,8 +161,8 @@ def extract(message: str) -> str | None:
                 key_value_pairs[key] = convert_to_number(value)
 
         # Extract weights and other details
-        weights_part = message.split("\r\n\r\n", 2)[-1]
-        weight_lines = weights_part.split("\r\n")
+        weights_part = message.split("\n\n", 2)[-1]
+        weight_lines = weights_part.split("\n")
 
         weight_keywords = [
             "Pax",
