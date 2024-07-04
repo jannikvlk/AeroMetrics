@@ -7,7 +7,6 @@ MN_DIR = Path("mnop")
 ZY_DIR = Path("zyxw")
 
 
-
 CSV_FILE_AB = DATA_DIR.joinpath(AB_DIR, "ABCD_tripfiles.csv")
 CSV_FILE_MN = DATA_DIR.joinpath(MN_DIR, "MNOP_tripfiles.csv")
 CSV_FILE_ZY = DATA_DIR.joinpath(ZY_DIR, "ZYXW_tripfiles.csv")
@@ -41,6 +40,19 @@ PARQUET_FILE_ZY_WEIGHTS = DATA_DIR.joinpath(
     "ZYXW_tripfiles_weights.parquet",
 )
 
+CSV_FILE_AB_WEIGHTS = DATA_DIR.joinpath(
+    AB_DIR,
+    "ABCD_tripfiles_weights.csv",
+)
+CSV_FILE_MN_WEIGHTS = DATA_DIR.joinpath(
+    MN_DIR,
+    "MNOP_tripfiles_weights.csv",
+)
+CSV_FILE_ZY_WEIGHTS = DATA_DIR.joinpath(
+    ZY_DIR,
+    "ZYXW_tripfiles_weights.csv",
+)
+
 PARQUET_FILE_AB_FLIGHTTABLE = DATA_DIR.joinpath(
     AB_DIR,
     "ABCD_flighttable.parquet",
@@ -52,4 +64,17 @@ PARQUET_FILE_MN_FLIGHTTABLE = DATA_DIR.joinpath(
 PARQUET_FILE_ZY_FLIGHTTABLE = DATA_DIR.joinpath(
     ZY_DIR,
     "ZYXW_flighttable.parquet",
+)
+
+CSV_FILE_AB_FLIGHTTABLE = DATA_DIR.joinpath(
+    AB_DIR,
+    "ABCD_flighttable.csv",
+)
+CSV_FILE_MN_FLIGHTTABLE = DATA_DIR.joinpath(
+    MN_DIR,
+    "MNOP_flighttable.csv",
+)
+CSV_FILE_ZY_FLIGHTTABLE = DATA_DIR.joinpath(
+    ZY_DIR,
+    "ZYXW_flighttable.csv",
 )
