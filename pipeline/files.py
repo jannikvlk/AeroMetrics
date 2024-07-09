@@ -1,80 +1,80 @@
 # Define the file paths
 from pathlib import Path
 
-DATA_DIR = Path("../data")
+DATA = Path("../data")
 AB_DIR = Path("abcd")
 MN_DIR = Path("mnop")
 ZY_DIR = Path("zyxw")
 
 
-CSV_FILE_AB = DATA_DIR.joinpath(AB_DIR, "ABCD_tripfiles.csv")
-CSV_FILE_MN = DATA_DIR.joinpath(MN_DIR, "MNOP_tripfiles.csv")
-CSV_FILE_ZY = DATA_DIR.joinpath(ZY_DIR, "ZYXW_tripfiles.csv")
+CSV_AB = DATA.joinpath(AB_DIR, "ABCD_tripfiles.csv")
+CSV_MN = DATA.joinpath(MN_DIR, "MNOP_tripfiles.csv")
+CSV_ZY = DATA.joinpath(ZY_DIR, "ZYXW_tripfiles.csv")
 
-CSV_FILE_AB_FIXED = DATA_DIR.joinpath(AB_DIR, "ABCD_tripfiles_fixed.csv")
-CSV_FILE_MN_FIXED = DATA_DIR.joinpath(MN_DIR, "MNOP_tripfiles_fixed.csv")
-CSV_FILE_ZY_FIXED = DATA_DIR.joinpath(ZY_DIR, "ZYXW_tripfiles_fixed.csv")
+CSV_AB_FIXED = DATA.joinpath(AB_DIR, "ABCD_tripfiles_fixed.csv")
+CSV_MN_FIXED = DATA.joinpath(MN_DIR, "MNOP_tripfiles_fixed.csv")
+CSV_ZY_FIXED = DATA.joinpath(ZY_DIR, "ZYXW_tripfiles_fixed.csv")
 
-PARQUET_FILE_AB = DATA_DIR.joinpath(AB_DIR, "ABCD_tripfiles.parquet")
-PARQUET_FILE_MN = DATA_DIR.joinpath(MN_DIR, "MNOP_tripfiles.parquet")
-PARQUET_FILE_ZY = DATA_DIR.joinpath(ZY_DIR, "ZYXW_tripfiles.parquet")
+PARQUET_AB = DATA.joinpath(AB_DIR, "ABCD_tripfiles.parquet")
+PARQUET_MN = DATA.joinpath(MN_DIR, "MNOP_tripfiles.parquet")
+PARQUET_ZY = DATA.joinpath(ZY_DIR, "ZYXW_tripfiles.parquet")
 
-PARQUET_FILE_AB_TEST = DATA_DIR.joinpath(AB_DIR, "ABCD_tripfiles_test.parquet")
-PARQUET_FILE_MN_TEST = DATA_DIR.joinpath(MN_DIR, "MNOP_tripfiles_test.parquet")
-PARQUET_FILE_ZY_TEST = DATA_DIR.joinpath(ZY_DIR, "ZYXW_tripfiles_test.parquet")
+PARQUET_AB_TEST = DATA.joinpath(AB_DIR, "ABCD_tripfiles_test.parquet")
+PARQUET_MN_TEST = DATA.joinpath(MN_DIR, "MNOP_tripfiles_test.parquet")
+PARQUET_ZY_TEST = DATA.joinpath(ZY_DIR, "ZYXW_tripfiles_test.parquet")
 
-PARQUET_FILE_AB_CONV = DATA_DIR.joinpath(AB_DIR, "ABCD_tripfiles_conv.parquet")
-PARQUET_FILE_MN_CONV = DATA_DIR.joinpath(MN_DIR, "MNOP_tripfiles_conv.parquet")
-PARQUET_FILE_ZY_CONV = DATA_DIR.joinpath(ZY_DIR, "ZYXW_tripfiles_conv.parquet")
+PARQUET_AB_CONV = DATA.joinpath(AB_DIR, "ABCD_tripfiles_conv.parquet")
+PARQUET_MN_CONV = DATA.joinpath(MN_DIR, "MNOP_tripfiles_conv.parquet")
+PARQUET_ZY_CONV = DATA.joinpath(ZY_DIR, "ZYXW_tripfiles_conv.parquet")
 
-PARQUET_FILE_AB_WEIGHTS = DATA_DIR.joinpath(
+PARQUET_AB_WEIGHTS = DATA.joinpath(
     AB_DIR,
     "ABCD_tripfiles_weights.parquet",
 )
-PARQUET_FILE_MN_WEIGHTS = DATA_DIR.joinpath(
+PARQUET_MN_WEIGHTS = DATA.joinpath(
     MN_DIR,
     "MNOP_tripfiles_weights.parquet",
 )
-PARQUET_FILE_ZY_WEIGHTS = DATA_DIR.joinpath(
+PARQUET_ZY_WEIGHTS = DATA.joinpath(
     ZY_DIR,
     "ZYXW_tripfiles_weights.parquet",
 )
 
-CSV_FILE_AB_WEIGHTS = DATA_DIR.joinpath(
+CSV_AB_WEIGHTS = DATA.joinpath(
     AB_DIR,
     "ABCD_tripfiles_weights.csv",
 )
-CSV_FILE_MN_WEIGHTS = DATA_DIR.joinpath(
+CSV_MN_WEIGHTS = DATA.joinpath(
     MN_DIR,
     "MNOP_tripfiles_weights.csv",
 )
-CSV_FILE_ZY_WEIGHTS = DATA_DIR.joinpath(
+CSV_ZY_WEIGHTS = DATA.joinpath(
     ZY_DIR,
     "ZYXW_tripfiles_weights.csv",
 )
 
-PARQUET_FILE_AB_FLIGHTTABLE = DATA_DIR.joinpath(
+PARQUET_AB_FLIGHTTABLE = DATA.joinpath(
     AB_DIR,
     "ABCD_flighttable.parquet",
 )
-PARQUET_FILE_MN_FLIGHTTABLE = DATA_DIR.joinpath(
+PARQUET_MN_FLIGHTTABLE = DATA.joinpath(
     MN_DIR,
     "MNOP_flighttable.parquet",
 )
-PARQUET_FILE_ZY_FLIGHTTABLE = DATA_DIR.joinpath(
+PARQUET_ZY_FLIGHTTABLE = DATA.joinpath(
     ZY_DIR,
     "ZYXW_flighttable.parquet",
 )
 
-CSV_FILE_AB_FLIGHTTABLE = DATA_DIR.joinpath(
+CSV_AB_FLIGHTTABLE = DATA.joinpath(
     AB_DIR,
     "ABCD_flighttable.csv",
 )
-CSV_FILE_MN_FLIGHTTABLE = DATA_DIR.joinpath(
+CSV_MN_FLIGHTTABLE = DATA.joinpath(
     MN_DIR,
     "MNOP_flighttable.csv",
 )
-CSV_FILE_ZY_FLIGHTTABLE = DATA_DIR.joinpath(
+CSV_ZY_FLIGHTTABLE = DATA.joinpath(
     ZY_DIR,
     "ZYXW_flighttable.csv",
 )
