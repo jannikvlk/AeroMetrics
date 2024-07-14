@@ -39,6 +39,9 @@ PARQUET_ZY_WEIGHTS = DATA.joinpath(
     ZY_DIR,
     "ZYXW_tripfiles_weights.parquet",
 )
+PARQUET_WEIGHTS = DATA.joinpath(
+    "tripfiles_weights.parquet",
+)
 
 CSV_AB_WEIGHTS = DATA.joinpath(
     AB_DIR,
@@ -51,6 +54,9 @@ CSV_MN_WEIGHTS = DATA.joinpath(
 CSV_ZY_WEIGHTS = DATA.joinpath(
     ZY_DIR,
     "ZYXW_tripfiles_weights.csv",
+)
+CSV_WEIGHTS = DATA.joinpath(
+    "tripfiles_weights.csv",
 )
 
 PARQUET_AB_FLIGHTTABLE = DATA.joinpath(
@@ -65,6 +71,9 @@ PARQUET_ZY_FLIGHTTABLE = DATA.joinpath(
     ZY_DIR,
     "ZYXW_flighttable.parquet",
 )
+PARQUET_FLIGHTTABLE = DATA.joinpath(
+    "flighttable.parquet",
+)
 
 CSV_AB_FLIGHTTABLE = DATA.joinpath(
     AB_DIR,
@@ -77,4 +86,7 @@ CSV_MN_FLIGHTTABLE = DATA.joinpath(
 CSV_ZY_FLIGHTTABLE = DATA.joinpath(
     ZY_DIR,
     "ZYXW_flighttable.csv",
+)
+CSV_FLIGHTTABLE = DATA.joinpath(
+    "flighttable.csv",
 )

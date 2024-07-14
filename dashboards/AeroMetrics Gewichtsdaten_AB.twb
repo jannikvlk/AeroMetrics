@@ -25,6 +25,13 @@
     </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
   </_.fcp.AnimationOnByDefault.false...style>
   <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Test' datatype='real' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='1000.0'>
+        <calculation class='tableau' formula='1000.0' />
+        <range granularity='1000.0' />
+      </column>
+    </datasource>
     <datasource caption='ABCD_tripfiles_weights' inline='true' name='federated.061h47e1p8o37j15ixo3h0fa2qn0' version='18.1'>
       <connection class='federated'>
         <named-connections>
@@ -2084,13 +2091,6 @@
         </relationships>
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
-    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
-      <aliases enabled='yes' />
-      <column caption='Test' datatype='real' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='1000.0'>
-        <calculation class='tableau' formula='1000.0' />
-        <range granularity='1000.0' />
-      </column>
-    </datasource>
   </datasources>
   <worksheets>
     <worksheet name='ALAW Hist'>
@@ -2289,7 +2289,7 @@
           </style-rule>
           <style-rule element='mark'>
             <encoding attr='color' field='[federated.061h47e1p8o37j15ixo3h0fa2qn0].[cnt:ALAW:qk]' max='2' min='1' num-steps='2' palette='orange_10_0' type='interpolated' />
-            <encoding attr='color' field='[federated.061h47e1p8o37j15ixo3h0fa2qn0].[none:ATOW (bin):qk]' max='11000.0' min='0.0' num-steps='2' type='custom-interpolated'>
+            <encoding attr='color' field='[federated.061h47e1p8o37j15ixo3h0fa2qn0].[none:ATOW (bin):qk]' max='11000' min='0' num-steps='2' type='custom-interpolated'>
               <color-palette custom='true' name='' type='ordered-diverging'>
                 <color>#2b5c8a</color>
                 <color>#406d97</color>
@@ -2306,7 +2306,7 @@
                 <color>#2b5c8a</color>
               </color-palette>
             </encoding>
-            <encoding attr='color' field='[federated.061h47e1p8o37j15ixo3h0fa2qn0].[none:ALAW (bin):qk]' max='15000.0' min='0.0' num-steps='2' type='custom-interpolated'>
+            <encoding attr='color' field='[federated.061h47e1p8o37j15ixo3h0fa2qn0].[none:ALAW (bin):qk]' max='15000' min='0' num-steps='2' type='custom-interpolated'>
               <color-palette custom='true' name='' type='ordered-diverging'>
                 <color>#005500</color>
                 <color>#116b11</color>
@@ -3414,74 +3414,70 @@ ETOW = EZFW + Total Fuel
       <zones>
         <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
           <zone h='98546' id='17' param='horz' type-v2='layout-flow' w='99272' x='364' y='727'>
-            <zone h='98546' id='13' param='horz' type-v2='layout-flow' w='99272' x='364' y='727'>
-              <zone h='98546' id='10' param='horz' type-v2='layout-flow' w='99272' x='364' y='727'>
-                <zone h='98546' id='8' type-v2='layout-basic' w='99272' x='364' y='727'>
-                  <zone h='49273' id='3' name='Count Diagramm' w='51156' x='364' y='727'>
-                    <zone-style>
-                      <format attr='border-color' value='#000000' />
-                      <format attr='border-style' value='none' />
-                      <format attr='border-width' value='0' />
-                      <format attr='margin' value='4' />
-                    </zone-style>
-                  </zone>
-                  <zone h='49273' id='5' name='ATOW vs ALAW' w='21870' x='5862' y='50000'>
-                    <zone-style>
-                      <format attr='border-color' value='#000000' />
-                      <format attr='border-style' value='none' />
-                      <format attr='border-width' value='0' />
-                      <format attr='margin' value='4' />
-                    </zone-style>
-                  </zone>
-                  <zone h='49273' id='6' name='ATOW vs Dep Airport' w='48116' x='51520' y='727'>
-                    <zone-style>
-                      <format attr='border-color' value='#000000' />
-                      <format attr='border-style' value='none' />
-                      <format attr='border-width' value='0' />
-                      <format attr='margin' value='4' />
-                    </zone-style>
-                  </zone>
-                  <zone h='49273' id='7' name='ALAW vs Arr Airport' w='48116' x='51520' y='50000'>
-                    <zone-style>
-                      <format attr='border-color' value='#000000' />
-                      <format attr='border-style' value='none' />
-                      <format attr='border-width' value='0' />
-                      <format attr='margin' value='4' />
-                    </zone-style>
-                  </zone>
-                  <zone h='12273' id='11' name='ATOW vs ALAW' pane-specification-id='4' param='[federated.061h47e1p8o37j15ixo3h0fa2qn0].[none:ALAW (bin):qk]' type-v2='color' w='5498' x='364' y='87000'>
-                    <zone-style>
-                      <format attr='border-color' value='#000000' />
-                      <format attr='border-style' value='none' />
-                      <format attr='border-width' value='0' />
-                      <format attr='margin' value='4' />
-                    </zone-style>
-                  </zone>
-                  <zone h='6364' id='14' name='ATOW vs ALAW' pane-specification-id='5' param='[federated.061h47e1p8o37j15ixo3h0fa2qn0].[none:ATOW (bin):qk]' type-v2='color' w='5498' x='364' y='80636'>
-                    <zone-style>
-                      <format attr='border-color' value='#000000' />
-                      <format attr='border-style' value='none' />
-                      <format attr='border-width' value='0' />
-                      <format attr='margin' value='4' />
-                    </zone-style>
-                  </zone>
-                  <zone h='49273' id='15' name='ATOW vs ALAW Scatter' w='23788' x='27732' y='50000'>
-                    <zone-style>
-                      <format attr='border-color' value='#000000' />
-                      <format attr='border-style' value='none' />
-                      <format attr='border-width' value='0' />
-                      <format attr='margin' value='4' />
-                    </zone-style>
-                  </zone>
-                  <zone h='30636' id='18' type-v2='empty' w='5498' x='364' y='50000'>
-                    <zone-style>
-                      <format attr='border-color' value='#000000' />
-                      <format attr='border-style' value='none' />
-                      <format attr='border-width' value='0' />
-                      <format attr='margin' value='4' />
-                    </zone-style>
-                  </zone>
-                </zone>
+            <zone h='98546' id='8' type-v2='layout-basic' w='99272' x='364' y='727'>
+              <zone h='49273' id='3' name='Count Diagramm' w='51156' x='364' y='727'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49273' id='5' name='ATOW vs ALAW' w='21870' x='5862' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49273' id='6' name='ATOW vs Dep Airport' w='48116' x='51520' y='727'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49273' id='7' name='ALAW vs Arr Airport' w='48116' x='51520' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='12273' id='11' name='ATOW vs ALAW' pane-specification-id='4' param='[federated.061h47e1p8o37j15ixo3h0fa2qn0].[none:ALAW (bin):qk]' type-v2='color' w='5498' x='364' y='87000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='6364' id='14' name='ATOW vs ALAW' pane-specification-id='5' param='[federated.061h47e1p8o37j15ixo3h0fa2qn0].[none:ATOW (bin):qk]' type-v2='color' w='5498' x='364' y='80636'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49273' id='15' name='ATOW vs ALAW Scatter' w='23788' x='27732' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='30636' id='18' type-v2='empty' w='5498' x='364' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
               </zone>
             </zone>
           </zone>
@@ -3497,8 +3493,8 @@ ETOW = EZFW + Total Fuel
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1600' minheight='1600' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='20' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98546' id='19' param='vert' type-v2='layout-flow' w='99272' x='364' y='727'>
+            <zone h='100000' id='22' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98546' id='21' param='vert' type-v2='layout-flow' w='99272' x='364' y='727'>
                 <zone fixed-size='280' h='49273' id='3' is-fixed='true' name='Count Diagramm' w='51156' x='364' y='727'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -3576,7 +3572,7 @@ ETOW = EZFW + Total Fuel
       <simple-id uuid='{B4095E7F-CC41-417C-9508-6F3CC5E38D5B}' />
     </dashboard>
   </dashboards>
-  <windows film-mode='true' saved-dpi-scale-factor='1.25' source-height='37'>
+  <windows source-height='37'>
     <window class='worksheet' name='Count'>
       <cards>
         <edge name='left'>
