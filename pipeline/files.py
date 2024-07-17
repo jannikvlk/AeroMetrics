@@ -90,3 +90,35 @@ CSV_ZY_FLIGHTTABLE = DATA.joinpath(
 CSV_FLIGHTTABLE = DATA.joinpath(
     "flighttable.csv",
 )
+
+PARQUET_AB_AUTOMATIONTABLE = DATA.joinpath(
+    AB_DIR,
+    "ABCD_tableau_automation.parquet",
+)
+PARQUET_MN_AUTOMATIONTABLE = DATA.joinpath(
+    MN_DIR,
+    "MNOP_tableau_automation.parquet",
+)
+PARQUET_ZY_AUTOMATIONTABLE = DATA.joinpath(
+    ZY_DIR,
+    "ZYXW_tableau_automation.parquet",
+)
+PARQUET_AUTOMATIONTABLE = DATA.joinpath(
+    "tableau_automation.parquet",
+)
+
+CSV_AB_AUTOMATIONTABLE = DATA.joinpath(
+    AB_DIR,
+    "ABCD_tableau_automation.csv",
+)
+CSV_MN_AUTOMATIONTABLE = DATA.joinpath(
+    MN_DIR,
+    "MNOP_tableau_automation.csv",
+)
+CSV_ZY_AUTOMATIONTABLE = DATA.joinpath(
+    ZY_DIR,
+    "ZYXW_tableau_automation.csv",
+)
+CSV_AUTOMATIONTABLE = DATA.joinpath(
+    "tableau_automation.csv",
+)
